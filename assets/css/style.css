@@ -139,8 +139,9 @@
 
 .logo-image {
     height: 48px;
-    width: 48px;
-    border-radius: 50%;
+    width: auto;
+    border-radius: 20px;
+
 }
 
 .profile-name {
