@@ -1,0 +1,33 @@
+---
+layout: page_padded
+title: News
+permalink: /news/
+---
+
+<h1 class="news-section-title">
+    News and Events
+</h1>
+
+{%- assign news = site.data.news.news -%}
+{%- for item in news -%}
+
+    <div class="news-item">
+        <div class="news-date">
+            <b>
+                {{- item.date -}}
+            </b>
+        </div>
+        {%- if item.link contains '://' -%}
+            <a href="{{ item.link }}" class="news-link">
+        {%- else -%}
+            <a href="{{ site.baseurl }}{{ item.link }}" class="news-link">
+        {%- endif -%}
+                <i style="font-style:normal" class="fas fa-link"></i>
+                Link
+            </a>
+        <span class="news-bold">
+            {{- item.title -}}
+        </span>
+    </div>
+
+{%- endfor -%}

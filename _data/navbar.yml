@@ -1,0 +1,18 @@
+pages:
+  - title: Home
+    permalink: /
+
+  - title: Members
+    permalink: /members/
+
+  - title: Publications
+    permalink: /publications/
+
+  - title: Projects
+    permalink: /projects/
+
+  - title: News
+    permalink: /news/
+
+  - title: Guide
+    permalink: /guide/

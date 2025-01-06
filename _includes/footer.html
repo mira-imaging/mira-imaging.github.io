@@ -1,0 +1,53 @@
+<footer class="footer">
+    {%- assign general = site.data.general -%}
+    <div class="footer-info">
+      <!-- About Section -->
+      <div class="footer-block-300px footer-block-common">
+        <h3>About Us</h3>
+        <p>{{- general.description -}}</p>
+      </div>
+      <!-- Contact Information -->
+      <div class="footer-block-300px footer-block-common">
+        <h3>Access</h3>
+        <p>
+          Address:<br>
+          &emsp;{{ general.address.building }},<br>
+          &emsp;{{ general.address.street }},<br>
+          &emsp;{{ general.address.city }},<br>
+          &emsp;{{ general.address.country }}.
+          (<a href="{{ general.address.maps_link }}">Maps</a>)
+        </p>
+      </div>
+      <!-- Contact Information -->
+      <div class="footer-block-auto footer-block-common">
+        <h3>Contact Us</h3>
+        <p>
+          Email: <a href="mailto:{{- general.contact.email -}}" class="footer-link">{{ general.contact.email }}</a>
+        </p>
+        <p>
+          Phone: {{ general.contact.phone }}
+        </p>
+      </div>
+      <!-- Social Media Links -->
+      <div class="footer-block-auto footer-block-common">
+        <h3>Follow Us</h3>
+        <div>
+          {% for link in general.social %}
+            <div>
+              <i style="font-style:normal" class="{{ link[1].icon }}"></i>
+              <a href="{{- link[1].link -}}" target="_blank" class="footer-link">{{ link[0] }}</a>
+            </div>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+    <!-- Copyright Section -->
+    <div class="footer-copyrights">
+      <span>
+        &copy; 2025 {{ general.name.title }}.
+        Generated from <a href="https://github.com/mhmdjouni/minimal-teams" class="footer-link">Minimal Teams</a>.
+        Powered by <a href="https://jekyllrb.com/" class="footer-link">Jekyll</a>.
+      </span>
+    </div>
+  </footer>
+  

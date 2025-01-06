@@ -1,0 +1,8 @@
+projects:
+  - name: Project 1
+    description: Project 1 aims at proiding scientific breakthroughs.
+    link: /projects/
+
+  - name: Project 2
+    description: Project 2 aims at pushing boundaries and providing services to the public.
+    link: https://example.com

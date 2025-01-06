@@ -1,0 +1,48 @@
+name:
+  long: Scientific Research and Development
+  short: Scientific R&D
+  abbrv: SRD
+  lower: srd
+  full: Scientific Research and Development (SRD)
+  append: Group
+  title: SRD Group
+
+affiliations:
+  uga:
+    name: Sample Institution 1
+    link: https://www.univ-grenoble-alpes.fr/
+  sampleAff:
+    name: Sample Institution 2
+    link: https://example.com
+
+description: >-
+  The Imaging Models and AI Guided Optimization Research (IMAGO) Research aims at developing
+    novel model-based and AI-driven approaches for computational imaging applications.
+
+contact:
+  email: srd-group [at] example.com
+  phone: "+00 (XX) AA BB CC DD"
+
+address:
+  building: "Building B"
+  street: "Street S"
+  city: "0000 City C"
+  country: "Country"
+  maps_link: https://www.google.com/maps
+
+social:
+  GitHub:
+    link: https://github.com/mhmdjouni
+    icon: fab fa-fw fa-github
+  X (Twitter):
+    link: https://x.com/mhmdjouni
+    icon: fab fa-fw fa-x-twitter
+
+images_dirs:
+  root: images
+  logos: images/logos
+  banners: images/banners
+  profile_pictures: images/profile_pictures
+
+logo_filename: default.jpg
+banner_filename: default.jpg

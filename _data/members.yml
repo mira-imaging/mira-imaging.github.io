@@ -1,0 +1,114 @@
+categories:
+  - &researcher
+    type: Researcher
+    order: "1"
+  - &student
+    type: Student
+    order: "2"
+  - &leader
+    type: Project Leader
+    order: "0"
+  - &visitor
+    type: Visitor
+    order: "3"
+  - &previous
+    type: Previous Member
+    order: "4"
+
+roles:
+  - &assProf Associate Professor
+  - &resEng Research Engineer
+  - &postdoc Postdoctoral Researcher
+  - &resAss Research Assistant
+  - &intern Intern
+  - &visRes Visiting Researcher
+  - &senVisRes Senior Visiting Researcher
+
+affiliations:
+  - &uni University
+  - &ins Institute of Technology
+  - &comp Company
+  - &sampleAff Sample Affiliation
+
+members:
+  # Member keys are used for permalinks or to identify / filter a member from any page.
+  - key: leader
+    name: Prof. Leader Lead
+    category: *leader
+    role: *assProf
+    affiliation: *ins
+    photo: 
+    email: example@example.com
+    link:  https://www.example.com
+  
+  - key: engineer
+    name: Engineer Engine
+    category: *researcher
+    role: *resEng
+    affiliation: *uni
+    photo: 
+    email: example@example.com
+    link:  /members/
+
+  - key: researcher
+    name: Researcher Research
+    category: *researcher
+    role: *postdoc
+    affiliation: *ins
+    photo: 
+    email: example@example.com
+    link: 
+
+  - key: developer
+    name: Developer Develop
+    category: *researcher
+    role: *postdoc
+    affiliation: *comp
+    photo: 
+    email: example@example.com
+    link: https://www.example.com
+
+  - key: assistant
+    name: Assistant Assist
+    category: *researcher
+    role: *resAss
+    affiliation: *ins
+    photo: 
+    email: example@example.com
+    link: 
+
+  - key: senior_visitor
+    name: Prof. Visitor Visit
+    category: *visitor
+    role: *senVisRes
+    affiliation: *sampleAff
+    photo: 
+    email: example@example.com
+    link: 
+
+  - key: intern
+    name: Intern Int
+    category: *student
+    role: *intern
+    affiliation: *sampleAff
+    photo: 
+    email: example@example.com
+    link: https://www.example.com
+
+  - key: visitor
+    name: Visitor Visito
+    category: *visitor
+    role: *visRes
+    affiliation: *sampleAff
+    photo: blank.png
+    email: example@example.com
+    link:  https://www.example.com
+
+  - key: previous
+    name: Prof. Previous Old
+    category: *previous
+    role: *senVisRes
+    affiliation: *sampleAff
+    photo: 
+    email: all_might@example.com
+    link:  https://www.example.com
