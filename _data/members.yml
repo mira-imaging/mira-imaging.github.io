@@ -19,96 +19,49 @@ roles:
   - &assProf Associate Professor
   - &resEng Research Engineer
   - &postdoc Postdoctoral Researcher
-  - &resAss Research Assistant
-  - &intern Intern
+  - &studProj Student Project
   - &visRes Visiting Researcher
   - &senVisRes Senior Visiting Researcher
 
 affiliations:
-  - &uni University
-  - &ins Institute of Technology
-  - &comp Company
+  - &uga Université Grenoble Alpes
+  - &ginp Grenoble Institute of Technology
   - &sampleAff Sample Affiliation
 
 members:
   # Member keys are used for permalinks or to identify / filter a member from any page.
-  - key: leader
-    name: Prof. Leader Lead
+  - key: dallamum
+    name: Prof. Mauro Dalla Mura
     category: *leader
     role: *assProf
-    affiliation: *ins
-    photo: 
-    email: example@example.com
-    link:  https://www.example.com
+    affiliation: *ginp
+    photo: mauro_dallamura.png
+    email: mauro.dalla-mura@grenoble-inp.fr
+    link:  https://scholar.google.com/citations?user=qbdbtn4AAAAJ&hl=en
   
-  - key: engineer
-    name: Engineer Engine
+  - key: negrea
+    name: Amaury Nègre
     category: *researcher
     role: *resEng
-    affiliation: *uni
-    photo: 
-    email: example@example.com
-    link:  /members/
+    affiliation: *ginp
+    photo: amaury_negre.jpg
+    email: amaury.negre@grenoble-inp.fr
+    link:  
 
-  - key: researcher
-    name: Researcher Research
+  - key: jounim
+    name: Mohamad Jouni
     category: *researcher
-    role: *postdoc
-    affiliation: *ins
-    photo: 
-    email: example@example.com
-    link: 
+    role: *resEng
+    affiliation: *uga
+    photo: mohamad_jouni.png
+    email: mohamad.jouni@grenoble-inp.fr
+    link: https://mhmdjouni.github.io
 
-  - key: developer
-    name: Developer Develop
-    category: *researcher
-    role: *postdoc
-    affiliation: *comp
-    photo: 
-    email: example@example.com
-    link: https://www.example.com
-
-  - key: assistant
-    name: Assistant Assist
-    category: *researcher
-    role: *resAss
-    affiliation: *ins
-    photo: 
-    email: example@example.com
-    link: 
-
-  - key: senior_visitor
-    name: Prof. Visitor Visit
-    category: *visitor
-    role: *senVisRes
-    affiliation: *sampleAff
-    photo: 
-    email: example@example.com
-    link: 
-
-  - key: intern
-    name: Intern Int
+  - key: ronningenk
+    name: Kari Torfinnsdatter Rønningen
     category: *student
-    role: *intern
-    affiliation: *sampleAff
+    role: *studProj
+    affiliation: *ginp
     photo: 
-    email: example@example.com
-    link: https://www.example.com
-
-  - key: visitor
-    name: Visitor Visito
-    category: *visitor
-    role: *visRes
-    affiliation: *sampleAff
-    photo: blank.png
-    email: example@example.com
-    link:  https://www.example.com
-
-  - key: previous
-    name: Prof. Previous Old
-    category: *previous
-    role: *senVisRes
-    affiliation: *sampleAff
-    photo: 
-    email: all_might@example.com
-    link:  https://www.example.com
+    email: 
+    link: 

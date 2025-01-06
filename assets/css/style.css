@@ -64,7 +64,7 @@
 /* Sidebar (News Section) */
 .sidebar {
     width: 100%;
-    max-width: 400px; /* Fixed width for sidebar */
+    max-width: 300px; /* Fixed width for sidebar */
     background-color: #f3f4f6; /* Light gray background */
     padding: 20px;
     border-top: 2px solid #d1d5db; /* Light gray border on top */
@@ -236,8 +236,8 @@
     margin-bottom: 5px;
 }
 
-.footer-block-300px {
-    flex: 1 1 300px;
+.footer-block-width {
+    flex: 1 1 var(--flex-width, 300px);
 }
 
 .footer-block-auto {

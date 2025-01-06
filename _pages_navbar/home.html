@@ -7,43 +7,39 @@ title: Home
 permalink: /
 ---
 
+{%- assign general = site.data.general -%}
+{%- assign proj_name = general.name -%}
+{%- assign affiliations = general.affiliations -%}
+
 <p>
-    Our research group is affiliated with some institutions.
+    The {{ proj_name.full }} {{ proj_name.append }} is affiliated with
+    the <a href="{{- affiliations.uga.link -}}">{{ affiliations.uga.name }} ({{affiliations.uga.abbrv}})</a>
+    and
+    the <a href="{{- affiliations.lsi.link -}}">{{ affiliations.lsi.name }} ({{affiliations.lsi.abbrv}})</a>.
+    It is funded by the {{ affiliations.lsi.abbrv }}.
 </p>
-<h1>Research</h1>
+<h1>Summary</h1>
 <p>
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean lacinia semper quam. Praesent non ultrices nulla.
-    Integer velit elit, ornare eget tincidunt ac, pellentesque in ipsum. Donec tristique finibus arcu eu fermentum.
-    Pellentesque convallis in urna ac rutrum. Praesent dignissim lacus sit amet tortor efficitur facilisis.
-    Nunc porta sem nec metus luctus maximus. Nam dui neque, ullamcorper in risus consequat, tempus pulvinar magna.
+    {{ general.description }}
 </p>
-<h1>Research Topics</h1>
+<h1>Research and Development Themes</h1>
 <ul>
     <li>
-        <h2>Topic 1</h2>
+        <h2>Multimodal Image Processing</h2>
         <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean lacinia semper quam. Praesent non ultrices nulla.
-            Integer velit elit, ornare eget tincidunt ac, pellentesque in ipsum. Donec tristique finibus arcu eu fermentum.
-            Pellentesque convallis in urna ac rutrum. Praesent dignissim lacus sit amet tortor efficitur facilisis.
-            Nunc porta sem nec metus luctus maximus. Nam dui neque, ullamcorper in risus consequat, tempus pulvinar magna.
+            Description.
         </p>
     </li>
     <li>
-        <h2>Topic 2</h2>
+        <h2>Advanced Computer Vision</h2>
         <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean lacinia semper quam. Praesent non ultrices nulla.
-            Integer velit elit, ornare eget tincidunt ac, pellentesque in ipsum. Donec tristique finibus arcu eu fermentum.
-            Pellentesque convallis in urna ac rutrum. Praesent dignissim lacus sit amet tortor efficitur facilisis.
-            Nunc porta sem nec metus luctus maximus. Nam dui neque, ullamcorper in risus consequat, tempus pulvinar magna.
+            Description.
         </p>
     </li>
     <li>
-        <h2>Topic 3</h2>
+        <h2>Technology Transfer and Valorization</h2>
         <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean lacinia semper quam. Praesent non ultrices nulla.
-            Integer velit elit, ornare eget tincidunt ac, pellentesque in ipsum. Donec tristique finibus arcu eu fermentum.
-            Pellentesque convallis in urna ac rutrum. Praesent dignissim lacus sit amet tortor efficitur facilisis.
-            Nunc porta sem nec metus luctus maximus. Nam dui neque, ullamcorper in risus consequat, tempus pulvinar magna.
+            Description.
         </p>
     </li>
 </ul>

@@ -1,26 +1,5 @@
 # For now, the news list should be sorted manually
 news:
-  - title: News Title 6
+  - title: The project was chosen for funding by the Institut Carnot Logiciels et Systèmes Intelligents (LSI).
     date: Nov 2024
     link: /news/
-
-  - title: News Title 5
-    date: Jul 2024
-    link: https://www.example.com
-
-  - title: News Title 4
-    date: Apr 2024
-    link: /news/
-    
-  - title: News Title 3
-    date: Dec 2023
-    link: /news/
-
-  - title: News Title 2
-    date: Jul 2023
-    link: /news/
-
-  - title: News Title 1
-    date: Jun 2023
-    link: /news/
-    

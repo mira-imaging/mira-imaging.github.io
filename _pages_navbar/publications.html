@@ -17,59 +17,69 @@ permalink: /publications/
     Selected Publications
 </h1>
 
-{% assign pubs_grouped = pubs_config.publications | sort: "date" | reverse | group_by: "year" %}
+{% assign pubs = pubs_config.publications %}
 
-<div>
-{% for pubs_year in pubs_grouped %}
-    {% assign year = pubs_year.name %}
-    {% assign pubs = pubs_year.items %}
-    <div class="publication-year-container">
-        <div class="year-header">
-            {{ year }}
-        </div>
-        {% for pub in pubs %}
-            <div class="publication-item">
-                <div class="publication-title">
-                    {{ pub.title }}
-                </div>
-                <div class="publication-authors">
-                {% for author in pub.authors %}
-                    {% if forloop.last and forloop.first == false %}
-                        and {{ author }}
-                    {% elsif forloop.last %}
-                        {{ author }}
-                    {% else %}
-                        {{ author }},
-                    {% endif %}
-                {% endfor %}
-                </div>
-                <div class="publication-venue">
-                    <i>
-                    <span class="publication-type">{{- pub.type.code -}}</span>
-                    {% if pub.venue.abbrv %}
-                        {{ pub.venue.title }} ({{ pub.venue.abbrv }}),
-                    {% else %}
-                        {{ pub.venue.title }},
-                    {% endif %}
-                    {{ pub.year }}
-                    </i>
-                </div>
-                <div class="publication-links">
-                    {% for link in pub.links %}
-                        {% if link.link %}
-                            {%- if link.link contains '://' -%}
-                                <a href="{{ link.link }}" class="publication-link">
-                            {%- else -%}
-                                <a href="{{ site.baseurl }}{{ link.link }}" class="publication-link">
-                            {%- endif -%}
-                                    <i style="font-style:normal" class="{{- link.icon -}}"></i>
-                                    {{ link.type }}
-                                </a>
+{% if pubs == empty or pubs == nil %}
+
+  <p>No publications yet under this project.</p>
+
+{% else %}
+
+    {% assign pubs_grouped = pubs | sort: "date" | reverse | group_by: "year" %}
+
+    <div>
+    {% for pubs_year in pubs_grouped %}
+        {% assign year = pubs_year.name %}
+        {% assign pubs = pubs_year.items %}
+        <div class="publication-year-container">
+            <div class="year-header">
+                {{ year }}
+            </div>
+            {% for pub in pubs %}
+                <div class="publication-item">
+                    <div class="publication-title">
+                        {{ pub.title }}
+                    </div>
+                    <div class="publication-authors">
+                    {% for author in pub.authors %}
+                        {% if forloop.last and forloop.first == false %}
+                            and {{ author }}
+                        {% elsif forloop.last %}
+                            {{ author }}
+                        {% else %}
+                            {{ author }},
                         {% endif %}
                     {% endfor %}
+                    </div>
+                    <div class="publication-venue">
+                        <i>
+                        <span class="publication-type">{{- pub.type.code -}}</span>
+                        {% if pub.venue.abbrv %}
+                            {{ pub.venue.title }} ({{ pub.venue.abbrv }}),
+                        {% else %}
+                            {{ pub.venue.title }},
+                        {% endif %}
+                        {{ pub.year }}
+                        </i>
+                    </div>
+                    <div class="publication-links">
+                        {% for link in pub.links %}
+                            {% if link.link %}
+                                {%- if link.link contains '://' -%}
+                                    <a href="{{ link.link }}" class="publication-link">
+                                {%- else -%}
+                                    <a href="{{ site.baseurl }}{{ link.link }}" class="publication-link">
+                                {%- endif -%}
+                                        <i style="font-style:normal" class="{{- link.icon -}}"></i>
+                                        {{ link.type }}
+                                    </a>
+                            {% endif %}
+                        {% endfor %}
+                    </div>
                 </div>
-            </div>
-        {% endfor %}
+            {% endfor %}
+        </div>
+    {% endfor %}
     </div>
-{% endfor %}
-</div>
+
+{% endif %}

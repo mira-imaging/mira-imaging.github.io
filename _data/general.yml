@@ -10,17 +10,23 @@ name:
 affiliations:
   uga:
     name: Université Grenoble Alpes
+    abbrv: UGA
     link: https://www.univ-grenoble-alpes.fr/
+  lsi:
+    name: Institut Carnot Logiciels & Systèmes Intelligents
+    abbrv: Carnot LSI
+    link: https://carnot-lsi.com/
   sampleAff:
     name: Sample Institution
+    abbrv: SI
     link: https://example.com
 
 description: >-
-  The Multi-camera Imaging Research and Acquisition (MIRA) Platform aims at multimodal
-    image data acquisition and processing.
+  The Multi-camera Imaging Research and Acquisition (MIRA) Platform aims at developing
+    a platform for real multimodal image data acquisition and processing.
 
 contact:
-  email: mohamad.jouni [at] grenoble-inp.fr
+  email: mauro.dalla-mura [at] grenoble-inp.fr
   phone: "+00 (XX) AA BB CC DD"
 
 address:
