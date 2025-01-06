@@ -9,25 +9,34 @@ permalink: /projects/
 </h1>
 
 {%- assign projects = site.data.projects.projects -%}
-{%- for item in projects -%}
 
-    <div class="news-item">
-        <div class="news-date">
-            <b>
-                {{- item.name -}}
-            </b>
+{% if projects == empty or projects == nil %}
+
+  <p>No sub-projects yet under this project.</p>
+
+{% else %}
+
+    {%- for item in projects -%}
+
+        <div class="news-item">
+            <div class="news-date">
+                <b>
+                    {{- item.name -}}
+                </b>
+            </div>
+            {%- if item.link contains '://' -%}
+                <a href="{{ item.link }}" class="news-link">
+            {%- else -%}
+                <a href="{{ site.baseurl }}{{ item.link }}" class="news-link">
+            {%- endif -%}
+                    <i style="font-style:normal" class="fas fa-link"></i>
+                    Link
+                </a>
+            <span class="news-bold">
+                {{- item.description -}}
+            </span>
         </div>
-        {%- if item.link contains '://' -%}
-            <a href="{{ item.link }}" class="news-link">
-        {%- else -%}
-            <a href="{{ site.baseurl }}{{ item.link }}" class="news-link">
-        {%- endif -%}
-                <i style="font-style:normal" class="fas fa-link"></i>
-                Link
-            </a>
-        <span class="news-bold">
-            {{- item.description -}}
-        </span>
-    </div>
 
-{%- endfor -%}
+    {%- endfor -%}
+
+{% endif %}

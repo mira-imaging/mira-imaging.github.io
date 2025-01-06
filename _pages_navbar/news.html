@@ -9,6 +9,13 @@ permalink: /news/
 </h1>
 
 {%- assign news = site.data.news.news -%}
+
+{% if news == empty or news == nil %}
+
+  <p>No news yet under this project.</p>
+
+{% else %}
+
 {%- for item in news -%}
 
     <div class="news-item">
@@ -31,3 +38,5 @@ permalink: /news/
     </div>
 
 {%- endfor -%}
+
+{% endif %}

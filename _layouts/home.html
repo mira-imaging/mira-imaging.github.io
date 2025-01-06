@@ -16,24 +16,28 @@ layout: default
             <div class="sidebar-news-block">
                 <h1 class="sidebar-news-title">News</h1>
                 {%- assign news = site.data.news.news | slice: 0, 5 -%}
-                {%- for item in news -%}
-                <div class="sidebar-news-item">
-                    <div class="sidebar-news-date">{{- item.date -}}</div>
-                    
-                    [
-                    {%- if item.link contains '://' -%}
-                        <a href="{{ item.link }}" class="sidebar-news-link">
-                    {%- else -%}
-                        <a href="{{ site.baseurl }}{{ item.link }}" class="sidebar-news-link">
-                    {%- endif -%}
-                    Link</a>]
+                {% if news == empty or news == nil %}
+                    <p>No news yet under this project.</p>
+                {% else %}
+                    {%- for item in news -%}
+                    <div class="sidebar-news-item">
+                        <div class="sidebar-news-date">{{- item.date -}}</div>
+                        
+                        [
+                        {%- if item.link contains '://' -%}
+                            <a href="{{ item.link }}" class="sidebar-news-link">
+                        {%- else -%}
+                            <a href="{{ site.baseurl }}{{ item.link }}" class="sidebar-news-link">
+                        {%- endif -%}
+                        Link</a>]
 
-                    <span style="font-size: 1.0rem;">{{ item.title }}</span>
-                </div>
-                {%- endfor -%}
-                <div class="sidebar-news-item">
-                    For older news, please visit the <a href="{{- site.baseurl -}}/news/" class="link">News</a> page.
-                </div>
+                        <span style="font-size: 1.0rem;">{{ item.title }}</span>
+                    </div>
+                    {%- endfor -%}
+                    <div class="sidebar-news-item">
+                        For older news, please visit the <a href="{{- site.baseurl -}}/news/" class="link">News</a> page.
+                    </div>
+                {% endif %}
             </div>
         </div>
     </div>
