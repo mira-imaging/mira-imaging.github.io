@@ -4,11 +4,12 @@
 # Any modification on this file requires building again (via jekyll build or jekyll serve).
 
 # SEO-related fields
-title: Scientific Research and Development Group
+title: MIRA Platform
 description: >-
-  Developing novel approaches.
+  The Multi-camera Imaging Research and Acquisition (MIRA) Platform aims at developing
+    a platform for real multimodal image data acquisition and processing.
 author: Mohamad Jouni
-url: "mhmdjouni.github.io" # the base hostname & protocol for your site, e.g. http://example.com
+url: "mira-imaging.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 baseurl: "" # the subpath of your site, e.g. /blog
 
 # Build settings
