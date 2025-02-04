@@ -1,5 +1,9 @@
 # For now, the news list should be sorted manually
 news:
-  - title: The project was chosen for funding by the Institut Carnot Logiciels et Systèmes Intelligents (LSI).
+  - title: We are participating in the Tech&Fest event with our multi-camera fusion demonstrator Fugito SS0.0, which aims at improving the spatial resolution of snapshot hyperspectral cameras via image fusion software technology.
+    date: Feb 2025
+    link: https://www.tech-fest.fr/en/
+
+  - title: The project was accepted for funding by the Institut Carnot Logiciels et Systèmes Intelligents (LSI).
     date: Nov 2024
-    link: /news/
+    link: https://carnot-lsi.com/en/home/
