@@ -12,14 +12,44 @@ affiliations:
     name: Université Grenoble Alpes
     abbrv: UGA
     link: https://www.univ-grenoble-alpes.fr/
+    logo: /images/logos/affiliations/uga.svg
+    logo_height: 90
+  ginp:
+    name: Institut Polytechnique de Grenoble
+    abbrv: Grenoble INP
+    link: https://www.grenoble-inp.fr/
+    logo: /images/logos/affiliations/grenoble_inp.png
+    logo_height: 90
+  gipsa:
+    name: Grenoble Images Parole Signal Automatique Laboratoire
+    abbrv: GIPSA-lab
+    link: https://www.gipsa-lab.grenoble-inp.fr/
+    logo: /images/logos/affiliations/gipsa.png
+    logo_height: 90
   lsi:
     name: Institut Carnot Logiciels & Systèmes Intelligents
     abbrv: Carnot LSI
     link: https://carnot-lsi.com/
-  sampleAff:
-    name: Sample Institution
-    abbrv: SI
-    link: https://example.com
+    logo: /images/logos/affiliations/carnot_lsi.svg
+    logo_height: 75
+  anr:
+    name: Agence Nationale de la Recherche
+    abbrv: ANR
+    link: https://anr.fr/
+    logo: /images/logos/affiliations/anr.png
+    logo_height: 50
+  iuf:
+    name: Institut Universitaire de France
+    abbrv: IUF
+    link: https://www.iufrance.fr/
+    logo: /images/logos/affiliations/iuf_full.png
+    logo_height: 75
+  persyval:
+    name: Pervasive Systems and Algorithms Lab
+    abbrv: PERSYVAL-lab
+    link: https://persyval-lab.org/fr
+    logo: /images/logos/affiliations/persyval.png
+    logo_height: 65
 
 description: >-
   The Multi-camera Imaging Research and Acquisition (MIRA) Platform aims at developing
@@ -27,7 +57,7 @@ description: >-
 
 contact:
   email: mauro.dalla-mura [at] grenoble-inp.fr
-  phone: "+00 (XX) AA BB CC DD"
+  phone: "+33 (XX) AA BB CC DD"
 
 address:
   building: "GIPSA-Lab"
@@ -50,8 +80,13 @@ images_dirs:
   banners: images/banners
   profile_pictures: images/profile_pictures
 
-logo_filename: triple_lens.jpg
-banner_filename: banner_01.jpg
+logo_header_filename: mira/triple_lenses.png
+logo_footer_filename: mira/white_text.png
+
+banner_filename:
+  Home: banner_01.jpg
+  Research: banner_02.jpg
+
 carousel_files:
   - banner_01.jpg
   - banner_02.jpg

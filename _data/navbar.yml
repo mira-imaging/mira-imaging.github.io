@@ -2,11 +2,20 @@ pages:
   - title: Home
     permalink: /
 
+  - title: Research
+    permalink: /research/
+
+  # - title: Teaching
+  #   permalink: /teaching/
+
+  # - title: Service
+  #   permalink: /service/
+
   - title: Members
     permalink: /members/
 
-  - title: Publications
-    permalink: /publications/
+  # - title: Publications
+  #   permalink: /publications/
 
   # - title: Projects
   #   permalink: /projects/
@@ -14,5 +23,11 @@ pages:
   - title: News
     permalink: /news/
 
-  - title: Guide
-    permalink: /guide/
+  # - title: Gallery
+  #   permalink: /gallery/
+
+  - title: Contact
+    permalink: /contact/
+
+  # - title: Guide
+  #   permalink: /guide/

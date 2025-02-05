@@ -8,3 +8,4 @@ Gemfile.lock
 
 .idea/
 images/banners/orig
+*ignore/

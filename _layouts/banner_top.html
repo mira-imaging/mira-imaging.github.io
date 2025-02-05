@@ -1,0 +1,17 @@
+---
+layout: default
+---
+{%- assign banners_dir = site.data.general.images_dirs.banners -%}
+{%- assign banner_filename = site.data.general.banner_filename[page.title] | default: "default.jpg" -%}
+
+<div class="home-container">
+    <div class="home-banner">
+        <img
+        class="home-banner-image"
+        src="{{- site.baseurl -}}/{{- banners_dir -}}/{{- banner_filename -}}"
+        alt="{{- site.baseurl -}}/{{- banners_dir -}}/{{- banner_filename -}}"
+        />
+    </div>
+    {{ content }}
+    <div class="footer-spacer"></div>
+</div>

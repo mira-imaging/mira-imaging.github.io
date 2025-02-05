@@ -12,29 +12,42 @@ permalink: /
 {%- assign affiliations = general.affiliations -%}
 
 <p>
-    The {{ proj_name.full }} {{ proj_name.append }} is affiliated with
-    the <a href="{{- affiliations.uga.link -}}">{{ affiliations.uga.name }} ({{affiliations.uga.abbrv}})</a>
-    and
-    the <a href="{{- affiliations.lsi.link -}}">{{ affiliations.lsi.name }} ({{affiliations.lsi.abbrv}})</a>.
-    It is funded by the {{ affiliations.lsi.abbrv }}.
+    The {{ proj_name.full }} {{ proj_name.append }} is the technological platform on multi-sensor imaging at 
+    <a href="{{- affiliations.gipsa.link -}}">{{ affiliations.gipsa.name }} ({{affiliations.gipsa.abbrv}})</a>,
+    specialized in spectral imaging and image fusion.
 </p>
+
 <h1>Summary</h1>
 <p>
     {{ general.description }}
 </p>
-<h1>Research and Development Themes</h1>
+<h1>Themes</h1>
 <ul>
     <li>
         <h2>Multimodal Image Processing</h2>
     </li>
     <li>
-        <h2>Collaborative & Contextual Computer Vision</h2>
+        <h2>Spectral Imaging</h2>
+    </li>
+    <li>
+        <h2>Computer Vision</h2>
+    </li>
+</ul>
+<h1>Services</h1>
+<ul>
+    <li>
+        <h2>Research and Development</h2>
     </li>
     <li>
         <h2>Technology Transfer & Valorization</h2>
     </li>
+    <li>
+        <h2>Teaching</h2>
+    </li>
 </ul>
 <p>
-    For more information, please visit our
+    For more information,
+    <a href="{{- site.baseurl -}}/contact/" class="link">contact us</a>
+    or visit our
     <a href="{{- site.baseurl -}}/news/" class="link">News</a> pages.
 </p>

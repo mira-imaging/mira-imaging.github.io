@@ -230,7 +230,8 @@
 }
 .footer-block-common h3 {
     color: #00bcd4;
-    font-weight: 0;
+    font-weight: bold;
+    font-size: 1.3rem;
 }
 .footer-block-common p {
     margin-bottom: 5px;

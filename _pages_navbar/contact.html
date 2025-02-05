@@ -1,0 +1,46 @@
+---
+layout: page_padded
+title: Contact
+permalink: /contact/
+---
+
+{%- assign general = site.data.general -%}
+<!-- Contact Information -->
+<div class="footer-block-width footer-block-common" style="--flex-width: 200px;">
+  <h3 style="color: black; font-size: 1.5rem; font-weight: bold;">Access</h3>
+  <p style="color: black; font-size: 1.1rem;">
+    {{ general.address.building }}<br>
+    {{ general.address.street }}<br>
+    {{ general.address.city }}<br>
+    {{ general.address.country }}.
+    (<a href="{{ general.address.maps_link }}">Maps</a>)
+  </p>
+</div>
+
+<br>
+
+<!-- Contact Information -->
+<div class="footer-block-auto footer-block-common">
+  <h3 style="color: black; font-size: 1.5rem; font-weight: bold;">Contact Us</h3>
+  <p style="color: black; font-size: 1.1rem;">
+    <b>Email:</b> <a href="mailto:{{- general.contact.email -}}"  style="color: black; font-size: 1.1rem;">{{ general.contact.email }}</a>
+  </p>
+  <p style="color: black; font-size: 1.1rem;">
+    <b>Phone:</b> {{ general.contact.phone }}
+  </p>
+</div>
+
+<br>
+
+<!-- Social Media Links -->
+<div class="footer-block-auto footer-block-common">
+  <h3 style="color: black; font-size: 1.5rem; font-weight: bold;">Follow Us</h3>
+  <div>
+    {% for link in general.social %}
+      <div style="color: black; font-size: 1.1rem;">
+        <i style="font-style:normal" class="{{ link[1].icon }}"></i>
+        <a href="{{- link[1].link -}}" target="_blank"  style="color: black; font-size: 1.1rem;">{{ link[0] }}</a>
+      </div>
+    {% endfor %}
+  </div>
+</div>

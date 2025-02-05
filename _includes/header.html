@@ -4,11 +4,11 @@
     {%- assign pages = site.data.navbar.pages | default: default_pages -%}
     {%- assign titles_size = site.pages_navbar | map: 'title' | join: '' | size -%}
     {%- assign logos_dir = site.data.general.images_dirs.logos -%}
-    {%- assign logo_fn = site.data.general.logo_filename | default: "default.jpg" -%}
+    {%- assign logo_fn = site.data.general.logo_header_filename | default: "default.jpg" -%}
 
     <a class="profile-link" rel="author" href="{{ "/" | relative_url }}">
       <img src="{{- site.baseurl -}}/{{- logos_dir -}}/{{- logo_fn -}}" class="logo-image" />
-      <span class="profile-name">{{ site.data.general.name.title | escape }}</span>
+      <span class="profile-name"><b>{{ site.data.general.name.title | escape }}</b></span>
     </a>
 
     {%- if titles_size > 0 -%}
