@@ -8,7 +8,7 @@
 
     <a class="profile-link" rel="author" href="{{ "/" | relative_url }}">
       <img src="{{- site.baseurl -}}/{{- logos_dir -}}/{{- logo_fn -}}" class="logo-image" />
-      <span class="profile-name"><b>{{ site.data.general.name.title | escape }}</b></span>
+      <span class="profile-name">{{ site.data.general.header_title | escape }}</span>
     </a>
 
     {%- if titles_size > 0 -%}

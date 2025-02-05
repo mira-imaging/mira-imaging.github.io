@@ -5,6 +5,8 @@
 layout: home
 title: Home
 permalink: /
+proj_name: functions/project_name
+affiliation: functions/affiliations/link.html
 ---
 
 {%- assign general = site.data.general -%}
@@ -12,8 +14,8 @@ permalink: /
 {%- assign affiliations = general.affiliations -%}
 
 <p>
-    The {{ proj_name.full }} {{ proj_name.append }} is the technological platform on multi-sensor imaging at 
-    <a href="{{- affiliations.gipsa.link -}}">{{ affiliations.gipsa.name }} ({{affiliations.gipsa.abbrv}})</a>,
+    The {% include {{ page.proj_name }}/append.html %} is the technological platform on multi-sensor imaging at 
+    {% include {{ page.affiliation }} key="gipsa" %},
     specialized in spectral imaging and image fusion.
 </p>
 

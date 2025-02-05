@@ -1,11 +1,9 @@
 name:
   long: Multi-camera Imaging Research and Acquisition
-  short: MIRA
   abbrv: MIRA
-  lower: mira
-  full: Multi-camera Imaging Research and Acquisition (MIRA)
   append: Platform
-  title: MIRA Platform
+
+header_title: MIRA Platform
 
 affiliations:
   uga:
