@@ -1,5 +1,6 @@
 {% if page.title == "Home" %}
-  <div style="text-align: center; width: inherit;">
+  <div style="text-align: center; margin-bottom: 10px;">
+    <h1 style="font-weight: bold; font-size: 2.1rem; margin-bottom: 0rem;">Supported by</h1>
     {%- assign affiliations = site.data.general.affiliations -%}
     {%- for aff in affiliations -%}
         {%- assign values = aff[1] -%}
@@ -10,13 +11,13 @@
             {%- assign img_src = site.baseurl | append: values.logo -%}
         {%- endif -%}
 
-        <a class="" href="{{ values.link }}" title="">
+        <a style="text-decoration: none;" href="{{ values.link }}" title="">
             <img
             alt="{{ values.name }}"
             data-alt="{{ values.name }}"
             data-title="{{ values.name }}"
             src="{{ img_src }}"
-            style="height: {{- values.logo_height -}}px; margin: 20px; float: none;"
+            style="margin: 10px 20px; float: none; height: {{ values.logo_realtive_height | times: 100 }}px;"
             title="{{ values.name }}"
             >
         </a>
@@ -31,15 +32,17 @@
        {%- assign logos_dir = site.data.general.images_dirs.logos -%}
        {%- assign logo_fn = site.data.general.logo_footer_filename | default: "default.jpg" -%}
       <div class="footer-block-width footer-block-common" style="--flex-width: 300px;">
-        <img
-        class=""
-        alt="{{ proj_name }}"
-        data-alt="{{ proj_name }}"
-        data-title="{{ proj_name }}"
-        src="{{- site.baseurl -}}/{{- logos_dir -}}/{{- logo_fn -}}"
-        style="width: 180px;"
-        title="{{ proj_name }}"
-        />
+        <a class=""  rel="author" href="{{ "/" | relative_url }}" title="">
+          <img
+          class=""
+          alt="{{ proj_name }}"
+          data-alt="{{ proj_name }}"
+          data-title="{{ proj_name }}"
+          src="{{- site.baseurl -}}/{{- logos_dir -}}/{{- logo_fn -}}"
+          style="width: 180px;"
+          title="{{ proj_name }}"
+          />
+        </a>
       </div>
       <!-- Contact Information -->
       <div class="footer-block-width footer-block-common" style="--flex-width: 300px;">

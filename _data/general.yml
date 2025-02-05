@@ -13,43 +13,43 @@ affiliations:
     abbrv: UGA
     link: https://www.univ-grenoble-alpes.fr/
     logo: /images/logos/affiliations/uga.svg
-    logo_height: 90
+    logo_realtive_height: 0.80
   ginp:
     name: Institut Polytechnique de Grenoble
     abbrv: Grenoble INP
     link: https://www.grenoble-inp.fr/
     logo: /images/logos/affiliations/grenoble_inp.png
-    logo_height: 90
+    logo_realtive_height: 0.80
   gipsa:
     name: Grenoble Images Parole Signal Automatique Laboratoire
     abbrv: GIPSA-lab
     link: https://www.gipsa-lab.grenoble-inp.fr/
     logo: /images/logos/affiliations/gipsa.png
-    logo_height: 90
+    logo_realtive_height: 0.80
   lsi:
     name: Institut Carnot Logiciels & Systèmes Intelligents
     abbrv: Carnot LSI
     link: https://carnot-lsi.com/
     logo: /images/logos/affiliations/carnot_lsi.svg
-    logo_height: 75
+    logo_realtive_height: 0.65
   anr:
     name: Agence Nationale de la Recherche
     abbrv: ANR
     link: https://anr.fr/
     logo: /images/logos/affiliations/anr.png
-    logo_height: 50
+    logo_realtive_height: 0.35
   iuf:
     name: Institut Universitaire de France
     abbrv: IUF
     link: https://www.iufrance.fr/
     logo: /images/logos/affiliations/iuf_full.png
-    logo_height: 75
+    logo_realtive_height: 0.65
   persyval:
     name: Pervasive Systems and Algorithms Lab
     abbrv: PERSYVAL-lab
     link: https://persyval-lab.org/fr
     logo: /images/logos/affiliations/persyval.png
-    logo_height: 65
+    logo_realtive_height: 0.5
 
 description: >-
   The Multi-camera Imaging Research and Acquisition (MIRA) Platform aims at developing

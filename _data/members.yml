@@ -28,8 +28,14 @@ affiliations:
   - &ginp Grenoble Institute of Technology
   - &sampleAff Sample Affiliation
 
+link_icons:
+  - &ic-email fas fa-fw fa-envelope
+  - &ic-github fab fa-fw fa-github
+  - &ic-twitter fab fa-x-twitter
+  - &ic-x fab fa-x-twitter
+  - &ic-x-twitter fab fa-x-twitter
+
 members:
-  # Member keys are used for permalinks or to identify / filter a member from any page.
   - key: dallamum
     name: Prof. Mauro Dalla Mura
     category: *leader
@@ -37,7 +43,23 @@ members:
     affiliation: *ginp
     photo: mauro_dallamura.png
     email: mauro.dalla-mura@grenoble-inp.fr
-    link:  https://scholar.google.com/citations?user=qbdbtn4AAAAJ&hl=en
+    personal_link:  https://scholar.google.com/citations?user=qbdbtn4AAAAJ&hl=en
+    years: Since 2024
+
+  - key: jounim
+    name: Mohamad Jouni
+    category: *researcher
+    role: *postdoc
+    affiliation: *uga
+    photo: mohamad_jouni.png
+    email: mohamad.jouni@grenoble-inp.fr
+    personal_link: https://mhmdjouni.github.io
+    years: Since 2024
+    icon_links:
+      - link: https://github.com/mhmdjouni
+        icon: *ic-github
+      - link: https://x.com/mhmdjouni
+        icon: *ic-x-twitter
   
   - key: negrea
     name: Amaury Nègre
@@ -46,16 +68,11 @@ members:
     affiliation: *ginp
     photo: amaury_negre.jpg
     email: amaury.negre@grenoble-inp.fr
-    link:  
-
-  - key: jounim
-    name: Mohamad Jouni
-    category: *researcher
-    role: *resEng
-    affiliation: *uga
-    photo: mohamad_jouni.png
-    email: mohamad.jouni@grenoble-inp.fr
-    link: https://mhmdjouni.github.io
+    personal_link: 
+    years: Since 2024
+    icon_links:
+      - link: https://github.com/negre
+        icon: *ic-github
 
   - key: ronningenk
     name: Kari Torfinnsdatter Rønningen
@@ -63,5 +80,7 @@ members:
     role: *studProj
     affiliation: *ginp
     photo: 
-    email: 
-    link: 
+    email: kari.ronningen@grenoble-inp.org
+    personal_link: 
+    years: Spring 2025
+    icon_links:

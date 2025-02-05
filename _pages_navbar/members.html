@@ -5,26 +5,20 @@ permalink: /members/
 ---
 
 <h1 class="news-section-title">
-    Members
+    {{ page.title }}
 </h1>
 
 {% assign members_config = site.data.members %}
 {% assign members = members_config.members %}
-
 {% if members == empty or members == nil %}
-
-  <p>No members yet under this project.</p>
-
+    <p>No members yet under this project.</p>
 {% else %}
-
     {% assign grouped_members = members | group_by: "category.order" | sort: "name" %}
     {% assign pfp_dir = site.data.general.images_dirs.profile_pictures %}
-
     {% for group in grouped_members %}
     {% assign category = members_config.categories | where: "order", group.name | first %}
     {% assign category_type = category.type %}
     {% assign members_cat = group.items %}
-
     <div class="category-header">
         {{- category_type -}}
     </div>
@@ -35,11 +29,11 @@ permalink: /members/
             <img src="{{- site.baseurl -}}/{{- pfp_dir -}}/{{- member_photo -}}" class="member-photo">
             <div class="member-info">
                 <div class="member-name">
-                    {%- if member.link -%}
-                        {%- if member.link contains '://' -%}
-                            <a href="{{ member.link }}" class="member-link">
+                    {%- if member.personal_link -%}
+                        {%- if member.personal_link contains '://' -%}
+                            <a href="{{ member.personal_link }}" class="member-link">
                         {%- else -%}
-                            <a href="{{ site.baseurl }}{{ member.link }}" class="member-link">
+                            <a href="{{ site.baseurl }}{{ member.personal_link }}" class="member-link">
                         {%- endif -%}
                         {{- member.name -}}
                     </a>
@@ -53,10 +47,19 @@ permalink: /members/
                 <a class="member-affiliation">
                     {{- member.affiliation -}}
                 </a>
+                <span class="member-year">
+                    {{- member.years -}}
+                </span>
+                <div class="member-icon">
+                    <a href="mailto:{{- member.email -}}" style="font-style:normal" class="fas fa-fw fa-envelope"></a>
+                    {% for icon_link in member.icon_links %}
+                        ·
+                        <a href="{{- icon_link.link -}}" style="font-style:normal" class="{{ icon_link.icon }}"></a>
+                    {% endfor %}
+                </div>
             </div>
         </div>
         {% endfor %}
     </div>
     {% endfor %}
-
 {% endif %}

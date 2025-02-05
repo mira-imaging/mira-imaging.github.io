@@ -397,7 +397,7 @@
 .members-list {
     display: grid;
     grid-template-columns: repeat(3, 1fr); /* 3 columns by default */
-    gap: 1.5rem; /* gap-x-10 and gap-y-10 equivalent */
+    gap: 1.25rem; /* gap-x-10 and gap-y-10 equivalent */
     margin-top: 0rem; /* pt-6 equivalent */
     margin-bottom: 2.5rem; /* pb-10 equivalent */
 }
@@ -406,14 +406,14 @@
 .member-card {
     display: flex;
     flex-direction: row; /* Stack photo and info vertically */
-    gap: 1.3rem; /* gap-x-4 equivalent */
+    gap: 1rem; /* gap-x-4 equivalent */
     box-sizing: border-box;
 }
 
 /* Member Photo */
 .member-photo {
-    width: 103px;
-    height: 135px;
+    width: 107px;
+    height: 140px;
     object-fit: cover;
     border-radius: 0.5rem; /* rounded-lg equivalent */
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* shadow-xl equivalent */
@@ -424,7 +424,7 @@
     display: flex;
     flex-direction: column;
     gap: 2px; /* gap-y-0.5 equivalent */
-    padding-top: 5px;
+    padding-top: 3px;
     flex-grow: 1; /* Ensures the info block stretches to take available space */
 }
 
@@ -432,7 +432,7 @@
 .member-name {
     font-size: 1.1rem;
     font-weight: bold;
-    margin-bottom:5px;
+    /* margin-bottom: 5px; */
 }
 
 /* Member Role */
@@ -444,6 +444,17 @@
 .member-affiliation {
     color: #696969;
     font-size: 0.90rem;
+}
+
+/* Member Affiliation */
+.member-year {
+    /* color: #696969; */
+    font-size: 0.90rem;
+}
+
+/* Member Affiliation */
+.member-icon a {
+    text-decoration: none;
 }
 
 /* Media Queries for Responsive Design */
