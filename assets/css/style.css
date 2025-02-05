@@ -232,10 +232,11 @@
 .footer-block-common h3 {
     color: #00bcd4;
     font-weight: bold;
-    font-size: 1.3rem;
+    font-size: 1.1rem;
 }
 .footer-block-common p {
     margin-bottom: 5px;
+    font-size: 0.9rem;
 }
 
 .footer-block-width {

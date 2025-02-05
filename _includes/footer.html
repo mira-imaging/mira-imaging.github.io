@@ -46,8 +46,8 @@
       </div>
       <!-- Contact Information -->
       <div class="footer-block-width footer-block-common" style="--flex-width: 300px;">
+        <h3>Access</h3>
         <p>
-          <h3>Access</h3>
           {{ general.address.building }}<br>
           {{ general.address.street }}<br>
           {{ general.address.city }}<br>
@@ -55,7 +55,7 @@
           (<a href="{{ general.address.maps_link }}">Maps</a>)
         </p>
         <br>
-        <h3>Contact Us</h3>
+        <h3>Contact</h3>
         <p>
           <b>Email:</b> <a href="mailto:{{- general.contact.email -}}" class="footer-link">{{ general.contact.email }}</a>
         </p>
@@ -66,14 +66,14 @@
       <!-- Social Media Links -->
       <div class="footer-block-auto footer-block-common">
         <h3>Follow Us</h3>
-        <div>
+        <p>
           {% for link in general.social %}
-            <div>
+            <p>
               <i style="font-style:normal" class="{{ link[1].icon }}"></i>
               <a href="{{- link[1].link -}}" target="_blank" class="footer-link">{{ link[0] }}</a>
-            </div>
+            </p>
           {% endfor %}
-        </div>
+        </p>
       </div>
     </div>
     <!-- Copyright Section -->
