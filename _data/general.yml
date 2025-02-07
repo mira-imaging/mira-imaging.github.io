@@ -4,6 +4,7 @@ name:
   append: Platform
 
 header_title: MIRA Platform
+footer_title: MIRA Platform
 
 affiliations:
   uga:
@@ -40,7 +41,7 @@ affiliations:
     name: Institut Universitaire de France
     abbrv: IUF
     link: https://www.iufrance.fr/
-    logo: /images/logos/affiliations/iuf_full.png
+    logo: /images/logos/affiliations/iuf.png
     logo_realtive_height: 0.65
   persyval:
     name: Pervasive Systems and Algorithms Lab
@@ -84,6 +85,7 @@ logo_footer_filename: mira/white_text.png
 banner_filename:
   Home: banner_01.jpg
   Research: banner_02.jpg
+  Teaching: banner_03.jpg
 
 carousel_files:
   - banner_01.jpg
