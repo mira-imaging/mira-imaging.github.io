@@ -5,8 +5,8 @@ pages:
   - title: Research
     permalink: /research/
 
-  # - title: Teaching
-  #   permalink: /teaching/
+  - title: Teaching
+    permalink: /teaching/
 
   # - title: Service
   #   permalink: /service/
