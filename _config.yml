@@ -9,7 +9,7 @@ description: >-
   The Multi-camera Imaging Research and Acquisition (MIRA) Platform aims at developing
     a platform for real multimodal image data acquisition and processing.
 author: Mohamad Jouni
-url: "mira-imaging.github.io" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://mira-imaging.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 baseurl: "" # the subpath of your site, e.g. /blog
 
 # Build settings
@@ -22,6 +22,9 @@ collections:
   pages_navbar:
     output: true
     permalink: /:name/
+  news:
+    output: true
+    permalink: /:collection/:name/
 
 
 

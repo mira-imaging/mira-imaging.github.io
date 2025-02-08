@@ -1,9 +1,11 @@
 # For now, the news list should be sorted manually
 news:
-  - title: We are participating in the Tech&Fest event with our multi-camera fusion demonstrator Fujito S 0.0, which aims at improving the spatial resolution of snapshot hyperspectral cameras via image fusion software technology.
+  - title: We are participating in the <a href=https://www.tech-fest.fr/en/>Tech&Fest</a> event with our multi-camera fusion demonstrator Fujito S 0.0, which aims at improving the spatial resolution of snapshot hyperspectral cameras via image fusion software technology.
     date: Feb 2025
-    link: https://www.tech-fest.fr/en/
+    link: /news/20250206-tech-and-fest/
+    thumbnail: 
 
-  - title: The project was accepted for funding by the Institut Carnot Logiciels et Systèmes Intelligents (LSI).
+  - title: The project was accepted for funding by the <a href=https://carnot-lsi.com/en/home/>Institut Carnot Logiciels et Systèmes Intelligents (LSI)</a>.
     date: Nov 2024
-    link: https://carnot-lsi.com/en/home/
+    link: /news/20241118-funding/
+    thumbnail: 

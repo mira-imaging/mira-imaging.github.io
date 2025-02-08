@@ -1,0 +1,202 @@
+schools:
+  ense3:
+    name: Grenoble INP - Ense3
+    link: https://ense3.grenoble-inp.fr/
+    logo: /images/logos/affiliations/Grenoble-INP-Ense3-couleur-RVB.png
+    logo_realtive_height: 1.0
+
+  phelma:
+    name: Grenoble INP - Phelma
+    link: https://phelma.grenoble-inp.fr/
+    logo: /images/logos/affiliations/Grenoble-INP-Phelma-couleur-RVB.png
+    logo_realtive_height: 1.0
+
+  polytech:
+    name: Grenoble INP - Polytech
+    link: https://polytech.grenoble-inp.fr/
+    logo: /images/logos/affiliations/Grenoble-INP-Polytech-Grenoble-couleur-RVB.png
+    logo_realtive_height: 1.0
+
+  ensimag:
+    name: Grenoble INP - Ensimag
+    link: https://ensimag.grenoble-inp.fr/
+    logo: /images/logos/affiliations/Grenoble INP - Ensimag (couleur, RVB, 120px).png
+    logo_realtive_height: 1.0
+
+courses: 
+
+projects:
+  - year: 2020-2021
+    title: Development of a toolbox for the simulation of hyperspectral images acquired by ImSPOC prototype
+    parent_project: MIRA
+    type: Internship
+    duration: 3 months
+    affiliation: Grenoble INP - Phelma / Ensimag
+    supervisors:
+      - Mauro Dalla Mura
+      - Daniele Picone
+      - Mohamad Jouni
+    level: Engineering Diploma - BAC+4
+    students:
+      - Matthieu Muller
+      - Robin Lizut
+      - Ernest Bayle
+    comments: 
+    
+  - year: 2021-2022
+    title: Analysis of prehistoric paintings by using hyperspectral images
+    parent_project: MIRA
+    type: Student Project
+    duration: 3 months
+    affiliation: Grenoble INP - Ense3
+    supervisors:
+      - Mauro Dalla Mura
+      - Mohamad Jouni
+      - Bernard Schmitt
+    level: Engineering Diploma - BAC+4
+    students:
+      - Nicolas Carvalho
+    comments: "The project was awarded the title of Best Research Project Award in the 2022 Innovation Challenge. <a href=https://www.linkedin.com/posts/grenoble-inp-ense3_innovation-activity-6947111466990751745-yrs6/>[Link]</a>"
+    
+  - year: 2021-2022
+    title: Simulation and Image Processing of Advanced Imagery Systems
+    parent_project: MIRA
+    type: Student Project
+    duration: 6 months
+    affiliation: Grenoble INP - Phelma
+    supervisors:
+      - Mauro Dalla Mura
+      - Mohamad Jouni
+      - Daniele Picone
+    level: Master Degree - BAC+4
+    students:
+      - Laura Auzoux
+      - Vicente Estopier-Castillo
+    comments: "The project was ranked first among its peers."
+    
+  - year: 2021-2022
+    title: Simulation of Optical Imaging Systems
+    parent_project: MIRA
+    type: Student Project
+    duration: 3 months
+    affiliation: Grenoble INP - Phelma
+    supervisors:
+      - Mauro Dalla Mura
+      - Mohamad Jouni
+      - Daniele Picone
+    level: Engineering Diploma - BAC+5
+    students:
+      - Aurélien Godet
+    comments: 
+    
+  - year: 2021-2022
+    title: Artificial Intelligence for Advanced Optical Imaging Systems
+    parent_project: MIRA
+    type: Student Project
+    duration: 2 months
+    affiliation: Grenoble INP - Polytech
+    supervisors:
+      - Mauro Dalla Mura
+      - Mohamad Jouni
+      - Daniele Picone
+    level: Engineering Diploma - BAC+5
+    students:
+      - Alexandre Leveque
+      - Gael Lemiere
+      - Tongyu Wang
+    comments: 
+    
+  - year: 2021-2022
+    title: Image Dataset Acquisition and Spectral Calibration for AI and Different Imagery Systems
+    parent_project: MIRA
+    type: Student Project
+    duration: 3 months
+    affiliation: Grenoble INP - Ense3
+    supervisors:
+      - Mauro Dalla Mura
+      - Mohamad Jouni
+      - Daniele Picone
+    level: Engineering Diploma - BAC+4
+    students:
+      - Ahmad-Opeyemi Zubair
+      - Kevin Costner Noumbissie Leungoue
+    comments: 
+    
+  - year: 2022-2023
+    title: 3D Scanner
+    parent_project: MIRA
+    type: Student Project
+    duration: 3 months
+    affiliation: Grenoble INP - Phelma
+    supervisors:
+      - Mohamad Jouni
+      - Daniele Picone
+    level: Engineering Diploma - BAC+4
+    students:
+      - Malo Olszewski
+      - Nina Cussac
+      - Martin Lombard
+      - Tome Sadones-Oldakowski
+    comments: 
+    
+  - year: 2022-2023
+    title: Development of a Lensless Computational Camera for 2D Photography
+    parent_project: MIRA
+    type: Internship
+    duration: 3 months
+    affiliation: Grenoble INP - Ense3
+    supervisors:
+      - Mauro Dalla Mura
+      - Mohamad Jouni
+    level: Engineering Diploma - BAC+4
+    students:
+      - Leonardo Alves Amaral Torres
+    comments: 
+    
+  - year: 2023-2024
+    title: 3D Scanner
+    parent_project: MIRA
+    type: Student Project
+    duration: 3 months
+    affiliation: Grenoble INP - Phelma
+    supervisors:
+      - Mohamad Jouni
+      - Daniele Picone
+    level: Engineering Diploma - BAC+4
+    students:
+      - Marius Guichard
+      - Mohamed Youssef Khomany
+      - Logan Le Roux
+      - Mathias Petey
+    comments: 
+    
+  - year: 2024-2025
+    title: 3D Scanner
+    parent_project: MIRA
+    type: Student Project
+    duration: 3 months
+    affiliation: Grenoble INP - Phelma
+    supervisors:
+      - Mohamad Jouni
+      - Daniele Picone
+    level: Engineering Diploma - BAC+4
+    students:
+      - Yann Salvignol
+      - 
+      - 
+      - 
+    comments: 
+    
+  - year: 2024-2025
+    title: "HIKARI: Hyperspectral Imaging with Kornia AI - Acquisition, Research, and Implementation"
+    parent_project: MIRA
+    type: Student Project
+    duration: 3 months
+    affiliation: Grenoble INP - Ense3
+    supervisors:
+      - Mohamad Jouni
+      - Daniele Picone
+    level: Engineering Diploma - BAC+4
+    students:
+      - Kari Rønningen
+    comments: 

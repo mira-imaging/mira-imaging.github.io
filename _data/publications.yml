@@ -30,6 +30,6 @@ link_icons:
   - &ic-ppt fas fa-file-powerpoint
   - &ic-book fas fa-book
 
-full_publications_link: https://example.com
+full_publications_link: /publications/
 
 publications:

@@ -1,0 +1,96 @@
+---
+layout: banner_top
+title: Teaching
+permalink: /teaching/
+---
+
+<h2 style="font-size: 1.3rem;">
+    The equipment of MIRA is used in teaching programs at ENSE3 and Phelma of GrenobleINP-UGA, in the framework of academic courses and student projects.
+</h2>
+
+<br><br>
+
+<h1 class="publication-section-title" style="font-size: 1.8rem;">
+    Courses
+</h1>
+<ul>
+    <li style="font-size: 1.3rem;">
+        <b>Image Analysis Project</b>
+        <div style="font-size: 1.1rem;"><b><i>SICOM</i></b>, managed by <b><i>Grenoble INP - Ense3</i></b></div>
+        <div>
+            <a
+            class="publication-link"
+            style="font-size: 1rem;"
+            href="https://gricad-gitlab.univ-grenoble-alpes.fr/mullemat/sicom_image_analysis_project"
+            >
+                <i style="font-style:normal" class="fab fa-fw fa-github"></i>
+                Course Materials
+            </a>
+        </div>
+    </li>
+</ul>
+
+<br><br>
+
+<h1 class="publication-section-title" style="font-size: 1.8rem;">
+    Student Projects
+</h1>
+{% assign projects_grouped = site.data.teaching.projects | where: "parent_project", "MIRA" | sort: "year" | reverse | group_by: "year"%}
+<div>
+{% for pubs_year in projects_grouped %}
+    {% assign year = pubs_year.name %}
+    {% assign pubs = pubs_year.items %}
+    <div class="publication-year-container">
+        <div class="year-header">
+            {{ year }}
+        </div>
+        {% for pub in pubs %}
+            <div class="publication-item">
+                <div class="publication-title">
+                    {{ pub.title }}
+                </div>
+                <div class="publication-authors">
+                {% for author in pub.students %}
+                    {% if forloop.last and forloop.first == false %}
+                        and {{ author }}
+                    {% elsif forloop.last %}
+                        {{ author }}
+                    {% else %}
+                        {{ author }},
+                    {% endif %}
+                {% endfor %}
+                </div>
+                <a class="publication-venue">
+                    <b><i>{{ pub.type }}</i></b>,
+                    managed by <b><i>{{ pub.affiliation }}</i></b>
+                </a>
+            </div>
+        {% endfor %}
+    </div>
+{% endfor %}
+</div>
+
+<div style="text-align: center; margin-bottom: 10px;">
+    <h1 style="font-weight: bold; font-size: 1.9rem; margin-bottom: 0rem;">Used by</h1>
+    {%- assign schools = site.data.teaching.schools -%}
+    {%- for school in schools -%}
+        {%- assign values = school[1] -%}
+
+        {%- if values.logo contains '://' -%}
+            {%- assign img_src = values.logo -%}
+        {%- else -%}
+            {%- assign img_src = site.baseurl | append: values.logo -%}
+        {%- endif -%}
+
+        <a style="text-decoration: none;" href="{{ values.link }}" title="">
+            <img
+            alt="{{ values.name }}"
+            data-alt="{{ values.name }}"
+            data-title="{{ values.name }}"
+            src="{{ img_src }}"
+            style="margin: 10px 20px; float: none; height: {{ values.logo_realtive_height | times: 70 }}px;"
+            title="{{ values.name }}"
+            >
+        </a>
+    {%- endfor -%}
+  </div>

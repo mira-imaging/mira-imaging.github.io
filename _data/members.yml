@@ -20,6 +20,7 @@ roles:
   - &resEng Research Engineer
   - &postdoc Postdoctoral Researcher
   - &studProj Student Project
+  - &collab Collaborator
   - &visRes Visiting Researcher
   - &senVisRes Senior Visiting Researcher
 
@@ -72,6 +73,19 @@ members:
     years: Since 2024
     icon_links:
       - link: https://github.com/negre
+        icon: *ic-github
+  
+  - key: piconed
+    name: Daniele Picone
+    category: *researcher
+    role: *collab
+    affiliation: *ginp
+    photo: daniele_picone.jpeg
+    email: daniele.picone@grenoble-inp.fr
+    personal_link: https://scholar.google.com/citations?user=Hg5fPvsAAAAJ&hl=en
+    years: Since 2024
+    icon_links:
+      - link: https://github.com/danaroth83
         icon: *ic-github
 
   - key: ronningenk
