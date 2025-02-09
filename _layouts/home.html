@@ -3,10 +3,10 @@ layout: banner_top
 ---
 
 <div class="home-content">
-    <div class="main">
+    <div class="home-main-content">
         {{- content -}}
     </div>
-    <div class="sidebar">
+    <div class="home-news-sidebar">
         <div class="sidebar-news-block">
             <h1 class="sidebar-news-title">News</h1>
             {%- assign news = site.data.news.news | slice: 0, 5 -%}
@@ -19,13 +19,13 @@ layout: banner_top
                     
                     [
                     {%- if item.link contains '://' -%}
-                        <a href="{{ item.link }}" class="sidebar-news-link">
+                        <a href="{{ item.link }}" class="link">
                     {%- else -%}
-                        <a href="{{ site.baseurl }}{{ item.link }}" class="sidebar-news-link">
+                        <a href="{{ site.baseurl }}{{ item.link }}" class="link">
                     {%- endif -%}
                     Link</a>]
 
-                    <span style="font-size: 1.0rem;">{{ item.title }}</span>
+                    <span>{{ item.title }}</span>
                 </div>
                 {%- endfor -%}
                 <div class="sidebar-news-item">

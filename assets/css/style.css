@@ -14,20 +14,23 @@
 */
 
  /* Container for the whole page */
-.home-container {
+.body-container {
     width: 100%;
     margin: 0 auto;
 }
 
 /* Banner Image */
-.home-banner {
+.banner-content {
     width: 100%;
 }
 
-.home-banner-image {
+.banner-image {
     width: 100%; /* Makes the image span the full width */
     height: auto; /* Ensures the image maintains its aspect ratio */
-    margin-bottom: 25px;
+}
+
+.below-banner-content {
+    padding: 40px 20px 40px 20px;
 }
 
 /* Content Section */
@@ -35,7 +38,6 @@
     display: flex;
     flex-direction: column; /* Stack elements vertically by default */
     gap: 30px; /* Space between sections */
-    padding: 20px 20px 40px 20px;
 }
 
 /* On medium screens and above, switch to row layout */
@@ -45,9 +47,28 @@
     }
 }
 
-/* Main Content */
-.main-content {
+/* Home Content */
+.home-main-content {
     flex: 1;
+}
+
+/* Sidebar (News Section) */
+.home-news-sidebar {
+    max-width: 300px; /* Fixed width for sidebar */
+    background-color: #f3f4f6; /* Light gray background */
+    padding: 10px 20px;
+    border-top: 2px solid #d1d5db; /* Light gray border on top */
+    border-radius: 8px; /* Rounded corners */
+}
+
+/* News Item Styling */
+.sidebar-news-item {
+    margin-bottom: 10px;
+}
+
+.sidebar-news-date {
+    color: #5481B0;
+    font-size: 1rem;
 }
 
 /* Links */
@@ -56,43 +77,11 @@
     text-decoration: underline;
 }
 
-.sidebar-news-link {
-    color: #2563eb;
-    font-size: 0.9rem;
-    text-decoration: underline;
-}
-
-/* Sidebar (News Section) */
-.sidebar {
-    width: 100%;
-    max-width: 300px; /* Fixed width for sidebar */
-    background-color: #f3f4f6; /* Light gray background */
-    padding: 20px;
-    border-top: 2px solid #d1d5db; /* Light gray border on top */
-    border-radius: 8px; /* Rounded corners */
-}
-
-/* News Item Styling */
-.sidebar-news-item {
-    margin-bottom: 1.0rem;
-}
-
-.sidebar-news-date {
-    color: #5481B0;
-    font-size: 0.9rem;
-}
-
-/* Responsive design adjustments */
 @media (max-width: 767px) {
-    .sidebar {
-        max-width: 95%; /* Full width for smaller screens */
-    }
-
-    .main-content {
-        padding-right: 0; /* Remove right padding on small screens */
+    .home-news-sidebar {
+        max-width: 100%; /* Fixed width for sidebar */
     }
 }
-
 
 /**
 * Header
