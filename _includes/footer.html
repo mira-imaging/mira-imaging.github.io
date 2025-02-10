@@ -17,21 +17,22 @@
             data-alt="{{ values.name }}"
             data-title="{{ values.name }}"
             src="{{ img_src }}"
-            style="margin: 10px 20px; float: none; height: {{ values.logo_realtive_height | times: 100 }}px;"
+            style="margin: 10px 20px; float: none; height: {{ values.logo_realtive_height | times: 80 }}px;"
             title="{{ values.name }}"
             >
         </a>
     {%- endfor -%}
   </div>
 {% endif %}
-<footer class="footer">
-    {%- assign general = site.data.general -%}
-    <div class="footer-info">
+<footer class="footer-container">
+  {%- assign general = site.data.general -%}
+  <div class="footer-content">
+    <div class="footer-subcontent">
       <!-- Logo Section -->
-       {% assign proj_name = general.name.long | append: " " | append: general.name.append %}
-       {%- assign logos_dir = site.data.general.images_dirs.logos -%}
-       {%- assign logo_fn = site.data.general.logo_footer_filename | default: "default.jpg" -%}
-      <div class="footer-block-width footer-block-common" style="--flex-width: 300px;">
+      {% assign proj_name = general.name.long | append: " " | append: general.name.append %}
+      {%- assign logos_dir = site.data.general.images_dirs.logos -%}
+      {%- assign logo_fn = site.data.general.logo_footer_filename | default: "default.jpg" -%}
+      <div class="footer-block-common">
         <a class=""  rel="author" href="{{ "/" | relative_url }}" title="">
           <img
           class=""
@@ -39,52 +40,55 @@
           data-alt="{{ proj_name }}"
           data-title="{{ proj_name }}"
           src="{{- site.baseurl -}}/{{- logos_dir -}}/{{- logo_fn -}}"
-          style="width: 180px;"
+          style="width: 180px; min-width: auto;"
           title="{{ proj_name }}"
           />
         </a>
       </div>
-      <!-- Contact Information -->
-      <div class="footer-block-width footer-block-common" style="--flex-width: 300px;">
-        <h3>Access</h3>
-        <p>
-          {{ general.address.building }}<br>
-          {{ general.address.street }}<br>
-          {{ general.address.city }}<br>
-          {{ general.address.country }}.
-          (<a href="{{ general.address.maps_link }}">Maps</a>)
-        </p>
-      </div>
-      <!-- Contact Information -->
-      <div class="footer-block-width footer-block-common" style="--flex-width: 300px;">
-        <h3>Contact</h3>
-        <p>
-          <b>Email:</b> <a href="mailto:{{- general.contact.email -}}" class="footer-link">{{ general.contact.email }}</a>
-        </p>
-        <p>
-          <b>Phone:</b> {{ general.contact.phone }}
-        </p>
-      </div>
-      <!-- Social Media Links -->
-      <div class="footer-block-auto footer-block-common">
-        <h3>Follow Us</h3>
-        <p>
-          {% for link in general.social %}
-            <p>
-              <i style="font-style:normal" class="{{ link[1].icon }}"></i>
-              <a href="{{- link[1].link -}}" target="_blank" class="footer-link">{{ link[0] }}</a>
-            </p>
-          {% endfor %}
-        </p>
+      <!-- Text Information -->
+      <div class="footer-text-content footer-block-common">
+        <!-- Contact Information -->
+        <div class="footer-block-common">
+          <h3>Access</h3>
+          <p>
+            {{ general.address.building }}<br>
+            {{ general.address.street }}<br>
+            {{ general.address.city }}<br>
+            {{ general.address.country }}.
+            (<a href="{{ general.address.maps_link }}">Maps</a>)
+          </p>
+        </div>
+        <!-- Contact Information -->
+        <div class="footer-block-common">
+          <h3>Contact</h3>
+          <p>
+            <b>Email:</b> <a href="mailto:{{- general.contact.email -}}" class="footer-link">{{ general.contact.email }}</a>
+          </p>
+          <p>
+            <b>Phone:</b> {{ general.contact.phone }}
+          </p>
+        </div>
+        <!-- Social Media Links -->
+        <div class="footer-block-common">
+          <h3>Follow Us</h3>
+          <p>
+            {% for link in general.social %}
+              <p>
+                <i style="font-style:normal" class="{{ link[1].icon }}"></i>
+                <a href="{{- link[1].link -}}" target="_blank" class="footer-link">{{ link[0] }}</a>
+              </p>
+            {% endfor %}
+          </p>
+        </div>
       </div>
     </div>
-    <!-- Copyright Section -->
-    <div class="footer-copyrights">
-      <span>
-        &copy; 2025 {{ general.footer_title }}.
-        Generated from <a href="https://github.com/mhmdjouni/minimal-teams" class="footer-link">Minimal Teams</a>.
-        Powered by <a href="https://jekyllrb.com/" class="footer-link">Jekyll</a>.
-      </span>
-    </div>
-  </footer>
-  
+  </div>
+  <!-- Copyright Section -->
+  <div class="footer-copyrights">
+    <span>
+      &copy; 2025 {{ general.footer_title }}.
+      Generated from <a href="https://github.com/mhmdjouni/minimal-teams" class="footer-link">Minimal Teams</a>.
+      Powered by <a href="https://jekyllrb.com/" class="footer-link">Jekyll</a>.
+    </span>
+  </div>
+</footer>

@@ -1,7 +1,8 @@
-/*big home layout container*/
-.big-container {
-    max-width: 1200px; /* Equivalent to max-w-[70rem] */
-    margin: 0 auto; /* Centers the container horizontally */
+.big-container,
+.container-header,
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .content-wrapper {
@@ -98,8 +99,6 @@
 }
 
 .container-header {
-    max-width: 1200px;
-    margin: 0 auto;
     display: flex;
     flex-direction: row;
     gap: 50px;
@@ -204,20 +203,30 @@
 */
 
 /* Predefined CSS */
-.footer {
+.footer-container {
     background-color: #333;
     color: #fff;
 }
 
-.footer-info {
-    max-width: 1200px;
+.footer-content {
     margin: 10px auto;
+}
+
+.footer-subcontent {
+    gap: 20px;
+    padding: 0px 10px;
     display: flex;
-    gap: 1rem;
+    flex-direction: row;
+}
+
+.footer-text-content {
+    gap: 20px;
+    display: flex;
+    flex-direction: row;
 }
 
 .footer-block-common {
-    padding: 0px 10px;
+    flex: 1 1 auto;
 }
 .footer-block-common h3 {
     color: #00bcd4;
@@ -227,14 +236,6 @@
 .footer-block-common p {
     margin-bottom: 5px;
     font-size: 0.9rem;
-}
-
-.footer-block-width {
-    flex: 1 1 var(--flex-width, 300px);
-}
-
-.footer-block-auto {
-    flex: 1 1 auto;
 }
 
 .footer-link {
@@ -247,118 +248,17 @@
     border-top: 1px solid white;
 }
 
-.footer-col-1 {
-    width: calc(35% - 15px);
-}
-
-.footer-col-2 {
-    width: calc(20% - 15px);
-}
-
-.footer-col-3 {
-    width: calc(45% - 15px);
+/* Media Queries for Responsiveness */
+@media screen and (max-width: 900px) {
+    .footer-text-content {
+        flex-direction: column;
+    }
 }
 
 /* Media Queries for Responsiveness */
-@media screen and (max-width: 800px) {
-    .footer-col-1,
-    .footer-col-2 {
-        width: calc(50% - 15px);
-    }
-
-    .footer-col-3 {
-        width: calc(100% - 15px);
-    }
-}
-
-@media screen and (max-width: 600px) {
-    .footer-col {
-        float: none;
-        width: calc(100% - 15px);
-    }
-}
-
-/* Custom CSS for Tailwind replaced styles */
-
-/* Footer container for full-width layout */
-.footer-container {
-    display: flex;
-    justify-content: center;
-}
-
-/* Wrapper to limit content width */
-.footer-content {
-    display: flex;
-    max-width: 70rem; /* Ensures the footer doesn't stretch too far */
-    width: 100%;
-    justify-content: space-between;
-    padding: 0 20px;
-}
-
-/* Footer left section (address, copyright) */
-.footer-left {
-    width: 50%;
-    font-size: 0.875rem;
-}
-
-/* Footer right section (contact info) */
-.footer-right {
-    width: 45%;
-}
-
-/* Styling for address text */
-.footer-address {
-    font-size: 0.875rem;
-    color: #000;
-}
-
-.footer-address-text {
-    margin-bottom: 10px;
-}
-
-/* Map link styling */
-.map-link {
-    display: inline-block;
-    text-decoration: underline;
-    color: #2563eb;
-}
-
-.map-text {
-    color: #4b5563;
-}
-
-.map-icon {
-    width: 12px;
-    height: 12px;
-    vertical-align: middle;
-}
-
-/* Copyright styling */
-.footer-copy {
-    font-size: 0.875rem;
-    color: #828282;
-}
-
-/* Contact list styling */
-.contact-list {
-    font-size: 0.875rem;
-    color: #000;
-}
-
-.footer-contact-follow {
-    font-weight: bold;
-}
-
-/* Mobile Adjustments */
-@media screen and (max-width: 600px) {
-    .footer-content {
+@media screen and (max-width: 550px) {
+    .footer-subcontent {
         flex-direction: column;
-    }
-
-    .footer-left,
-    .footer-right {
-        width: 100%;
-        margin-bottom: 20px;
     }
 }
 
