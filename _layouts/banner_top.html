@@ -2,7 +2,7 @@
 layout: default
 ---
 {%- assign banners_dir = site.data.general.images_dirs.banners -%}
-{%- assign banner_filename = site.data.general.banner_filename[page.title] | default: "default.jpg" -%}
+{%- assign banner_filename = site.data.banners.banners[page.url] | default: default.jpg -%}
 
 <div class="banner-content">
     <img

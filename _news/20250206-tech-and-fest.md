@@ -1,5 +1,5 @@
 ---
-layout: page_padded
+layout: banner_top
 title: Tech&Fest 2025
 ---
 

@@ -1,2 +1,3 @@
 {%- assign aff_key = include.key -%}
-<a href="{{ affiliations[aff_key].link }}">{{ affiliations[aff_key].name }} ({{ affiliations[aff_key].abbrv }})</a>
+{%- assign affiliation = site.data.affiliations.affiliations | where: "key", aff_key | first -%}
+<a href="{{ affiliation.link }}">{{ affiliation.name }} ({{ affiliation.abbrv }})</a>

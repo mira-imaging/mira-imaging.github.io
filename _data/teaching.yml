@@ -1,28 +1,3 @@
-schools:
-  ense3:
-    name: Grenoble INP - Ense3
-    link: https://ense3.grenoble-inp.fr/
-    logo: /images/logos/affiliations/Grenoble-INP-Ense3-couleur-RVB.png
-    logo_realtive_height: 1.0
-
-  phelma:
-    name: Grenoble INP - Phelma
-    link: https://phelma.grenoble-inp.fr/
-    logo: /images/logos/affiliations/Grenoble-INP-Phelma-couleur-RVB.png
-    logo_realtive_height: 1.0
-
-  polytech:
-    name: Grenoble INP - Polytech
-    link: https://polytech.grenoble-inp.fr/
-    logo: /images/logos/affiliations/Grenoble-INP-Polytech-Grenoble-couleur-RVB.png
-    logo_realtive_height: 1.0
-
-  ensimag:
-    name: Grenoble INP - Ensimag
-    link: https://ensimag.grenoble-inp.fr/
-    logo: /images/logos/affiliations/Grenoble INP - Ensimag (couleur, RVB, 120px).png
-    logo_realtive_height: 1.0
-
 courses: 
 
 projects:

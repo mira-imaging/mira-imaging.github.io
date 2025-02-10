@@ -1,76 +1,74 @@
-{% if page.title == "Home" or page.title == "Research"%}
+{% if page.url == "/" or page.url == "/research/" %}
   <div class="supported-by">
     <h1 class="supported-by-title">Supported by</h1>
-    {%- assign affiliations = site.data.general.affiliations -%}
-    {%- for aff in affiliations -%}
-        {%- assign values = aff[1] -%}
-
-        {%- if values.logo contains '://' -%}
-            {%- assign img_src = values.logo -%}
+    {%- assign affiliations = site.data.affiliations.affiliations | where: "is_supporter", true -%}
+    {%- for school in affiliations -%}
+        {%- if school.logo contains '://' -%}
+            {%- assign img_src = school.logo -%}
         {%- else -%}
-            {%- assign img_src = site.baseurl | append: values.logo -%}
+            {%- assign img_src = site.baseurl | append: school.logo -%}
         {%- endif -%}
 
-        <a style="text-decoration: none;" href="{{ values.link }}" title="">
+        <a style="text-decoration: none;" href="{{ school.link }}" title="">
             <img
             class="supported-by-logo"
-            alt="{{ values.name }}"
-            data-alt="{{ values.name }}"
-            data-title="{{ values.name }}"
+            alt="{{ school.name }}"
+            data-alt="{{ school.name }}"
+            data-title="{{ school.name }}"
             src="{{ img_src }}"
-            style="height: {{ values.logo_realtive_height | times: 80 }}px;"
-            title="{{ values.name }}"
+            style="height: {{ school.logo_realtive_height | times: 60 }}px;"
+            title="{{ school.name }}"
             >
         </a>
     {%- endfor -%}
   </div>
 {% endif %}
-{% if page.title == "Teaching" %}
+{% if page.url == "/teaching/" %}
   <div class="supported-by">
     <h1 class="supported-by-title">Used by</h1>
-    {%- assign schools = site.data.teaching.schools -%}
+    {%- assign schools = site.data.affiliations.affiliations | where: "is_used_by_teaching", true -%}
     {%- for school in schools -%}
-        {%- assign values = school[1] -%}
-
-        {%- if values.logo contains '://' -%}
-            {%- assign img_src = values.logo -%}
+        {%- if school.logo contains '://' -%}
+            {%- assign img_src = school.logo -%}
         {%- else -%}
-            {%- assign img_src = site.baseurl | append: values.logo -%}
+            {%- assign img_src = site.baseurl | append: school.logo -%}
         {%- endif -%}
 
-        <a style="text-decoration: none;" href="{{ values.link }}" title="">
+        <a style="text-decoration: none;" href="{{ school.link }}" title="">
             <img
             class="supported-by-logo"
-            alt="{{ values.name }}"
-            data-alt="{{ values.name }}"
-            data-title="{{ values.name }}"
+            alt="{{ school.name }}"
+            data-alt="{{ school.name }}"
+            data-title="{{ school.name }}"
             src="{{ img_src }}"
-            style="height: {{ values.logo_realtive_height | times: 60 }}px;"
-            title="{{ values.name }}"
+            style="height: {{ school.logo_realtive_height | times: 60 }}px;"
+            title="{{ school.name }}"
             >
         </a>
     {%- endfor -%}
   </div>
   <div class="supported-by">
     <h1 class="supported-by-title">Supported by</h1>
-    {%- assign values = site.data.general.affiliations.persyval -%}
-    {%- if values.logo contains '://' -%}
-        {%- assign img_src = values.logo -%}
-    {%- else -%}
-        {%- assign img_src = site.baseurl | append: values.logo -%}
-    {%- endif -%}
+    {%- assign schools = site.data.affiliations.affiliations | where: "is_supporter_teaching", true -%}
+    {%- for school in schools -%}
+      {%- if school.logo contains '://' -%}
+          {%- assign img_src = school.logo -%}
+      {%- else -%}
+          {%- assign img_src = site.baseurl | append: school.logo -%}
+      {%- endif -%}
 
-    <a style="text-decoration: none;" href="{{ values.link }}" title="">
-        <img
-        class="supported-by-logo"
-        alt="{{ values.name }}"
-        data-alt="{{ values.name }}"
-        data-title="{{ values.name }}"
-        src="{{ img_src }}"
-        style="height: {{ values.logo_realtive_height | times: 100 }}px;"
-        title="{{ values.name }}"
-        >
-    </a>
+      <a style="text-decoration: none;" href="{{ school.link }}" title="">
+          <img
+          class="supported-by-logo"
+          alt="{{ school.name }}"
+          data-alt="{{ school.name }}"
+          data-title="{{ school.name }}"
+          src="{{ img_src }}"
+          style="height: {{ school.logo_realtive_height | times: 80 }}px;"
+          title="{{ school.name }}"
+          >
+      </a>
+    {%- endfor -%}
   </div>
 {% endif %}
 <footer class="footer-container">
