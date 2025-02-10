@@ -4,23 +4,24 @@ title: Teaching
 permalink: /teaching/
 ---
 
-<h2 style="font-size: 1rem;">
+<h2 style="font-size: 1.1rem;">
     The equipment of MIRA is used in teaching programs at ENSE3 and Phelma of GrenobleINP-UGA, in the framework of academic courses and student projects.
 </h2>
 
-<br><br>
+<br>
 
-<h1 class="publication-section-title" style="font-size: 1.8rem;">
+<h1 class="teaching-section-title">
     Courses
 </h1>
 <ul>
-    <li style="font-size: 1.3rem;">
-        <b>Image Analysis Project</b>
-        <div style="font-size: 1.2rem; color: #414141;"><b><i>SICOM</i></b>, managed by <b><i>Grenoble INP - Ense3</i></b></div>
-        <div>
+    <li class="teaching-item">
+        <div class="teaching-title">
+            Image Analysis Project
+        </div>
+        <div class="teaching-venue"><b><i>SICOM</i></b>, managed by <b><i>Grenoble INP - Ense3</i></b></div>
+        <div class="teaching-links">
             <a
-            class="publication-link"
-            style="font-size: 1rem;"
+            class="teaching-link"
             href="https://gricad-gitlab.univ-grenoble-alpes.fr/mullemat/sicom_image_analysis_project"
             >
                 <i style="font-style:normal" class="fab fa-fw fa-github"></i>
@@ -32,7 +33,7 @@ permalink: /teaching/
 
 <br><br>
 
-<h1 class="publication-section-title" style="font-size: 1.8rem;">
+<h1 class="teaching-section-title">
     Student Projects
 </h1>
 {% assign projects_grouped = site.data.teaching.projects | where: "parent_project", "MIRA" | sort: "year" | reverse | group_by: "year"%}
@@ -40,45 +41,45 @@ permalink: /teaching/
 {% for pubs_year in projects_grouped %}
     {% assign year = pubs_year.name %}
     {% assign pubs = pubs_year.items %}
-    <div class="publication-year-container">
-        <div class="year-header" style="font-size: 1.4rem;">
+    <div class="teaching-year-container">
+        <div class="teaching-year-header">
             {{ year }}
         </div>
         <ul>
         {% for pub in pubs %}
-            <li class="publication-item" style="font-size: 1.3rem;">
-                <div class="publication-title" style="font-size: 1.3rem;">
+            <li class="teaching-item">
+                <div class="teaching-title">
                     {{ pub.title }}
                 </div>
-                <a class="publication-venue" style="font-size: 1.2rem;">
+                <div class="teaching-venue">
                     <b><i>{{ pub.type }}</i></b>,
                     managed by <b><i>{{ pub.affiliation }}</i></b>
-                </a>
-                <ul>
-                <li class="publication-authors" style="font-size: 1.1rem;">
-                    Students:
-                    {% for author in pub.students %}
-                        {% if forloop.last and forloop.first == false %}
-                            and {{ author }}
-                        {% elsif forloop.last %}
-                            {{ author }}
-                        {% else %}
-                            {{ author }},
-                        {% endif %}
-                    {% endfor %}
-                </li>
-                <li class="publication-authors" style="font-size: 1.1rem;">
-                    Supervisors:
-                    {% for author in pub.supervisors %}
-                        {% if forloop.last and forloop.first == false %}
-                            and {{ author }}
-                        {% elsif forloop.last %}
-                            {{ author }}
-                        {% else %}
-                            {{ author }},
-                        {% endif %}
-                    {% endfor %}
-                </li>
+                </div>
+                <ul class="teaching-authors">
+                    <li>
+                        Students:
+                        {% for author in pub.students %}
+                            {% if forloop.last and forloop.first == false %}
+                                and {{ author }}
+                            {% elsif forloop.last %}
+                                {{ author }}
+                            {% else %}
+                                {{ author }},
+                            {% endif %}
+                        {% endfor %}
+                    </li>
+                    <li>
+                        Supervisors:
+                        {% for author in pub.supervisors %}
+                            {% if forloop.last and forloop.first == false %}
+                                and {{ author }}
+                            {% elsif forloop.last %}
+                                {{ author }}
+                            {% else %}
+                                {{ author }},
+                            {% endif %}
+                        {% endfor %}
+                    </li>
                 </ul>
             </li>
         {% endfor %}

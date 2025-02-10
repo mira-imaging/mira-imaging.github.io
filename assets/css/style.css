@@ -1,8 +1,20 @@
+/**
+* Fix content width
+*/
+
 .big-container,
 .container-header,
 .footer-content {
     max-width: 1200px;
     margin: 0 auto;
+}
+
+/**
+* Default Body element
+*/
+
+.main-content {
+    flex: 1;
 }
 
 .content-wrapper {
@@ -11,14 +23,8 @@
 }
 
 /**
-* Home Page
+* Banner Page
 */
-
- /* Container for the whole page */
-.body-container {
-    width: 100%;
-    margin: 0 auto;
-}
 
 /* Banner Image */
 .banner-content {
@@ -34,17 +40,21 @@
     padding: 40px 20px 40px 20px;
 }
 
+/**
+* Home Layout
+*/
+
 /* Content Section */
 .home-content {
     display: flex;
-    flex-direction: column; /* Stack elements vertically by default */
+    flex-direction: row; /* Stack elements vertically by default */
     gap: 30px; /* Space between sections */
 }
 
 /* On medium screens and above, switch to row layout */
-@media (min-width: 768px) {
+@media (max-width: 767px) {
     .home-content {
-        flex-direction: row; /* Switch to row for larger screens */
+        flex-direction: column; /* Switch to row for larger screens */
     }
 }
 
@@ -417,12 +427,12 @@
     margin-bottom: 1.5rem;
 }
 
-/* Year Header */
+/* Publication Year Header */
 .publication-year-container {
     margin-bottom: 2rem;
 }
 
-.year-header {
+.publication-year-header {
     font-size: 1.3rem; /* text-2xl */
     font-weight: bold;
     color: #4a4a4a; /* text-gray-700 */
@@ -433,7 +443,6 @@
 
 /* Publication Item */
 .publication-item {
-    margin-left: 0.5rem; /* ml-3 */
     margin-bottom: 1rem; /* mb-5 */
 }
 
@@ -564,3 +573,68 @@
     background-color: #333;
     color: white;
 }
+
+
+
+/**
+* Teaching
+*/
+
+.teaching-section-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #4a4a4a;
+    margin-bottom: 1.5rem;
+}
+
+.teaching-year-container {
+    margin-bottom: 2rem;
+}
+
+.teaching-year-header {
+    font-size: 1.3rem; /* text-2xl */
+    font-weight: bold;
+    color: #4a4a4a; /* text-gray-700 */
+    border-bottom: 1px solid #a1a1a1; /* border-b */
+    padding-bottom: 0.5rem; /* pb-2 */
+    margin-bottom: 1rem; /* mb-5 */
+}
+
+.teaching-item {
+    margin-bottom: 1rem; /* mb-5 */
+}
+
+.teaching-title {
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+.teaching-venue {
+    font-size: 1.1rem;
+    color: #414141;
+}
+
+.teaching-authors {
+    font-size: 1.0rem;
+}
+
+.teaching-links {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.teaching-link {
+    background-color: #158CBA;
+    border: none;
+    color: white;
+    cursor: pointer;
+    align-items: center;
+    padding: 3px 6px;
+    font-size: 14px;
+    border-radius: 15%;
+    text-decoration: none;
+}
+.teaching-link:hover {
+    background-color: #0056b3; /* darken on hover */
+}
+
