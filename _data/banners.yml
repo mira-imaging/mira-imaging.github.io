@@ -1,12 +1,12 @@
 banners:
 
-  /: banner_01.jpg
+  /: banner_home.jpg
   
-  /research/: banner_02.jpg
-  /teaching/: banner_03.jpg
+  /research/: banner_research.jpg
+  /teaching/: banner_teaching.jpg
   /members/: 
   /news/: 
   /contact/: 
 
   /news/20241118-funding/: 
-  /news/20250206-tech-and-fest/: banner_04.jpg
+  /news/20250206-tech-and-fest/: banner_tech_and_fest.jpg
