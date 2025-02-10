@@ -1,6 +1,6 @@
-{% if page.title == "Home" %}
-  <div style="text-align: center; margin-bottom: 10px;">
-    <h1 style="font-weight: bold; font-size: 2.1rem; margin-bottom: 0rem;">Supported by</h1>
+{% if page.title == "Home" or page.title == "Research"%}
+  <div class="supported-by">
+    <h1 class="supported-by-title">Supported by</h1>
     {%- assign affiliations = site.data.general.affiliations -%}
     {%- for aff in affiliations -%}
         {%- assign values = aff[1] -%}
@@ -13,15 +13,64 @@
 
         <a style="text-decoration: none;" href="{{ values.link }}" title="">
             <img
+            class="supported-by-logo"
             alt="{{ values.name }}"
             data-alt="{{ values.name }}"
             data-title="{{ values.name }}"
             src="{{ img_src }}"
-            style="margin: 10px 20px; float: none; height: {{ values.logo_realtive_height | times: 80 }}px;"
+            style="height: {{ values.logo_realtive_height | times: 80 }}px;"
             title="{{ values.name }}"
             >
         </a>
     {%- endfor -%}
+  </div>
+{% endif %}
+{% if page.title == "Teaching" %}
+  <div class="supported-by">
+    <h1 class="supported-by-title">Used by</h1>
+    {%- assign schools = site.data.teaching.schools -%}
+    {%- for school in schools -%}
+        {%- assign values = school[1] -%}
+
+        {%- if values.logo contains '://' -%}
+            {%- assign img_src = values.logo -%}
+        {%- else -%}
+            {%- assign img_src = site.baseurl | append: values.logo -%}
+        {%- endif -%}
+
+        <a style="text-decoration: none;" href="{{ values.link }}" title="">
+            <img
+            class="supported-by-logo"
+            alt="{{ values.name }}"
+            data-alt="{{ values.name }}"
+            data-title="{{ values.name }}"
+            src="{{ img_src }}"
+            style="height: {{ values.logo_realtive_height | times: 60 }}px;"
+            title="{{ values.name }}"
+            >
+        </a>
+    {%- endfor -%}
+  </div>
+  <div class="supported-by">
+    <h1 class="supported-by-title">Supported by</h1>
+    {%- assign values = site.data.general.affiliations.persyval -%}
+    {%- if values.logo contains '://' -%}
+        {%- assign img_src = values.logo -%}
+    {%- else -%}
+        {%- assign img_src = site.baseurl | append: values.logo -%}
+    {%- endif -%}
+
+    <a style="text-decoration: none;" href="{{ values.link }}" title="">
+        <img
+        class="supported-by-logo"
+        alt="{{ values.name }}"
+        data-alt="{{ values.name }}"
+        data-title="{{ values.name }}"
+        src="{{ img_src }}"
+        style="height: {{ values.logo_realtive_height | times: 100 }}px;"
+        title="{{ values.name }}"
+        >
+    </a>
   </div>
 {% endif %}
 <footer class="footer-container">
@@ -35,12 +84,11 @@
       <div class="footer-block-common">
         <a class=""  rel="author" href="{{ "/" | relative_url }}" title="">
           <img
-          class=""
+          class="footer-logo"
           alt="{{ proj_name }}"
           data-alt="{{ proj_name }}"
           data-title="{{ proj_name }}"
           src="{{- site.baseurl -}}/{{- logos_dir -}}/{{- logo_fn -}}"
-          style="width: 180px; min-width: auto;"
           title="{{ proj_name }}"
           />
         </a>

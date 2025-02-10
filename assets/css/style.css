@@ -202,7 +202,22 @@
 * Footer
 */
 
-/* Predefined CSS */
+.supported-by {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.supported-by-title {
+    font-weight: bold;
+    font-size: 2.1rem;
+    margin-bottom: 0rem;
+}
+
+.supported-by-logo {
+    margin: 10px 20px;
+    float: none;
+}
+
 .footer-container {
     background-color: #333;
     color: #fff;
@@ -246,6 +261,11 @@
     text-align: center;
     padding: 5px 0;
     border-top: 1px solid white;
+}
+
+.footer-logo {
+    width: 150px;
+    min-width: auto;
 }
 
 /* Media Queries for Responsiveness */
