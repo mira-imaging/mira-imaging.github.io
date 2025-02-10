@@ -587,6 +587,10 @@
     margin-bottom: 1.5rem;
 }
 
+.teaching-content-block {
+    padding-left: 10px;
+}
+
 .teaching-year-container {
     margin-bottom: 2rem;
 }

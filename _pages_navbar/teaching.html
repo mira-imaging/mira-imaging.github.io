@@ -13,23 +13,28 @@ permalink: /teaching/
 <h1 class="teaching-section-title">
     Courses
 </h1>
-<ul>
-    <li class="teaching-item">
-        <div class="teaching-title">
-            Image Analysis Project
-        </div>
-        <div class="teaching-venue"><b><i>SICOM</i></b>, managed by <b><i>Grenoble INP - Ense3</i></b></div>
-        <div class="teaching-links">
-            <a
-            class="teaching-link"
-            href="https://gricad-gitlab.univ-grenoble-alpes.fr/mullemat/sicom_image_analysis_project"
-            >
-                <i style="font-style:normal" class="fab fa-fw fa-github"></i>
-                Course Materials
-            </a>
-        </div>
-    </li>
-</ul>
+<div class="teaching-content-block">
+    <ul>
+        <li class="teaching-item">
+            <div class="teaching-title">
+                Image Analysis Project
+            </div>
+            <div class="teaching-venue">
+                <b><i>SICOM</i></b>,
+                at the <b><i>Grenoble INP - Ense3</i></b>
+            </div>
+            <div class="teaching-links">
+                <a
+                class="teaching-link"
+                href="https://gricad-gitlab.univ-grenoble-alpes.fr/mullemat/sicom_image_analysis_project"
+                >
+                    <i style="font-style:normal" class="fab fa-fw fa-github"></i>
+                    Course Materials
+                </a>
+            </div>
+        </li>
+    </ul>
+</div>
 
 <br>
 
@@ -37,7 +42,7 @@ permalink: /teaching/
     Student Projects
 </h1>
 {% assign projects_grouped = site.data.teaching.projects | where: "parent_project", "MIRA" | sort: "year" | reverse | group_by: "year"%}
-<div>
+<div class="teaching-content-block">
 {% for pubs_year in projects_grouped %}
     {% assign year = pubs_year.name %}
     {% assign pubs = pubs_year.items %}
