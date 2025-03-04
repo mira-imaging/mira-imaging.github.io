@@ -1,0 +1,15 @@
+---
+layout: banner_top
+---
+
+{% assign news_item = site.data.news.list | where: "page.url", page.url | first %}
+
+<h1>{{ news_item.page.title }}</h1>
+<h2>We are participating in the Tech&Fest event!</h2>
+<p>
+    {{ news_item.text }}
+</p>
+
+<p>
+    More details coming soon!
+</p>

@@ -9,7 +9,7 @@ layout: banner_top
     <div class="home-news-sidebar">
         <div class="sidebar-news-block">
             <h1 class="sidebar-news-title">News</h1>
-            {%- assign news = site.data.news.news | slice: 0, 5 -%}
+            {%- assign news = site.data.news.list | slice: 0, 5 -%}
             {% if news == empty or news == nil %}
                 <p>No news yet under this project.</p>
             {% else %}
@@ -25,7 +25,7 @@ layout: banner_top
                     {%- endif -%}
                     Link</a>]
 
-                    <span>{{ item.title }}</span>
+                    <span>{{ item.text }}</span>
                 </div>
                 {%- endfor -%}
                 <div class="sidebar-news-item">

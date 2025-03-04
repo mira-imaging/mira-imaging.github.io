@@ -1,11 +1,25 @@
 # For now, the news list should be sorted manually
-news:
-  - title: We are participating in the <a href=https://www.tech-fest.fr/en/>Tech&Fest</a> event with our multi-camera fusion demonstrator Fujito S 0.0, which aims at improving the spatial resolution of snapshot hyperspectral cameras via image fusion software technology.
+list:
+  - text: We are participating in the <a href=https://www.tech-fest.fr/en/>Tech&Fest</a> event with our <b>multi-camera fusion demonstrator Fujito S 0.0</b>, which aims at improving the spatial resolution of snapshot hyperspectral cameras via image fusion software technology.
     date: Feb 2025
     link: /news/20250206-tech-and-fest/
+    page:
+      url: /news/20250206-tech-and-fest/
+      title: Tech&Fest 2025
     thumbnail: 
 
-  - title: The project was accepted for funding by the <a href=https://carnot-lsi.com/en/home/>Institut Carnot Logiciels et Systèmes Intelligents (LSI)</a>.
+  - text: The development of the MIRA Platform was accepted for funding by the <a href=https://carnot-lsi.com/en/home/>Institut Carnot Logiciels et Systèmes Intelligents (LSI)</a>. The real work kicks off!
     date: Nov 2024
     link: /news/20241118-funding/
+    page:
+      url: /news/20241118-funding/
+      title: Project Accepted for Funding!
+    thumbnail: 
+
+  - text: Professor M. Dalla Mura and his PhD student Matthieu Muller visited the <a href="https://uis.edu.co/en/">Universidad Industrial de Santander</a>, Colombia for two weeks for scientific collaborations.
+    date: Nov 2024
+    link: /news/20241107-colombia-visit/
+    page:
+      url: /news/20241107-colombia-visit/
+      title: Collaboration Visit to the Universidad Industrial de Santander in Colombia
     thumbnail: 
