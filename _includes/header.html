@@ -20,13 +20,23 @@
         </svg>
       </label>
 
-      <div class="trigger">
+      <ul class="nav-menu">
         {%- for page in pages -%}
-        {%- if page.title -%}
-        <a class="page-link" href="{{ page.permalink | relative_url }}">{{ page.title | escape }}</a>
-        {%- endif -%}
+          {%- if page.title -%}
+            <li class="nav-item {% if page.subpages %}has-dropdown{% endif %}">
+              <a href="{{ page.permalink | relative_url }}">{{ page.title | escape }}</a>
+              
+              {%- if page.subpages -%}
+                <ul class="dropdown">
+                  {%- for subpage in page.subpages -%}
+                    <li><a href="{{ subpage.permalink | relative_url }}">{{ subpage.title | escape }}</a></li>
+                  {%- endfor -%}
+                </ul>
+              {%- endif -%}
+            </li>
+          {%- endif -%}
         {%- endfor -%}
-      </div>
+      </ul>
     </nav>
     {%- endif -%}
   </div>

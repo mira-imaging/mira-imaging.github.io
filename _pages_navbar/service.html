@@ -1,0 +1,22 @@
+---
+layout: page_padded
+permalink: /services/
+---
+
+{% assign page_item = site.data.navbar.pages | where: "permalink", page.url | first %}
+
+<h1 class="teaching-section-title">
+    MIRA Platform Services
+</h1>
+<div class="teaching-content-block">
+    <p> The MIRA Platform provides different services, in particular:</p>
+    <ul>
+        {% for subpage in page_item.subpages %}
+        <li>
+            <a href="{{ subpage.permalink }}">
+                {{ subpage.title }}
+            </a>
+        </li>
+        {% endfor %}
+    </ul>
+</div>

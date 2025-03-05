@@ -1,18 +1,22 @@
 pages:
   - title: Home
     permalink: /
+    subpages:
 
-  - title: Research
-    permalink: /research/
+  - title: Services
+    permalink: /services/
+    subpages:
+      - title: Research
+        permalink: /research/
+        subpages:
 
-  - title: Teaching
-    permalink: /teaching/
-
-  # - title: Service
-  #   permalink: /service/
+      - title: Teaching
+        permalink: /teaching/
+        subpages:
 
   - title: Members
     permalink: /members/
+    subpages:
 
   # - title: Publications
   #   permalink: /publications/
@@ -22,12 +26,18 @@ pages:
 
   - title: News
     permalink: /news/
+    subpages:
+
+  - title: FAQ
+    permalink: /faq/
+    subpages:
 
   # - title: Gallery
   #   permalink: /gallery/
 
   - title: Contact
     permalink: /contact/
+    subpages:
 
   # - title: Guide
   #   permalink: /guide/
