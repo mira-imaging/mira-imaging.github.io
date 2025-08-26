@@ -1,6 +1,6 @@
 # For now, the news list should be sorted manually
 list:
-  - text: We are participating in the <a href=https://www.tech-fest.fr/en/>Tech&Fest</a> event with our <b>multi-camera fusion demonstrator Fujito S 0.0</b>, which aims at improving the spatial resolution of snapshot hyperspectral cameras via image fusion software technology.
+  - text: We are participating in the <a href=https://www.tech-fest.fr/en/>Tech&Fest</a> event with our <b>multi-camera fusion demonstrator Kamefusion 0.1.0</b>, which aims at improving the spatial resolution of snapshot hyperspectral cameras via image fusion software technology.
     date: Feb 2025
     link: /news/20250206-tech-and-fest/
     page:
