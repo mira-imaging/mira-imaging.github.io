@@ -4,12 +4,117 @@ layout: banner_top
 
 {% assign news_item = site.data.news.list | where: "page.url", page.url | first %}
 
-<h1>{{ news_item.page.title }}</h1>
-<h2>We are participating in the Tech&Fest event!</h2>
-<p>
-    {{ news_item.text }}
-</p>
+<div class="page-container">
 
-<p>
-    More details coming soon!
-</p>
+  <!-- Page Title -->
+  <header class="page-header">
+    <h1 class="title">{{ news_item.page.title }}</h1>
+    <h2 class="subtitle">Tech & Fest Demo</h2>
+  </header>
+
+  <!-- Description -->
+  <section class="description">
+    <p>{{ news_item.text }}</p>
+    <p>More details coming soon!</p>
+  </section>
+
+  <!-- Video Section -->
+  <section class="videos">
+    <h3>Demo Videos</h3>
+
+    <div class="video-grid">
+      <video controls width="800">
+        <source src="/media/videos/comparison.webm" type="video/webm">
+        Your browser does not support the video tag.
+      </video>
+    </div>
+
+    <div>
+      <div>
+        <img src="/media/images/photo_1.png" alt="Slider" class="gallery-item">
+      </div>
+
+      <!-- Add more videos as needed -->
+    </div>
+  </section>
+
+  <!-- Image Gallery -->
+  <section class="gallery">
+    <h3>Event Photos</h3>
+    <div class="gallery-grid">
+      <img src="/media/images/photo_1.png" alt="Event Photo 1" class="gallery-item">
+      <img src="/media/images/photo_2.png" alt="Event Photo 2" class="gallery-item">
+      <img src="/media/images/photo_3.png" alt="Event Photo 3" class="gallery-item">
+      <img src="/media/images/photo_4.png" alt="Event Photo 4" class="gallery-item">
+      <!-- Add more images as needed -->
+    </div>
+  </section>
+
+</div>
+
+<!-- Example CSS for layout (put in your assets/css/main.css) -->
+<style>
+.page-container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+}
+
+.page-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.title {
+    font-size: 2.5rem;
+    margin: 0;
+}
+
+.subtitle {
+    font-size: 1.5rem;
+    color: #666;
+    margin: 5px 0 20px;
+}
+
+.description p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+
+.videos {
+    margin-top: 40px;
+}
+
+.video-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.gallery {
+    margin-top: 50px;
+}
+
+.gallery-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+}
+
+.gallery-item {
+    width: 250px;
+    height: auto;
+    object-fit: cover;
+    border-radius: 6px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+    transition: transform 0.2s;
+}
+
+.gallery-item:hover {
+    transform: scale(1.05);
+}
+</style>

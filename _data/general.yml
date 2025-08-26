@@ -30,10 +30,11 @@ social:
     icon: fab fa-fw fa-x-twitter
 
 images_dirs:
-  root: images
-  logos: images/logos
-  banners: images/banners
-  profile_pictures: images/profile_pictures
+  root: media/images
+  logos: media/images/logos
+  banners: media/images/banners
+  profile_pictures: media/images/profile_pictures
+  videos: media/videos
 
 logo_header_filename: mira/triple_lenses.png
 logo_footer_filename: mira/white_text.png
