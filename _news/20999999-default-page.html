@@ -1,0 +1,35 @@
+---
+layout: page_padded
+---
+
+{% assign news_item = site.data.news.list | where: "page.url", page.url | first %}
+
+<h1>{{ news_item.page.title }}</h1>
+<p>
+    {{ news_item.text }}
+</p>
+
+
+<br><br><br><br><br><br><br><br>
+Page.path = {{ page.path }}
+<br>
+Page.url = {{ page.url }}
+<br>
+Page.id = {{ page.id }}
+<br>
+Page.name = {{ page.name }}
+<br>
+Page.date = {{ page.date }}
+<br>
+Page.title = {{ page.title }}
+<br>
+Page.collection = {{ page.collection }}
+<br>
+Page.categories = {{ page.categories }}
+<br>
+Page.tags = {{ page.tags }}
+<br>
+Page.content:
+<br>
+{{ page.content }}
+<br>
