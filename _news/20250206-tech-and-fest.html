@@ -3,6 +3,7 @@ layout: banner_top
 ---
 
 {% assign news_item = site.data.news.list | where: "page.url", page.url | first %}
+{% assign media_dir = site.baseurl | append: '/' | append: 'media/tech-and-fest-2025' %}
 
 <div class="page-container">
 
@@ -23,7 +24,7 @@ layout: banner_top
 
     <div class="video-grid">
       <video autoplay loop muted playsinline width="800">
-        <source src="/media/tech-and-fest-2025/videos/comparison.webm" type="video/webm">
+        <source src="{{ media_dir }}/videos/comparison.webm" type="video/webm">
         Your browser does not support the video tag.
       </video>
     </div>
@@ -40,20 +41,20 @@ layout: banner_top
       <div class="tri-slider">
         <div class="col col--left">
           <div class="ba" data-mode="auto" data-fit="contain" aria-label="Before/After">
-            <img class="ba__img ba__img--before" src="/media/tech-and-fest-2025/images/pair_1/frame_0000/lr_highlight.png" alt="Before">
-            <img class="ba__img ba__img--after"  src="/media/tech-and-fest-2025/images/pair_1/frame_0000/sr_highlight.png"  alt="After">
+            <img class="ba__img ba__img--before" src="{{ media_dir }}/images/pair_1/frame_0000/lr_highlight.png" alt="Before">
+            <img class="ba__img ba__img--after"  src="{{ media_dir }}/images/pair_1/frame_0000/sr_highlight.png"  alt="After">
             <button class="ba__handle" role="slider" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50"></button>
           </div>
         </div>
         <div class="col col--right">
           <div class="ba" data-mode="fill" data-fit="contain" aria-label="Before/After">
-            <img class="ba__img ba__img--before" src="/media/tech-and-fest-2025/images/pair_1/frame_0000/lr_patch.png" alt="Before">
-            <img class="ba__img ba__img--after"  src="/media/tech-and-fest-2025/images/pair_1/frame_0000/sr_patch.png"  alt="After">
+            <img class="ba__img ba__img--before" src="{{ media_dir }}/images/pair_1/frame_0000/lr_patch.png" alt="Before">
+            <img class="ba__img ba__img--after"  src="{{ media_dir }}/images/pair_1/frame_0000/sr_patch.png"  alt="After">
             <button class="ba__handle" role="slider" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50"></button>
           </div>
           <div class="ba" data-mode="fill" data-fit="contain" aria-label="Before/After">
-            <img class="ba__img ba__img--before" src="/media/tech-and-fest-2025/images/pair_1/frame_0000/hr_spectrum.png" alt="Before">
-            <img class="ba__img ba__img--after"  src="/media/tech-and-fest-2025/images/pair_1/frame_0000/sr_spectrum.png"  alt="After">
+            <img class="ba__img ba__img--before" src="{{ media_dir }}/images/pair_1/frame_0000/hr_spectrum.png" alt="Before">
+            <img class="ba__img ba__img--after"  src="{{ media_dir }}/images/pair_1/frame_0000/sr_spectrum.png"  alt="After">
             <button class="ba__handle" role="slider" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50"></button>
           </div>
         </div>
@@ -63,20 +64,20 @@ layout: banner_top
       <div class="tri-slider">
         <div class="col col--left">
           <div class="ba" data-mode="auto" data-fit="contain" aria-label="Before/After">
-            <img class="ba__img ba__img--before" src="/media/tech-and-fest-2025/images/pair_1/frame_0000/lr_highlight.png" alt="Before">
-            <img class="ba__img ba__img--after"  src="/media/tech-and-fest-2025/images/pair_1/frame_0000/sr_highlight.png"  alt="After">
+            <img class="ba__img ba__img--before" src="{{ media_dir }}/images/pair_1/frame_0000/lr_highlight.png" alt="Before">
+            <img class="ba__img ba__img--after"  src="{{ media_dir }}/images/pair_1/frame_0000/sr_highlight.png"  alt="After">
             <button class="ba__handle" role="slider" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50"></button>
           </div>
         </div>
         <div class="col col--right">
           <div class="ba" data-mode="fill" data-fit="contain" aria-label="Before/After">
-            <img class="ba__img ba__img--before" src="/media/tech-and-fest-2025/images/pair_1/frame_0000/lr_patch.png" alt="Before">
-            <img class="ba__img ba__img--after"  src="/media/tech-and-fest-2025/images/pair_1/frame_0000/sr_patch.png"  alt="After">
+            <img class="ba__img ba__img--before" src="{{ media_dir }}/images/pair_1/frame_0000/lr_patch.png" alt="Before">
+            <img class="ba__img ba__img--after"  src="{{ media_dir }}/images/pair_1/frame_0000/sr_patch.png"  alt="After">
             <button class="ba__handle" role="slider" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50"></button>
           </div>
           <div class="ba" data-mode="fill" data-fit="contain" aria-label="Before/After">
-            <img class="ba__img ba__img--before" src="/media/tech-and-fest-2025/images/pair_1/frame_0000/hr_spectrum.png" alt="Before">
-            <img class="ba__img ba__img--after"  src="/media/tech-and-fest-2025/images/pair_1/frame_0000/sr_spectrum.png"  alt="After">
+            <img class="ba__img ba__img--before" src="{{ media_dir }}/images/pair_1/frame_0000/hr_spectrum.png" alt="Before">
+            <img class="ba__img ba__img--after"  src="{{ media_dir }}/images/pair_1/frame_0000/sr_spectrum.png"  alt="After">
             <button class="ba__handle" role="slider" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50"></button>
           </div>
         </div>
@@ -86,32 +87,32 @@ layout: banner_top
       <div class="tri-slider">
         <div class="col col--left">
           <div class="ba" data-mode="auto" data-fit="contain" aria-label="Before/After">
-            <img class="ba__img ba__img--before" src="/media/tech-and-fest-2025/images/pair_1/frame_0000/lr_highlight.png" alt="Before">
-            <img class="ba__img ba__img--after"  src="/media/tech-and-fest-2025/images/pair_1/frame_0000/sr_highlight.png"  alt="After">
+            <img class="ba__img ba__img--before" src="{{ media_dir }}/images/pair_1/frame_0000/lr_highlight.png" alt="Before">
+            <img class="ba__img ba__img--after"  src="{{ media_dir }}/images/pair_1/frame_0000/sr_highlight.png"  alt="After">
             <button class="ba__handle" role="slider" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50"></button>
           </div>
         </div>
         <div class="col col--right">
           <div class="ba" data-mode="fill" data-fit="contain" aria-label="Before/After">
-            <img class="ba__img ba__img--before" src="/media/tech-and-fest-2025/images/pair_1/frame_0000/lr_patch.png" alt="Before">
-            <img class="ba__img ba__img--after"  src="/media/tech-and-fest-2025/images/pair_1/frame_0000/sr_patch.png"  alt="After">
+            <img class="ba__img ba__img--before" src="{{ media_dir }}/images/pair_1/frame_0000/lr_patch.png" alt="Before">
+            <img class="ba__img ba__img--after"  src="{{ media_dir }}/images/pair_1/frame_0000/sr_patch.png"  alt="After">
             <button class="ba__handle" role="slider" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50"></button>
           </div>
           <div class="ba" data-mode="fill" data-fit="contain" aria-label="Before/After">
-            <img class="ba__img ba__img--before" src="/media/tech-and-fest-2025/images/pair_1/frame_0000/hr_spectrum.png" alt="Before">
-            <img class="ba__img ba__img--after"  src="/media/tech-and-fest-2025/images/pair_1/frame_0000/sr_spectrum.png"  alt="After">
+            <img class="ba__img ba__img--before" src="{{ media_dir }}/images/pair_1/frame_0000/hr_spectrum.png" alt="Before">
+            <img class="ba__img ba__img--after"  src="{{ media_dir }}/images/pair_1/frame_0000/sr_spectrum.png"  alt="After">
             <button class="ba__handle" role="slider" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50"></button>
           </div>
         </div>
         <div class="col col--right">
           <div class="ba" data-mode="fill" data-fit="contain" aria-label="Before/After">
-            <img class="ba__img ba__img--before" src="/media/tech-and-fest-2025/images/pair_1/frame_0000/lr_patch.png" alt="Before">
-            <img class="ba__img ba__img--after"  src="/media/tech-and-fest-2025/images/pair_1/frame_0000/sr_patch.png"  alt="After">
+            <img class="ba__img ba__img--before" src="{{ media_dir }}/images/pair_1/frame_0000/lr_patch.png" alt="Before">
+            <img class="ba__img ba__img--after"  src="{{ media_dir }}/images/pair_1/frame_0000/sr_patch.png"  alt="After">
             <button class="ba__handle" role="slider" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50"></button>
           </div>
           <div class="ba" data-mode="fill" data-fit="contain" aria-label="Before/After">
-            <img class="ba__img ba__img--before" src="/media/tech-and-fest-2025/images/pair_1/frame_0000/hr_spectrum.png" alt="Before">
-            <img class="ba__img ba__img--after"  src="/media/tech-and-fest-2025/images/pair_1/frame_0000/sr_spectrum.png"  alt="After">
+            <img class="ba__img ba__img--before" src="{{ media_dir }}/images/pair_1/frame_0000/hr_spectrum.png" alt="Before">
+            <img class="ba__img ba__img--after"  src="{{ media_dir }}/images/pair_1/frame_0000/sr_spectrum.png"  alt="After">
             <button class="ba__handle" role="slider" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50"></button>
           </div>
         </div>
@@ -123,18 +124,18 @@ layout: banner_top
   <section class="gallery">
     <h3 class="section-title">Event Gallery</h3>
     <div class="gallery-grid">
-      <img src="/media/tech-and-fest-2025/gallery/PXL_20250206_085827646.jpg" alt="Event Photo 1" class="gallery-item">
-      <img src="/media/tech-and-fest-2025/gallery/PXL_20250206_094036514.jpg" alt="Event Photo 2" class="gallery-item">
-      <img src="/media/tech-and-fest-2025/gallery/PXL_20250206_094044963.jpg" alt="Event Photo 3" class="gallery-item">
-      <img src="/media/tech-and-fest-2025/gallery/PXL_20250206_094053039.jpg" alt="Event Photo 4" class="gallery-item">
-      <img src="/media/tech-and-fest-2025/gallery/PXL_20250206_102935028.jpg" alt="Event Photo 5" class="gallery-item">
-      <img src="/media/tech-and-fest-2025/gallery/PXL_20250206_103018616.jpg" alt="Event Photo 6" class="gallery-item">
-      <img src="/media/tech-and-fest-2025/gallery/PXL_20250206_115642548.jpg" alt="Event Photo 7" class="gallery-item">
-      <img src="/media/tech-and-fest-2025/gallery/PXL_20250206_120846617.jpg" alt="Event Photo 8" class="gallery-item">
-      <img src="/media/tech-and-fest-2025/gallery/PXL_20250206_120855831.jpg" alt="Event Photo 9" class="gallery-item">
-      <img src="/media/tech-and-fest-2025/gallery/PXL_20250206_120958982.jpg" alt="Event Photo 10" class="gallery-item">
-      <img src="/media/tech-and-fest-2025/gallery/PXL_20250206_121631116.jpg" alt="Event Photo 11" class="gallery-item">
-      <img src="/media/tech-and-fest-2025/gallery/PXL_20250206_121657968.jpg" alt="Event Photo 12" class="gallery-item">
+      <img src="{{ media_dir }}/gallery/PXL_20250206_085827646.jpg" alt="Event Photo 1" class="gallery-item">
+      <img src="{{ media_dir }}/gallery/PXL_20250206_094036514.jpg" alt="Event Photo 2" class="gallery-item">
+      <img src="{{ media_dir }}/gallery/PXL_20250206_094044963.jpg" alt="Event Photo 3" class="gallery-item">
+      <img src="{{ media_dir }}/gallery/PXL_20250206_094053039.jpg" alt="Event Photo 4" class="gallery-item">
+      <img src="{{ media_dir }}/gallery/PXL_20250206_102935028.jpg" alt="Event Photo 5" class="gallery-item">
+      <img src="{{ media_dir }}/gallery/PXL_20250206_103018616.jpg" alt="Event Photo 6" class="gallery-item">
+      <img src="{{ media_dir }}/gallery/PXL_20250206_115642548.jpg" alt="Event Photo 7" class="gallery-item">
+      <img src="{{ media_dir }}/gallery/PXL_20250206_120846617.jpg" alt="Event Photo 8" class="gallery-item">
+      <img src="{{ media_dir }}/gallery/PXL_20250206_120855831.jpg" alt="Event Photo 9" class="gallery-item">
+      <img src="{{ media_dir }}/gallery/PXL_20250206_120958982.jpg" alt="Event Photo 10" class="gallery-item">
+      <img src="{{ media_dir }}/gallery/PXL_20250206_121631116.jpg" alt="Event Photo 11" class="gallery-item">
+      <img src="{{ media_dir }}/gallery/PXL_20250206_121657968.jpg" alt="Event Photo 12" class="gallery-item">
     </div>
   </section>
 

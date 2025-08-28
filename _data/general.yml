@@ -30,7 +30,8 @@ social:
     icon: fab fa-fw fa-x-twitter
 
 images_dirs:
-  root: media/images
+  media: media
+  images: media/images
   logos: media/images/logos
   banners: media/images/banners
   profile_pictures: media/images/profile_pictures

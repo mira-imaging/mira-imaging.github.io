@@ -7,8 +7,9 @@
         {%- if school.logo contains '://' -%}
             {%- assign img_src = school.logo -%}
         {%- else -%}
-            {%- assign img_src = '/' | append: site.baseurl | append: logos_dir | append: school.logo -%}
+            {%- assign img_src = site.baseurl | append: '/' | append: logos_dir | append: '/' | append: school.logo_subpath -%}
         {%- endif -%}
+        {{img_src}}
         <a style="text-decoration: none;" href="{{ school.link }}" title="">
             <img
             class="supported-by-logo"
@@ -32,7 +33,7 @@
         {%- if school.logo contains '://' -%}
             {%- assign img_src = school.logo -%}
         {%- else -%}
-          {%- assign img_src = '/' | append: site.baseurl | append: logos_dir | append: school.logo -%}
+          {%- assign img_src = site.baseurl | append: '/' | append: logos_dir | append: '/' | append: school.logo_subpath -%}
         {%- endif -%}
         <a style="text-decoration: none;" href="{{ school.link }}" title="">
             <img
@@ -55,7 +56,7 @@
       {%- if school.logo contains '://' -%}
         {%- assign img_src = school.logo -%}
       {%- else -%}
-        {%- assign img_src = '/' | append: site.baseurl | append: logos_dir | append: school.logo -%}
+        {%- assign img_src = site.baseurl | append: '/' | append: logos_dir | append: '/' | append: school.logo_subpath -%}
       {%- endif -%}
       <a style="text-decoration: none;" href="{{ school.link }}" title="">
           <img
