@@ -3,7 +3,7 @@ affiliations:
     name: Université Grenoble Alpes
     abbrv: UGA
     link: https://www.univ-grenoble-alpes.fr/
-    logo: /images/logos/affiliations/uga.svg
+    logo: /affiliations/uga.svg
     logo_realtive_height: 1.00
     is_supporter: True
     is_supporter_teaching: False
@@ -13,7 +13,7 @@ affiliations:
     name: Institut Polytechnique de Grenoble
     abbrv: Grenoble INP
     link: https://www.grenoble-inp.fr/
-    logo: /images/logos/affiliations/grenoble_inp.png
+    logo: /affiliations/grenoble_inp.png
     logo_realtive_height: 1.00
     is_supporter: True
     is_supporter_teaching: False
@@ -23,7 +23,7 @@ affiliations:
     name: Grenoble Images Parole Signal Automatique Laboratoire
     abbrv: GIPSA-lab
     link: https://www.gipsa-lab.grenoble-inp.fr/
-    logo: /images/logos/affiliations/gipsa.png
+    logo: /affiliations/gipsa.png
     logo_realtive_height: 1.00
     is_supporter: True
     is_supporter_teaching: False
@@ -33,7 +33,7 @@ affiliations:
     name: Institut Carnot Logiciels & Systèmes Intelligents
     abbrv: Carnot LSI
     link: https://carnot-lsi.com/
-    logo: /images/logos/affiliations/carnot_lsi.svg
+    logo: /affiliations/carnot_lsi.svg
     logo_realtive_height: 0.80
     is_supporter: True
     is_supporter_teaching: False
@@ -43,7 +43,7 @@ affiliations:
     name: Agence Nationale de la Recherche
     abbrv: ANR
     link: https://anr.fr/
-    logo: /images/logos/affiliations/anr.png
+    logo: /affiliations/anr.png
     logo_realtive_height: 0.40
     is_supporter: True
     is_supporter_teaching: False
@@ -53,7 +53,7 @@ affiliations:
     name: Institut Universitaire de France
     abbrv: IUF
     link: https://www.iufrance.fr/
-    logo: /images/logos/affiliations/iuf.png
+    logo: /affiliations/iuf.png
     logo_realtive_height: 0.80
     is_supporter: True
     is_supporter_teaching: False
@@ -63,7 +63,7 @@ affiliations:
     name: Pervasive Systems and Algorithms Lab
     abbrv: PERSYVAL-lab
     link: https://persyval-lab.org/fr
-    logo: /images/logos/affiliations/persyval.png
+    logo: /affiliations/persyval.png
     logo_realtive_height: 0.60
     is_supporter: True
     is_supporter_teaching: True
@@ -72,7 +72,7 @@ affiliations:
   - key: ense3
     name: Grenoble INP - Ense3
     link: https://ense3.grenoble-inp.fr/
-    logo: /images/logos/affiliations/Grenoble-INP-Ense3-couleur-RVB.png
+    logo: /affiliations/Grenoble-INP-Ense3-couleur-RVB.png
     logo_realtive_height: 1.0
     is_supporter: False
     is_supporter_teaching: False
@@ -81,7 +81,7 @@ affiliations:
   - key: phelma
     name: Grenoble INP - Phelma
     link: https://phelma.grenoble-inp.fr/
-    logo: /images/logos/affiliations/Grenoble-INP-Phelma-couleur-RVB.png
+    logo: /affiliations/Grenoble-INP-Phelma-couleur-RVB.png
     logo_realtive_height: 1.0
     is_supporter: False
     is_supporter_teaching: False
@@ -90,7 +90,7 @@ affiliations:
   - key: polytech
     name: Grenoble INP - Polytech
     link: https://polytech.grenoble-inp.fr/
-    logo: /images/logos/affiliations/Grenoble-INP-Polytech-Grenoble-couleur-RVB.png
+    logo: /affiliations/Grenoble-INP-Polytech-Grenoble-couleur-RVB.png
     logo_realtive_height: 1.0
     is_supporter: False
     is_supporter_teaching: False
@@ -99,7 +99,7 @@ affiliations:
   - key: ensimag
     name: Grenoble INP - Ensimag
     link: https://ensimag.grenoble-inp.fr/
-    logo: /images/logos/affiliations/Grenoble INP - Ensimag (couleur, RVB, 120px).png
+    logo: /affiliations/Grenoble INP - Ensimag (couleur, RVB, 120px).png
     logo_realtive_height: 1.0
     is_supporter: False
     is_supporter_teaching: False
