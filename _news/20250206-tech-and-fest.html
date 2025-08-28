@@ -37,70 +37,120 @@ layout: banner_top
 
     <!-- Tri-sliders Container -->
     <div class="tri-sliders-container">
-      <!-- TRI #1 -->
+      <!-- TRI-SLIDER #1 -->
       <div class="tri-slider">
+        <!-- COLUMN LEFT -->
         <div class="col col--left">
+          <!-- SLIDER BIG -->
           <div class="ba" data-mode="auto" data-fit="contain" aria-label="Before/After">
-            <img class="ba__img ba__img--before" src="{{ media_dir }}/images/pair_1/frame_0000/lr_highlight.png" alt="Before">
-            <img class="ba__img ba__img--after"  src="{{ media_dir }}/images/pair_1/frame_0000/sr_highlight.png"  alt="After">
+            <div class="ba__group ba__group--before">
+              <img class="ba__img" src="{{ media_dir }}/images/pair_1/frame_0000/lr_highlight.png" alt="Before">
+              <span class="ba__label ba__label--before">Cam 1 (LR)</span>
+            </div>
+            <div class="ba__group ba__group--after">
+              <img class="ba__img" src="{{ media_dir }}/images/pair_1/frame_0000/sr_highlight.png" alt="After">
+              <span class="ba__label ba__label--after">Fusion (HR)</span>
+            </div>
             <button class="ba__handle" role="slider" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50"></button>
           </div>
         </div>
+        <!-- COLUMN RIGHT -->
         <div class="col col--right">
+          <!-- SLIDER TOP -->
           <div class="ba" data-mode="fill" data-fit="contain" aria-label="Before/After">
-            <img class="ba__img ba__img--before" src="{{ media_dir }}/images/pair_1/frame_0000/lr_patch.png" alt="Before">
-            <img class="ba__img ba__img--after"  src="{{ media_dir }}/images/pair_1/frame_0000/sr_patch.png"  alt="After">
+            <div class="ba__group ba__group--before">
+              <img class="ba__img" src="{{ media_dir }}/images/pair_1/frame_0000/lr_patch.png" alt="Before">
+              <span class="ba__label ba__label--before">Cam 1</span>
+            </div>
+            <div class="ba__group ba__group--after">
+              <img class="ba__img" src="{{ media_dir }}/images/pair_1/frame_0000/sr_patch.png" alt="After">
+              <span class="ba__label ba__label--after">Fusion</span>
+            </div>
             <button class="ba__handle" role="slider" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50"></button>
           </div>
+          <!-- SLIDER BOTTOM -->
           <div class="ba" data-mode="fill" data-fit="contain" aria-label="Before/After">
-            <img class="ba__img ba__img--before" src="{{ media_dir }}/images/pair_1/frame_0000/hr_spectrum.png" alt="Before">
-            <img class="ba__img ba__img--after"  src="{{ media_dir }}/images/pair_1/frame_0000/sr_spectrum.png"  alt="After">
+            <div class="ba__group ba__group--before">
+              <img class="ba__img" src="{{ media_dir }}/images/pair_1/frame_0000/hr_spectrum.png" alt="Before">
+              <span class="ba__label ba__label--before">Cam 2</span>
+            </div>
+            <div class="ba__group ba__group--after">
+              <img class="ba__img" src="{{ media_dir }}/images/pair_1/frame_0000/sr_spectrum.png" alt="After">
+              <span class="ba__label ba__label--after">Fusion</span>
+            </div>
             <button class="ba__handle" role="slider" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50"></button>
           </div>
         </div>
       </div>
-    
-      <!-- TRI #2 (another set) -->
-      <div class="tri-slider">
+
+      <!-- TRI-SLIDER #2 -->
+      <div class="tri-slider" style="width: 60%;">
+        <!-- COLUMN LEFT -->
         <div class="col col--left">
+          <!-- SLIDER BIG -->
           <div class="ba" data-mode="auto" data-fit="contain" aria-label="Before/After">
-            <img class="ba__img ba__img--before" src="{{ media_dir }}/images/pair_1/frame_0000/lr_highlight.png" alt="Before">
-            <img class="ba__img ba__img--after"  src="{{ media_dir }}/images/pair_1/frame_0000/sr_highlight.png"  alt="After">
+            <div class="ba__group ba__group--before">
+              <img class="ba__img" src="{{ media_dir }}/images/pair_1/frame_0000/lr_highlight.png" alt="Before">
+              <span class="ba__label ba__label--before">Before</span>
+            </div>
+            <div class="ba__group ba__group--after">
+              <img class="ba__img" src="{{ media_dir }}/images/pair_1/frame_0000/sr_highlight.png" alt="After">
+              <span class="ba__label ba__label--after">After</span>
+            </div>
             <button class="ba__handle" role="slider" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50"></button>
           </div>
         </div>
+        <!-- COLUMN RIGHT -->
         <div class="col col--right">
+          <!-- SLIDER TOP -->
           <div class="ba" data-mode="fill" data-fit="contain" aria-label="Before/After">
-            <img class="ba__img ba__img--before" src="{{ media_dir }}/images/pair_1/frame_0000/lr_patch.png" alt="Before">
-            <img class="ba__img ba__img--after"  src="{{ media_dir }}/images/pair_1/frame_0000/sr_patch.png"  alt="After">
+            <div class="ba__group ba__group--before">
+              <img class="ba__img" src="{{ media_dir }}/images/pair_1/frame_0000/lr_patch.png" alt="Before">
+              <span class="ba__label ba__label--before">Before</span>
+            </div>
+            <div class="ba__group ba__group--after">
+              <img class="ba__img" src="{{ media_dir }}/images/pair_1/frame_0000/sr_patch.png" alt="After">
+              <span class="ba__label ba__label--after">After</span>
+            </div>
             <button class="ba__handle" role="slider" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50"></button>
           </div>
+          <!-- SLIDER BOTTOM -->
           <div class="ba" data-mode="fill" data-fit="contain" aria-label="Before/After">
-            <img class="ba__img ba__img--before" src="{{ media_dir }}/images/pair_1/frame_0000/hr_spectrum.png" alt="Before">
-            <img class="ba__img ba__img--after"  src="{{ media_dir }}/images/pair_1/frame_0000/sr_spectrum.png"  alt="After">
+            <div class="ba__group ba__group--before">
+              <img class="ba__img" src="{{ media_dir }}/images/pair_1/frame_0000/hr_spectrum.png" alt="Before">
+              <span class="ba__label ba__label--before">Before</span>
+            </div>
+            <div class="ba__group ba__group--after">
+              <img class="ba__img" src="{{ media_dir }}/images/pair_1/frame_0000/sr_spectrum.png" alt="After">
+              <span class="ba__label ba__label--after">After</span>
+            </div>
             <button class="ba__handle" role="slider" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50"></button>
           </div>
         </div>
-      </div>
-    
-      <!-- TRI #3 (another set) -->
-      <div class="tri-slider">
-        <div class="col col--left">
-          <div class="ba" data-mode="auto" data-fit="contain" aria-label="Before/After">
-            <img class="ba__img ba__img--before" src="{{ media_dir }}/images/pair_1/frame_0000/lr_highlight.png" alt="Before">
-            <img class="ba__img ba__img--after"  src="{{ media_dir }}/images/pair_1/frame_0000/sr_highlight.png"  alt="After">
-            <button class="ba__handle" role="slider" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50"></button>
-          </div>
-        </div>
+        <!-- COLUMN RIGHT -->
         <div class="col col--right">
+          <!-- SLIDER TOP -->
           <div class="ba" data-mode="fill" data-fit="contain" aria-label="Before/After">
-            <img class="ba__img ba__img--before" src="{{ media_dir }}/images/pair_1/frame_0000/lr_patch.png" alt="Before">
-            <img class="ba__img ba__img--after"  src="{{ media_dir }}/images/pair_1/frame_0000/sr_patch.png"  alt="After">
+            <div class="ba__group ba__group--before">
+              <img class="ba__img" src="{{ media_dir }}/images/pair_1/frame_0000/lr_patch.png" alt="Before">
+              <span class="ba__label ba__label--before">Before</span>
+            </div>
+            <div class="ba__group ba__group--after">
+              <img class="ba__img" src="{{ media_dir }}/images/pair_1/frame_0000/sr_patch.png" alt="After">
+              <span class="ba__label ba__label--after">After</span>
+            </div>
             <button class="ba__handle" role="slider" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50"></button>
           </div>
+          <!-- SLIDER BOTTOM -->
           <div class="ba" data-mode="fill" data-fit="contain" aria-label="Before/After">
-            <img class="ba__img ba__img--before" src="{{ media_dir }}/images/pair_1/frame_0000/hr_spectrum.png" alt="Before">
-            <img class="ba__img ba__img--after"  src="{{ media_dir }}/images/pair_1/frame_0000/sr_spectrum.png"  alt="After">
+            <div class="ba__group ba__group--before">
+              <img class="ba__img" src="{{ media_dir }}/images/pair_1/frame_0000/hr_spectrum.png" alt="Before">
+              <span class="ba__label ba__label--before">Before</span>
+            </div>
+            <div class="ba__group ba__group--after">
+              <img class="ba__img" src="{{ media_dir }}/images/pair_1/frame_0000/sr_spectrum.png" alt="After">
+              <span class="ba__label ba__label--after">After</span>
+            </div>
             <button class="ba__handle" role="slider" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50"></button>
           </div>
         </div>
@@ -233,6 +283,17 @@ layout: banner_top
   height: 100%;               /* row or JS will provide height */
 }
 
+/* Groups: full overlay layers (image + label) */
+.ba__group {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+.ba__group--before { z-index: 0; }
+.ba__group--after  { z-index: 1; will-change: clip-path; }
+
+/* Images still fill the group */
 .ba__img {
   position: absolute;
   inset: 0;
@@ -241,6 +302,29 @@ layout: banner_top
   object-position: center;
   pointer-events: none;
 }
+.ba[data-fit="contain"] .ba__img { object-fit: contain; background: none; }
+.ba[data-fit="cover"]   .ba__img { object-fit: cover; }
+
+/* Labels (inside groups, so they get clipped with them) */
+.ba__label {
+  position: absolute;
+  bottom: 8px;
+  padding: 4px 8px;
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: #fff;
+  background: rgba(0,0,0,0.5);
+  border-radius: 4px;
+  pointer-events: none;
+}
+.ba__label--before { left: 8px; }
+.ba__label--after  { right: 8px; }
+
+/* default (left/big) */
+.col--left  .ba .ba__label { font-size: 0.95rem; padding: 4px 8px; }
+
+/* smaller labels for right column sliders */
+.col--right .ba .ba__label { font-size: 0.75rem; padding: 3px 6px; border-radius: 3px; }
 
 /* Per-slider fit */
 .ba[data-fit="contain"] .ba__img { object-fit: contain; background: none; }
@@ -319,10 +403,11 @@ layout: banner_top
 <script>
   (function(){
     function initSlider(slider){
-      const before = slider.querySelector('.ba__img--before');
-      const after  = slider.querySelector('.ba__img--after');
-      const handle = slider.querySelector('.ba__handle');
-      const mode   = slider.dataset.mode || 'auto';   // 'auto' | 'fill'
+      const beforeGroup = slider.querySelector('.ba__group--before');
+      const afterGroup  = slider.querySelector('.ba__group--after');
+      const beforeImg   = beforeGroup?.querySelector('img') || slider.querySelector('.ba__img--before');
+      const handle      = slider.querySelector('.ba__handle');
+      const mode        = slider.dataset.mode || 'auto';   // 'auto' | 'fill'
   
       let ratio = 0.5, dragging = false;
   
@@ -331,33 +416,38 @@ layout: banner_top
         ratio = clamp01(r);
         const rect = slider.getBoundingClientRect();
         const px = ratio * rect.width;
-        after.style.clipPath = `inset(0 0 0 ${px}px)`;
-        handle.style.left = px + 'px';
-        handle.setAttribute('aria-valuenow', Math.round(ratio*100));
+  
+        // Clip AFTER group so only the RIGHT side shows (labels included)
+        if (afterGroup) afterGroup.style.clipPath = `inset(0 0 0 ${px}px)`;
+  
+        if (handle) {
+          handle.style.left = px + 'px';
+          handle.setAttribute('aria-valuenow', Math.round(ratio * 100));
+        }
       }
   
-      // Auto mode: height = width * (before.h / before.w)
+      // --- sizing for 'auto' mode: height from BEFORE image aspect ---
       function sizeFromBefore(){
-        if (!before.naturalWidth || !before.naturalHeight) return;
-        const aspect = before.naturalHeight / before.naturalWidth;
+        if (!beforeImg || !beforeImg.naturalWidth || !beforeImg.naturalHeight) return;
+        const aspect = beforeImg.naturalHeight / beforeImg.naturalWidth;
         slider.style.height = Math.round(slider.clientWidth * aspect) + 'px';
         applyPosition(ratio);
       }
       function whenLoaded(img, cb){
+        if (!img) return;
         if (img.complete && img.naturalWidth) cb();
         else img.addEventListener('load', cb, { once: true });
       }
   
       if (mode === 'auto') {
-        whenLoaded(before, sizeFromBefore);
+        whenLoaded(beforeImg, sizeFromBefore);
         window.addEventListener('resize', sizeFromBefore);
       } else {
-        // Fill mode: height comes from the grid row; just keep clip in sync
         const ro = new ResizeObserver(() => applyPosition(ratio));
         ro.observe(slider);
       }
   
-      // Interactions
+      // --- interactions ---
       function clientX(e){ return e.touches ? e.touches[0].clientX : e.clientX; }
       function updateFromEvent(e){
         const rect = slider.getBoundingClientRect();
@@ -378,16 +468,19 @@ layout: banner_top
       window.addEventListener('touchmove', move, {passive:false});
       window.addEventListener('touchend', up);
   
-      handle.addEventListener('keydown', (e)=>{
-        const step = e.shiftKey ? 0.1 : 0.02;
-        if (e.key === 'ArrowLeft')  { applyPosition(ratio - step); e.preventDefault(); }
-        if (e.key === 'ArrowRight') { applyPosition(ratio + step); e.preventDefault(); }
-        if (e.key === 'Home')       { applyPosition(0); e.preventDefault(); }
-        if (e.key === 'End')        { applyPosition(1); e.preventDefault(); }
-      });
+      if (handle) {
+        handle.addEventListener('keydown', (e)=>{
+          const step = e.shiftKey ? 0.1 : 0.02;
+          if (e.key === 'ArrowLeft')  { applyPosition(ratio - step); e.preventDefault(); }
+          if (e.key === 'ArrowRight') { applyPosition(ratio + step); e.preventDefault(); }
+          if (e.key === 'Home')       { applyPosition(0); e.preventDefault(); }
+          if (e.key === 'End')        { applyPosition(1); e.preventDefault(); }
+        });
+      }
     }
   
-    // Initialize every .ba on the page (works for any number of tri blocks)
+    // Init all sliders
     document.querySelectorAll('.ba').forEach(initSlider);
   })();
   </script>
+  
