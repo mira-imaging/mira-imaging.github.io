@@ -104,18 +104,6 @@ layout: banner_top
             <button class="ba__handle" role="slider" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50"></button>
           </div>
         </div>
-        <div class="col col--right">
-          <div class="ba" data-mode="fill" data-fit="contain" aria-label="Before/After">
-            <img class="ba__img ba__img--before" src="{{ media_dir }}/images/pair_1/frame_0000/lr_patch.png" alt="Before">
-            <img class="ba__img ba__img--after"  src="{{ media_dir }}/images/pair_1/frame_0000/sr_patch.png"  alt="After">
-            <button class="ba__handle" role="slider" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50"></button>
-          </div>
-          <div class="ba" data-mode="fill" data-fit="contain" aria-label="Before/After">
-            <img class="ba__img ba__img--before" src="{{ media_dir }}/images/pair_1/frame_0000/hr_spectrum.png" alt="Before">
-            <img class="ba__img ba__img--after"  src="{{ media_dir }}/images/pair_1/frame_0000/sr_spectrum.png"  alt="After">
-            <button class="ba__handle" role="slider" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50"></button>
-          </div>
-        </div>
       </div>
     </div>
   </section>
@@ -202,16 +190,25 @@ layout: banner_top
 .tri-sliders-container {
   width: 1000px;                  /* or 100%; max-width: 1000px; */
   margin: 0 auto;
-  display: grid;
-  gap: 24px;
+  display: flex;
+  flex-wrap: wrap;
   grid-template-columns: repeat(auto-fit, minmax(480px, 1fr));
+  gap: 24px;
+  justify-content: center;
 }
 
-/* Important: let the card fill its grid cell */
+/* One tri-slider that can have 1 or 2 (or more) right columns */
 .tri-slider {
-  width: 100%;                    /* remove your 45% width */
+  width: 45%;                    /* remove your 45% width */
   display: grid;
-  grid-template-columns: 2fr 1fr;
+
+  /* First column is the big left slider */
+  grid-template-columns: 2fr;
+
+  /* Any extra children after the first become additional columns (1fr each) */
+  grid-auto-flow: column;
+  grid-auto-columns: 1fr;
+
   gap: 8px;
   align-items: stretch;
 }
