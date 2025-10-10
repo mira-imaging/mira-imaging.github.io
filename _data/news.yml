@@ -8,6 +8,14 @@ list:
   #     title: New Dataset Paper Submission in Collaboration with the Universidad Industrial de Santander in Colombia
   #   thumbnail: 
 
+  - text: We participated in the <a href=https://www.sido-lyon.com/en/>SIDO</a> event with a multi-camera <b>RGB-Hyperspectral fusion demonstrator</b>. For information at the laboratory's website, visit <a href="https://www.gipsa-lab.grenoble-inp.fr/les-publications/toutes-les-actus/mira-au-sido-2025">this link</a>.
+    date: Sep 2025
+    link: /news/20250917-sido/
+    page:
+      url: /news/20250917-sido/
+      title: SIDO 2025
+    thumbnail: 
+
   - text: Professor M. Dalla Mura, M. Jouni, and D. Picone visited the <a href="https://www.isct.ac.jp/en">Institute of Science Tokyo</a>, Japan for six weeks for scientific collaborations.
     date: Jul 2025
     link: /news/20250708-japan-visit/
@@ -16,7 +24,7 @@ list:
       title: Collaboration Visit to the Institute of Science Tokyo in Japan
     thumbnail: 
 
-  - text: We participated in the <a href=https://www.tech-fest.fr/en/>Tech&Fest</a> event with our <b>multi-camera fusion demonstrator Kamefusion 0.1.0</b>, which aims at improving the spatial resolution of snapshot hyperspectral cameras via image fusion software technology.
+  - text: We participated in the <a href=https://www.tech-fest.fr/en/>Tech&Fest</a> event with a multi-camera <b>Multispectral-Hyperspectral fusion demonstrator</b>, which aims at improving the spatial resolution of snapshot hyperspectral cameras via image fusion software technology.
     date: Feb 2025
     link: /news/20250206-tech-and-fest/
     page:
@@ -24,7 +32,7 @@ list:
       title: Tech&Fest 2025
     thumbnail: 
 
-  - text: The development of the MIRA Platform was accepted for funding by the <a href=https://carnot-lsi.com/en/home/>Institut Carnot Logiciels et Systèmes Intelligents (LSI)</a>.
+  - text: The development of the MIRA Platform has been given the green light by <a href=https://www.floralis.fr/>Floralis</a> and <a href=https://carnot-lsi.com/en/home/>Institut Carnot Logiciels et Systèmes Intelligents (LSI)</a>.
     date: Nov 2024
     link: /news/20241118-funding/
     page:
