@@ -56,9 +56,9 @@ affiliation: functions/affiliations/link.html
 <hr class="section-divider" />
 
 <section class="home-section">
-    <h1>Research</h1>
+    <h1>Research Themes</h1>
     <p>
-        MIRA focuses on multi-modal spectral imaging research, including image preprocessing, registration, and fusion.
+        MIRA focuses on multi-modal spectral imaging and fusion, including calibration, registration, and super-resolution.
     </p>
     <div class="research-grid">
         <a class="research-card">
@@ -67,15 +67,54 @@ affiliation: functions/affiliations/link.html
         </a>
 
         <a class="research-card">
-            <img src="{{ site.baseurl }}/media/images/research/registration.png" alt="Image Registration">
-            <span>Image Registration</span>
+            <img src="{{ site.baseurl }}/media/images/research/registration.png" alt="Registration">
+            <span>Registration</span>
         </a>
 
         <a class="research-card">
-            <img src="{{ site.baseurl }}/media/images/research/main_sr.jpg" alt="Image Fusion">
-            <span>Image Fusion</span>
+            <img src="{{ site.baseurl }}/media/images/research/main_sr.jpg" alt="Super-resolution">
+            <span>Super-resolution</span>
         </a>
     </div>
+
+    <h2 style="justify-content: center;">Super-resolution</h2>
+
+    <h3 style="justify-content: center;">Video Illustration</h3>
+    <div class="video-grid">
+      <video autoplay loop muted playsinline>
+        {% assign video_media_dir = site.baseurl | append: '/' | append: 'media/tech-and-fest-2025/images/pair_1/frame_0000' %}
+        <source src="{{ video_media_dir }}/comparison.webm" type="video/webm">
+        Your browser does not support the video tag.
+      </video>
+    </div>
+
+    <h3 style="justify-content: center;">Visual Before/After Sliders</h3>
+    <div class="tri-sliders-container">
+      <div style="width: 60%;">
+        {% assign slider_media_dir = site.baseurl | append: '/' | append: 'media/tech-and-fest-2025/images/pair_1/frame_0000' %}
+        {% assign left_before = slider_media_dir | append: "/lr_highlight.png" %}
+        {% assign left_after  = slider_media_dir | append: "/sr_highlight.png" %}
+        {% assign top_before  = slider_media_dir | append: "/lr_patch.png" %}
+        {% assign top_after   = slider_media_dir | append: "/sr_patch.png" %}
+        {% assign bottom_before = slider_media_dir | append: "/hr_spectrum.png" %}
+        {% assign bottom_after  = slider_media_dir | append: "/sr_spectrum.png" %}
+        {% include tri_slider.html
+        left_before=left_before
+        left_after=left_after
+        left_label_before="Cam 1 (LR)"
+        left_label_after="Fusion (HR)"
+        top_before=top_before
+        top_after=top_after
+        top_label_before="Cam 1"
+        top_label_after="Fusion"
+        bottom_before=bottom_before
+        bottom_after=bottom_after
+        bottom_label_before="Cam 2"
+        bottom_label_after="Fusion"
+        %}
+      </div>
+    </div>
+
 </section>
 
 <hr class="section-divider" />
@@ -90,6 +129,9 @@ affiliation: functions/affiliations/link.html
 </section>
 
 
+<link rel="stylesheet" href="{{ '/assets/css/tri-slider.css' | relative_url }}">
+<script src="{{ '/assets/js/tri-slider.js' | relative_url }}"></script>
+
 <style>
 .home-section {
     margin: 0 auto;
@@ -99,6 +141,20 @@ affiliation: functions/affiliations/link.html
 .home-section h1 {
     text-align: center;
     font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.home-section h2 {
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.home-section h3 {
+    text-align: left;
+    font-size: 1.1rem;
     font-weight: bold;
     margin-bottom: 1rem;
 }
@@ -185,6 +241,35 @@ affiliation: functions/affiliations/link.html
     display: inline-block;
     max-width: 95%;
     height: auto;
+}
+
+.tri-sliders-container {
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+}
+
+.video-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    max-width: 100%;
+    overflow: hidden;
+    margin: 1rem 0;
+}
+
+/* Keep video responsive and centered */
+.video-grid video {
+    width: 95%;
+    max-width: 100%;
+    height: auto;
+    display: block;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
 }
 
 </style>
