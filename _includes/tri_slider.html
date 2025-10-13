@@ -1,45 +1,42 @@
 <!-- Tri-Slider Component -->
-<div class="tri-sliders-container">
-    <div class="tri-slider">
-      <div class="col col--left">
-        <div class="ba" data-mode="auto" data-fit="contain" aria-label="Before/After">
-          <div class="ba__group ba__group--before">
-            <img class="ba__img" src="{{ include.left_before }}" alt="Before">
-            <span class="ba__label ba__label--before">{{ include.left_label_before }}</span>
-          </div>
-          <div class="ba__group ba__group--after">
-            <img class="ba__img" src="{{ include.left_after }}" alt="After">
-            <span class="ba__label ba__label--after">{{ include.left_label_after }}</span>
-          </div>
-          <button class="ba__handle" role="slider"></button>
-        </div>
+<div class="tri-slider">
+  <div class="col col--left">
+    <div class="ba" data-mode="auto" data-fit="contain" aria-label="Before/After">
+      <div class="ba__group ba__group--before">
+        <img class="ba__img" src="{{ include.left_before }}" alt="Before">
+        <span class="ba__label ba__label--before">{{ include.left_label_before }}</span>
       </div>
-  
-      <div class="col col--right">
-        <div class="ba" data-mode="fill" data-fit="contain" aria-label="Before/After">
-          <div class="ba__group ba__group--before">
-            <img class="ba__img" src="{{ include.top_before }}" alt="Before">
-            <span class="ba__label ba__label--before">{{ include.top_label_before }}</span>
-          </div>
-          <div class="ba__group ba__group--after">
-            <img class="ba__img" src="{{ include.top_after }}" alt="After">
-            <span class="ba__label ba__label--after">{{ include.top_label_after }}</span>
-          </div>
-          <button class="ba__handle" role="slider"></button>
-        </div>
-  
-        <div class="ba" data-mode="fill" data-fit="contain" aria-label="Before/After">
-          <div class="ba__group ba__group--before">
-            <img class="ba__img" src="{{ include.bottom_before }}" alt="Before">
-            <span class="ba__label ba__label--before">{{ include.bottom_label_before }}</span>
-          </div>
-          <div class="ba__group ba__group--after">
-            <img class="ba__img" src="{{ include.bottom_after }}" alt="After">
-            <span class="ba__label ba__label--after">{{ include.bottom_label_after }}</span>
-          </div>
-          <button class="ba__handle" role="slider"></button>
-        </div>
+      <div class="ba__group ba__group--after">
+        <img class="ba__img" src="{{ include.left_after }}" alt="After">
+        <span class="ba__label ba__label--after">{{ include.left_label_after }}</span>
       </div>
+      <button class="ba__handle" role="slider"></button>
     </div>
   </div>
-  
+
+  <div class="col col--right">
+    <div class="ba" data-mode="fill" data-fit="contain" aria-label="Before/After">
+      <div class="ba__group ba__group--before">
+        <img class="ba__img" src="{{ include.top_before }}" alt="Before">
+        <span class="ba__label ba__label--before">{{ include.top_label_before }}</span>
+      </div>
+      <div class="ba__group ba__group--after">
+        <img class="ba__img" src="{{ include.top_after }}" alt="After">
+        <span class="ba__label ba__label--after">{{ include.top_label_after }}</span>
+      </div>
+      <button class="ba__handle" role="slider"></button>
+    </div>
+
+    <div class="ba" data-mode="fill" data-fit="contain" aria-label="Before/After">
+      <div class="ba__group ba__group--before">
+        <img class="ba__img" src="{{ include.bottom_before }}" alt="Before">
+        <span class="ba__label ba__label--before">{{ include.bottom_label_before }}</span>
+      </div>
+      <div class="ba__group ba__group--after">
+        <img class="ba__img" src="{{ include.bottom_after }}" alt="After">
+        <span class="ba__label ba__label--after">{{ include.bottom_label_after }}</span>
+      </div>
+      <button class="ba__handle" role="slider"></button>
+    </div>
+  </div>
+</div>

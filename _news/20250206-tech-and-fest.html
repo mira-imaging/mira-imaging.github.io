@@ -36,26 +36,28 @@ tri_slider: true
   <section class="sliders">
     <h3 class="section-title">Demo Sliders</h3>
    
-    {% assign left_before = media_dir | append: "/images/pair_1/frame_0000/lr_highlight.png" %}
-    {% assign left_after  = media_dir | append: "/images/pair_1/frame_0000/sr_highlight.png" %}
-    {% assign top_before  = media_dir | append: "/images/pair_1/frame_0000/lr_patch.png" %}
-    {% assign top_after   = media_dir | append: "/images/pair_1/frame_0000/sr_patch.png" %}
-    {% assign bottom_before = media_dir | append: "/images/pair_1/frame_0000/hr_spectrum.png" %}
-    {% assign bottom_after  = media_dir | append: "/images/pair_1/frame_0000/sr_spectrum.png" %}
-    {% include tri_slider.html
-      left_before=left_before
-      left_after=left_after
-      left_label_before="Cam 1 (LR)"
-      left_label_after="Fusion (HR)"
-      top_before=top_before
-      top_after=top_after
-      top_label_before="Cam 1"
-      top_label_after="Fusion"
-      bottom_before=bottom_before
-      bottom_after=bottom_after
-      bottom_label_before="Cam 2"
-      bottom_label_after="Fusion"
-    %}
+    <div class="tri-sliders-container">
+      {% assign left_before = media_dir | append: "/images/pair_1/frame_0000/lr_highlight.png" %}
+      {% assign left_after  = media_dir | append: "/images/pair_1/frame_0000/sr_highlight.png" %}
+      {% assign top_before  = media_dir | append: "/images/pair_1/frame_0000/lr_patch.png" %}
+      {% assign top_after   = media_dir | append: "/images/pair_1/frame_0000/sr_patch.png" %}
+      {% assign bottom_before = media_dir | append: "/images/pair_1/frame_0000/hr_spectrum.png" %}
+      {% assign bottom_after  = media_dir | append: "/images/pair_1/frame_0000/sr_spectrum.png" %}
+      {% include tri_slider.html
+        left_before=left_before
+        left_after=left_after
+        left_label_before="Cam 1 (LR)"
+        left_label_after="Fusion (HR)"
+        top_before=top_before
+        top_after=top_after
+        top_label_before="Cam 1"
+        top_label_after="Fusion"
+        bottom_before=bottom_before
+        bottom_after=bottom_after
+        bottom_label_before="Cam 2"
+        bottom_label_after="Fusion"
+      %}
+    </div>
   </section>
   
   <!-- Image Gallery -->
@@ -79,8 +81,7 @@ tri_slider: true
 
 </div>
 
-{% if page.tri_slider %}
-  <link rel="stylesheet" href="{{ '/assets/css/tri-slider.css' | relative_url }}">
-  <script src="{{ '/assets/js/tri-slider.js' | relative_url }}"></script>
-{% endif %}
+<link rel="stylesheet" href="{{ '/assets/css/blog-page.css' | relative_url }}">
+<link rel="stylesheet" href="{{ '/assets/css/tri-slider.css' | relative_url }}">
+<script src="{{ '/assets/js/tri-slider.js' | relative_url }}"></script>
 
