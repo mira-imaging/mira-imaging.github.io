@@ -12,43 +12,179 @@ affiliation: functions/affiliations/link.html
 {%- assign general = site.data.general -%}
 {%- assign proj_name = general.name -%}
 
-<p>
-    The {% include {{ page.proj_name }}/append.html %} is the technological platform on multi-sensor imaging at 
-    {% include {{ page.affiliation }} key="gipsa" %},
-    specialized in spectral imaging and image fusion.
-</p>
+<section class="home-section">
+    <h1>Multi-camera Imaging Research and Acquisition<br>- The MIRA Platform -</h1>
 
-<h1>Summary</h1>
-<p>
-    {{ general.description }}
-</p>
-<h1>Themes</h1>
-<ul>
-    <li>
-        <h2>Multimodal Image Processing</h2>
-    </li>
-    <li>
-        <h2>Spectral Imaging</h2>
-    </li>
-    <li>
-        <h2>Computer Vision</h2>
-    </li>
-</ul>
-<h1>Services</h1>
-<ul>
-    <li>
-        <h2>Research & Development</h2>
-    </li>
-    <li>
-        <h2>Technology Transfer & Valorization</h2>
-    </li>
-    <li>
-        <h2>Teaching & Student Projects</h2>
-    </li>
-</ul>
-<p>
-    For more information,
-    <a href="{{- site.baseurl -}}/contact/" class="link">contact us</a>
-    or visit our
-    <a href="{{- site.baseurl -}}/news/" class="link">News</a> pages.
-</p>
+    <ul>
+        <li>A platform dedicated for <b>multimodal imaging</b>, acquisition and processing.</li>
+        
+        <li>
+            Hosted at the laboratory <b>{% include {{ page.affiliation }} key="gipsa" %}</b>, in Grenoble, France.
+            Presented officially through <a href="https://www.gipsa-lab.grenoble-inp.fr/recherche/plateaux-techniques/mira">this link</a>.
+        </li>
+        
+        <li>Specialized in <b>spectral imaging</b> and <b>image fusion</b>.</li>
+        
+        <li>
+            Aims at building <b>multi-camera</b> image processing pipelines:
+        </li>
+        <li class="centered-image">
+            <img src="{{ site.baseurl }}/media/images/pipeline.jpg" alt="Pipeline" style="margin: 5px auto;">
+        </li>
+            
+        <li>Aims at integration in <b>research</b>, <b>teaching</b>, and <b>technology transfer</b> projects:</li>
+        <div class="research-grid">
+            <a href="{{ site.baseurl }}/research" class="research-card">
+                <img src="{{ site.baseurl }}/media/images/research/main_sr.jpg" alt="Research">
+                <span>Research</span>
+            </a>
+    
+            <a href="{{ site.baseurl }}/teaching" class="research-card">
+                <img src="{{ site.baseurl }}/media/images/teaching/optical_setup.png" alt="Teaching">
+                <span>Teaching</span>
+            </a>
+    
+            <a href="{{ site.baseurl }}/transfer" class="research-card">
+                <img src="{{ site.baseurl }}/media/images/transfer/20250917_sido/couple_front.jpeg" alt="Technology Transfer">
+                <span>Technology Transfer</span>
+            </a>
+        </div>
+    </ul>
+
+</section>
+
+<hr class="section-divider" />
+
+<section class="home-section">
+    <h1>Research</h1>
+    <p>
+        MIRA focuses on multi-modal spectral imaging research, including image preprocessing, registration, and fusion.
+    </p>
+    <div class="research-grid">
+        <a class="research-card">
+            <img src="{{ site.baseurl }}/media/images/research/Imagerie-hyperspectrale.jpg" alt="Spectral Imaging">
+            <span>Spectral Imaging</span>
+        </a>
+
+        <a class="research-card">
+            <img src="{{ site.baseurl }}/media/images/research/registration.png" alt="Image Registration">
+            <span>Image Registration</span>
+        </a>
+
+        <a class="research-card">
+            <img src="{{ site.baseurl }}/media/images/research/main_sr.jpg" alt="Image Fusion">
+            <span>Image Fusion</span>
+        </a>
+    </div>
+</section>
+
+<hr class="section-divider" />
+
+<section class="home-section">
+    <p>
+        For more information,
+        <a href="{{- site.baseurl -}}/contact/" class="link">contact us</a>
+        or visit our
+        <a href="{{- site.baseurl -}}/news/" class="link">News</a> pages.
+    </p>
+</section>
+
+
+<style>
+.home-section {
+    margin: 0 auto;
+}
+
+/* Center the main section titles */
+.home-section h1 {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+/* Content stays left-aligned */
+.home-section p,
+.home-section ul {
+    text-align: left;
+    margin-bottom: 1rem;
+}
+
+/* Lists styling */
+.section-list {
+    list-style: circle;
+    padding: 0;
+}
+
+.section-list li {
+    margin: 0.5rem 0;
+}
+
+/* Separator line */
+.section-divider {
+    border: none;
+    border-top: 1px solid #ccc;
+    margin: 2rem auto;
+    width: 60%;
+    opacity: 0.6;
+}
+
+
+/* Research section layout */
+.research-grid {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    padding: 10px;
+    margin-bottom: 1rem;
+}
+
+/* Individual card (button style) */
+.research-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    background-color: #f8f8f8;
+    border-radius: 12px;
+    flex: 1;
+    padding: 1rem;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Image */
+.research-card img {
+    width: 100%;
+    height: 130px;
+    object-fit: contain;
+    border-radius: 8px;
+    margin-bottom: 0.8rem;
+}
+
+/* Text below the image */
+.research-card span {
+    text-align: center;
+    color: #333;
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+/* Hover effect */
+.research-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+.centered-image {
+    text-align: center;
+    list-style: none; /* Remove bullet */
+}
+
+.centered-image img {
+    display: inline-block;
+    max-width: 95%;
+    height: auto;
+}
+
+</style>
