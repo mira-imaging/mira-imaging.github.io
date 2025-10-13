@@ -24,7 +24,11 @@
         {%- for page in pages -%}
           {%- if page.title -%}
             <li class="nav-item {% if page.subpages %}has-dropdown{% endif %}">
-              <a href="{{ page.permalink | relative_url }}">{{ page.title | escape }}</a>
+              {%- if page.permalink -%}
+                <a href="{{ page.permalink | relative_url }}">{{ page.title | escape }}</a>
+              {%- else -%}
+                <a class="inactive-link">{{ page.title | escape }}</a>
+              {%- endif -%}
               
               {%- if page.subpages -%}
                 <ul class="dropdown">
