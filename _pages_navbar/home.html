@@ -77,8 +77,77 @@ affiliation: functions/affiliations/link.html
         </a>
     </div>
 
+    <div class="research-descriptions">
+
+      <h3>Spectral Imaging</h3>
+      <p>
+        We acquire images that go beyond the visible range to capture detailed spectral information for each pixel.  
+        Our workflow includes <b>preprocessing</b> and <b>radiometric calibration</b> of raw data to ensure accurate reflectance values and spectral consistency across sensors.  
+        This enables reliable analysis of materials, biological tissues, and manufactured products using their unique optical signatures.
+      </p>
+    
+      <h3>Image Registration</h3>
+      <p>
+        We align images from multiple cameras or sensors so that every pixel represents the same point in the scene.  
+        This spatial matching is essential for combining data from color, infrared, and hyperspectral cameras accurately, ensuring high-quality fusion and comparison between modalities.
+      </p>
+    
+      <h3>Super-resolution</h3>
+      <p>
+        We combine information from multiple low-resolution images or sensors to produce sharper, higher-resolution results.  
+        This enhances image detail and clarity, enabling improved visualization, quantitative analysis, and advanced applications such as defect detection and material mapping.
+      </p>
+    
+    </div>
+        
     <h2 style="justify-content: center;">Super-resolution</h2>
 
+    <p>
+      In multimodal imaging, different cameras often capture complementary information.  
+      For instance, assume the following configuration of two cameras, where:  
+      <b>Cam&nbsp;1</b> provides a detailed spectral signature but at a lower spatial resolution,  
+      while <b>Cam&nbsp;2</b> offers sharper spatial details at a lower spectral resolution.  
+      The goal of <b>super-resolution fusion</b> is to combine both sources to obtain images that are  
+      simultaneously high in spatial and spectral content.
+    </p>
+    
+    <table class="fusion-table">
+      <thead>
+        <tr>
+          <th>Camera / Result</th>
+          <th>Spectral Resolution</th>
+          <th>Spatial Resolution</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><b>Cam&nbsp;1</b></td>
+          <td>High (many wavelength bands)</td>
+          <td>Low (coarser image details)</td>
+          <td>Captures rich spectral information for each pixel, ideal for material identification.</td>
+        </tr>
+        <tr>
+          <td><b>Cam&nbsp;2</b></td>
+          <td>Low (few wavelength bands)</td>
+          <td>High (fine image details)</td>
+          <td>Captures sharp spatial structures but limited spectral information.</td>
+        </tr>
+        <tr>
+          <td><b>Fused Image</b></td>
+          <td>High</td>
+          <td>High</td>
+          <td>Combines both sources through <b>super-resolution fusion</b> to produce images rich in both spatial and spectral content.</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <p>
+      The following video and interactive sliders illustrate this process.  
+      The video shows the improvement from individual camera captures to the fused high-resolution result,  
+      while the sliders allow a pixel-wise comparison between the input images and the fusion output.
+    </p>
+    
     <h3 style="justify-content: center;">Video Illustration</h3>
     <div class="video-grid">
       <video autoplay loop muted playsinline>
@@ -166,6 +235,50 @@ affiliation: functions/affiliations/link.html
     margin-bottom: 1rem;
 }
 
+.home-section p {
+    margin-bottom: 1rem;
+    line-height: 1.6;
+    color: #555;
+}
+
+.home-section p + p {
+    margin-top: -0.3rem;
+}
+
+.fusion-table {
+  width: 100%;
+  max-width: 800px;
+  margin: 1.5rem auto;
+  border-collapse: collapse;
+  text-align: left;
+  font-size: 0.95rem;
+  color: #444;
+}
+
+.fusion-table thead {
+  background-color: #f3f4f6;
+}
+
+.fusion-table th,
+.fusion-table td {
+  border: 1px solid #ddd;
+  padding: 8px 12px;
+  vertical-align: top;
+}
+
+.fusion-table th {
+  font-weight: bold;
+  color: #222;
+}
+
+.fusion-table tbody tr:nth-child(even) {
+  background-color: #fafafa;
+}
+
+.fusion-table tbody tr:hover {
+  background-color: #f0f0f0;
+}
+
 /* Lists styling */
 .section-list {
     list-style: circle;
@@ -241,6 +354,26 @@ affiliation: functions/affiliations/link.html
     display: inline-block;
     max-width: 95%;
     height: auto;
+}
+
+.research-descriptions {
+    max-width: 900px;
+    margin: 1.5rem auto;
+}
+
+.research-descriptions h3 {
+    font-size: 1.2rem;
+    margin-top: 1.2rem;
+    color: #333;
+    text-align: left;
+}
+
+.research-descriptions p {
+    margin-top: 0.4rem;
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #555;
+    text-align: justify;
 }
 
 .tri-sliders-container {
