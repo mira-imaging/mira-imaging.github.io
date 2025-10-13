@@ -3,8 +3,8 @@ pages:
     permalink: /
     subpages:
 
-  - title: Services
-    permalink: /services/
+  - title: Activities
+    permalink: 
     subpages:
       - title: Research
         permalink: /research/
@@ -12,6 +12,10 @@ pages:
 
       - title: Teaching
         permalink: /teaching/
+        subpages:
+
+      - title: Technology Transfer
+        permalink: /transfer/
         subpages:
 
   - title: Members
