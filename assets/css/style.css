@@ -44,32 +44,43 @@
 * Home Layout
 */
 
-/* Content Section */
 .home-content {
-    display: flex;
-    flex-direction: row; /* Stack elements vertically by default */
-    gap: 30px; /* Space between sections */
+    display: grid;
+    grid-template-columns: 2.2fr 1fr; /* 75% / 25% split */
+    gap: 30px;
+    align-items: start;
 }
 
-/* On medium screens and above, switch to row layout */
+.home-main-content,
+.home-news-sidebar {
+    min-width: 0;
+}
+
+.home-main-content {
+    padding: 10px;
+}
+
+/* Sidebar styling */
+.home-news-sidebar {
+    background-color: #f3f4f6;
+    padding: 10px 20px;
+    border-top: 2px solid #d1d5db;
+    border-radius: 8px;
+    box-sizing: border-box;
+}
+
+/* Responsive stacking */
 @media (max-width: 767px) {
     .home-content {
-        flex-direction: column; /* Switch to row for larger screens */
+        grid-template-columns: 1fr; /* Stack vertically */
     }
 }
 
-/* Home Content */
-.home-main-content {
-    flex: 1;
-}
-
-/* Sidebar (News Section) */
-.home-news-sidebar {
-    max-width: 300px; /* Fixed width for sidebar */
-    background-color: #f3f4f6; /* Light gray background */
-    padding: 10px 20px;
-    border-top: 2px solid #d1d5db; /* Light gray border on top */
-    border-radius: 8px; /* Rounded corners */
+.sidebar-news-block h1 {
+    text-align: left;
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
 }
 
 /* News Item Styling */
@@ -87,12 +98,6 @@
 .link {
     color: #2563eb;
     text-decoration: underline;
-}
-
-@media (max-width: 767px) {
-    .home-news-sidebar {
-        max-width: 100%; /* Fixed width for sidebar */
-    }
 }
 
 /**
@@ -186,6 +191,7 @@
     font-size: 1rem;
     padding: 10px 15px;
     display: block;
+    cursor: pointer;
 }
   
 .nav-item a:hover {
@@ -197,6 +203,16 @@
     display: block;
 }
   
+/* Inactive (no href) links: look clickable, but no action */
+.nav-item a.inactive-link {
+    cursor: pointer; /* keep hand shape */
+}
+
+/* Optional: slightly dim inactive links if you want to indicate no action */
+.nav-item a.inactive-link:hover {
+    background: #ddd;
+}
+
 .dropdown {
     display: none;
     position: absolute;
