@@ -104,7 +104,11 @@
 * Header
 */
 
-/* General Header Styling */
+/* ===============================
+   HEADER — RESPONSIVE & DROPDOWN
+   =============================== */
+
+/* Header wrapper */
 .site-header {
     border-bottom: 2px solid #e0e0e0;
     background-color: #efefef;
@@ -112,108 +116,85 @@
     top: 0;
     z-index: 10;
     width: 100%;
-}
-
-.container-header {
+  }
+  
+  /* Main container: logo (left) + nav (right) */
+  .container-header {
     display: flex;
     flex-direction: row;
-    gap: 50px;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 0px;
-}
-
-.profile-link {
+    gap: 24px;
+    padding: 10px 20px;
+    flex-wrap: nowrap;
+    max-width: 1200px;
+    margin: 0 auto;
+    min-width: 0;
+  }
+  
+  /* --- Left: Logo + title --- */
+  .profile-link {
     display: flex;
     flex-direction: row;
-    gap: 10px;
-    align-items: center;
-}
-
-.profile-link:hover {
-    text-decoration: none;
-}
-
-.profile {
-    display: flex;
     align-items: center;
     gap: 10px;
+    flex-shrink: 1;
+    min-width: 0;
     text-decoration: none;
-    color: black;
-}
-
-.logo-image {
+    color: inherit;
+  }
+  
+  .logo-image {
     height: 48px;
     width: auto;
     border-radius: 20px;
-
-}
-
-.profile-name {
+    flex-shrink: 0;
+  }
+  
+  .profile-name {
     font-size: 1.5rem;
     font-weight: bold;
     color: #333;
-}
-
-/* Navigation */
-.site-nav {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  
+  /* --- Right: Navigation --- */
+  .site-nav {
     position: relative;
-}
-
-.nav-trigger {
-    display: none;
-}
-
-.menu-icon {
-    display: none;
-    cursor: pointer;
-}
-
-.trigger {
+    flex-shrink: 0;
+  }
+  
+  .nav-menu {
     display: flex;
-    gap: 30px;
-}
-
-.nav-menu {
     list-style: none;
     padding: 0;
     margin: 0;
-    display: flex;
-}
+    gap: 10px;
+  }
   
-.nav-item {
+  .nav-item {
     position: relative;
-}
+  }
   
-.nav-item a {
+  .nav-item a {
     text-decoration: none;
     color: #111;
     font-size: 1rem;
     padding: 10px 15px;
     display: block;
     cursor: pointer;
-}
+    transition: background 0.2s ease;
+  }
   
-.nav-item a:hover {
+  .nav-item a:hover {
+    background: #ddd;
     text-decoration: underline;
-    background: #ddd;
-}
+  }
   
-.has-dropdown:hover .dropdown {
-    display: block;
-}
-  
-/* Inactive (no href) links: look clickable, but no action */
-.nav-item a.inactive-link {
-    cursor: pointer; /* keep hand shape */
-}
-
-/* Optional: slightly dim inactive links if you want to indicate no action */
-.nav-item a.inactive-link:hover {
-    background: #ddd;
-}
-
-.dropdown {
+  /* Dropdowns (for subpages) */
+  .dropdown {
     display: none;
     position: absolute;
     background: white;
@@ -224,58 +205,152 @@
     left: 0;
     min-width: 150px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-}
+  }
   
-.dropdown li {
-    padding: 5px 0;
-}
+  .has-dropdown:hover .dropdown {
+    display: block;
+  }
   
-.dropdown a {
+  .dropdown a {
     padding: 8px;
     display: block;
     color: #333;
     text-decoration: none;
-}
+  }
   
-.dropdown a:hover {
+  .dropdown a:hover {
     background: #eee;
-}
+  }
   
-
-/* Mobile Styling */
-
-@media screen and (max-width: 600px) {
+  /* --- Hamburger icon --- */
+  .menu-icon {
+    display: none;
+    cursor: pointer;
+    padding: 8px;
+  }
+  
+  .menu-icon svg {
+    fill: #333;
+  }
+  
+  .nav-trigger {
+    display: none;
+  }
+  
+  /* ==============================
+     RESPONSIVE BEHAVIOR
+     ============================== */
+  
+  @media (max-width: 900px) {
+    .container-header {
+      gap: 10px;
+    }
+  
+    /* Show hamburger icon */
     .menu-icon {
-        display: block;
-        width: 36px;
-        height: 36px;
+      display: block;
+      cursor: pointer;
+      padding: 8px;
+      z-index: 11;
     }
-
-    .menu-icon > svg {
-        fill: #333;
+  
+    /* Mobile dropdown menu container */
+    .nav-menu {
+      display: none;
+      flex-direction: column;
+      position: absolute;
+      right: 0;
+      top: 100%;
+      background: #efefef;
+      border: 1px solid #ccc;
+      width: 240px;
+      box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+      padding: 8px 0;
+      border-radius: 6px;
+      z-index: 10;
+  
+      /* 🧩 fix leaking selections */
+      overflow: hidden;           /* keep hover area inside box */
+      clip-path: inset(0 round 6px); /* for browsers that ignore overflow rounding */
     }
-
-    .site-nav .trigger {
-        display: none;
-        position: absolute;
-        top: 50px;
-        right: 15px;
-        background: #fff;
-        border: 1px solid #e8e8e8;
-        border-radius: 5px;
-        padding: 10px;
-        flex-direction: column;
+  
+    /* When hamburger checked */
+    .nav-trigger:checked ~ .nav-menu {
+      display: flex;
     }
-
-    .nav-trigger:checked ~ .trigger {
-        display: flex;
+  
+    /* Each menu item */
+    .nav-item {
+      width: 100%;
+      position: relative;
     }
-
-    .page-link {
-        margin: 10px 0;
+  
+    .nav-item a {
+      display: block;
+      width: 100%;
+      padding: 10px 16px;
+      border-bottom: 1px solid #ddd;
+      color: #111;
+      text-decoration: none;
+      box-sizing: border-box;
+      background: transparent;
     }
-}
-
+  
+    .nav-item:last-child a {
+      border-bottom: none;
+    }
+  
+    .nav-item a:hover {
+      background: #ddd;
+    }
+  
+    /* --- Submenus inside mobile dropdown --- */
+    .dropdown {
+      display: none;
+      position: static;           /* disable absolute dropdown */
+      box-shadow: none;
+      border-top: 1px solid #ddd;
+      margin-left: 1rem;
+      flex-direction: column;
+      background: transparent;
+    }
+  
+    .has-dropdown > a::after {
+      content: "▾";
+      float: right;
+      font-size: 0.8em;
+    }
+  
+    /* Tap or focus reveals submenu */
+    .has-dropdown:focus-within > .dropdown,
+    .has-dropdown:hover > .dropdown {
+      display: flex;
+    }
+  
+    /* Submenu items */
+    .dropdown a {
+      padding: 8px 20px;
+      font-size: 0.95rem;
+      background: transparent;
+    }
+  
+    .dropdown a:hover {
+      background: #ddd;
+    }
+  
+    /* Optional smooth expand animation (safe & subtle) */
+    .dropdown {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.25s ease-out;
+    }
+  
+    .has-dropdown:focus-within > .dropdown,
+    .has-dropdown:hover > .dropdown {
+      max-height: 300px; /* adjust based on expected number of submenu items */
+    }
+  }
+  
 /**
 * Footer
 */
