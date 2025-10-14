@@ -86,11 +86,39 @@ affiliation: functions/affiliations/link.html
         This enables reliable analysis of materials, biological tissues, and manufactured products using their unique optical signatures.
       </p>
     
+      <div class="example-grid">
+        <figure>
+          <img src="{{ site.baseurl }}/media/images/research/frame_000002/lr_raw.png" alt="Raw HSI">
+          <figcaption>Raw hyperspectral image (uncalibrated)</figcaption>
+        </figure>
+        <figure>
+          <img src="{{ site.baseurl }}/media/images/research/frame_000002/lr_preprocessed.png" alt="Calibrated HSI">
+          <figcaption>Radiometrically calibrated reflectance image</figcaption>
+        </figure>
+      </div>
+    
+    
       <h3>Image Registration</h3>
       <p>
         We align images from multiple cameras or sensors so that every pixel represents the same point in the scene.  
         This spatial matching is essential for combining data from color, infrared, and hyperspectral cameras accurately, ensuring high-quality fusion and comparison between modalities.
       </p>
+    
+      <div class="example-grid">
+        <figure>
+          <img src="{{ site.baseurl }}/media/images/research/frame_000002/hr_preprocessed.png" alt="Reference HR image">
+          <figcaption>Reference image (HR)</figcaption>
+        </figure>
+        <figure>
+          <img src="{{ site.baseurl }}/media/images/research/frame_000002/lr_preprocessed.png" alt="Target LR image">
+          <figcaption>Target image (LR, before alignment)</figcaption>
+        </figure>
+        <figure>
+          <img src="{{ site.baseurl }}/media/images/research/frame_000002/lr_aligned.png" alt="Registered LR image">
+          <figcaption>Target image after registration</figcaption>
+        </figure>
+      </div>
+    
     
       <h3>Super-resolution</h3>
       <p>
@@ -98,17 +126,31 @@ affiliation: functions/affiliations/link.html
         This enhances image detail and clarity, enabling improved visualization, quantitative analysis, and advanced applications such as defect detection and material mapping.
       </p>
     
+      <div class="example-grid">
+        <figure>
+          <img src="{{ site.baseurl }}/media/images/research/frame_000002/zoom/hr_aligned.png" alt="Registered HR image">
+          <figcaption>Registered HR image</figcaption>
+        </figure>
+        <figure>
+          <img src="{{ site.baseurl }}/media/images/research/frame_000002/zoom/lr_aligned.png" alt="Registered LR image">
+          <figcaption>Registered LR image</figcaption>
+        </figure>
+        <figure>
+          <img src="{{ site.baseurl }}/media/images/research/frame_000002/zoom/sr_fused.png" alt="Super-resolved image">
+          <figcaption>Super-resolved fusion result</figcaption>
+        </figure>
+      </div>
+    
     </div>
-        
+            
     <h2 style="justify-content: center;">Super-resolution</h2>
 
     <p>
       In multimodal imaging, different cameras often capture complementary information.  
-      For instance, assume the following configuration of two cameras, where:  
-      <b>Cam&nbsp;1</b> provides a detailed spectral signature but at a lower spatial resolution,  
-      while <b>Cam&nbsp;2</b> offers sharper spatial details at a lower spectral resolution.  
-      The goal of <b>super-resolution fusion</b> is to combine both sources to obtain images that are  
-      simultaneously high in spatial and spectral content.
+      <b>Cam&nbsp;1</b> provides rich spectral data but lower spatial detail,  
+      while <b>Cam&nbsp;2</b> offers sharper spatial resolution with fewer spectral bands.  
+      Through <b>super-resolution fusion</b>, these data sources are combined to produce an image
+      that is both spatially detailed and spectrally rich, as summarized below:
     </p>
     
     <table class="fusion-table">
@@ -123,32 +165,37 @@ affiliation: functions/affiliations/link.html
       <tbody>
         <tr>
           <td><b>Cam&nbsp;1</b></td>
-          <td>High (many wavelength bands)</td>
-          <td>Low (coarser image details)</td>
-          <td>Captures rich spectral information for each pixel, ideal for material identification.</td>
+          <td>High</td>
+          <td>Low</td>
+          <td>Captures detailed spectral information for material analysis.</td>
         </tr>
         <tr>
           <td><b>Cam&nbsp;2</b></td>
-          <td>Low (few wavelength bands)</td>
-          <td>High (fine image details)</td>
-          <td>Captures sharp spatial structures but limited spectral information.</td>
+          <td>Low</td>
+          <td>High</td>
+          <td>Captures fine spatial structures with fewer spectral bands.</td>
         </tr>
         <tr>
           <td><b>Fused Image</b></td>
           <td>High</td>
           <td>High</td>
-          <td>Combines both sources through <b>super-resolution fusion</b> to produce images rich in both spatial and spectral content.</td>
+          <td>Combines both to yield enhanced spatial and spectral quality.</td>
         </tr>
       </tbody>
     </table>
-
+    
     <p>
-      The following video and interactive sliders illustrate this process.  
-      The video shows the improvement from individual camera captures to the fused high-resolution result,  
-      while the sliders allow a pixel-wise comparison between the input images and the fusion output.
+      The video and sliders below demonstrate this process — showing how two complementary inputs  
+      are merged into a high-resolution spectral image.
     </p>
     
     <h3 style="justify-content: center;">Video Illustration</h3>
+
+    <div class="legend">
+      <span><b>LR</b> = Low Resolution (coarser spatial detail)</span>
+      <span><b>HR</b> = High Resolution (finer spatial detail)</span>
+    </div>
+    
     <div class="video-grid">
       <video autoplay loop muted playsinline>
         {% assign video_media_dir = site.baseurl | append: '/' | append: 'media/tech-and-fest-2025/images/pair_1/frame_0000' %}
@@ -156,8 +203,14 @@ affiliation: functions/affiliations/link.html
         Your browser does not support the video tag.
       </video>
     </div>
+    
+    <h3 style="justify-content: center;">Comparison Sliders</h3>
 
-    <h3 style="justify-content: center;">Visual Before/After Sliders</h3>
+    <div class="legend">
+      <span><b>LR</b> = Low Resolution (coarser spatial detail)</span>
+      <span><b>HR</b> = High Resolution (finer spatial detail)</span>
+    </div>
+    
     <div class="tri-sliders-container">
       <div style="width: 60%;">
         {% assign slider_media_dir = site.baseurl | append: '/' | append: 'media/tech-and-fest-2025/images/pair_1/frame_0000' %}
@@ -183,6 +236,27 @@ affiliation: functions/affiliations/link.html
         %}
       </div>
     </div>
+
+</section>
+
+<hr class="section-divider" />
+
+<section class="home-section">
+  <h1>Events</h1>
+
+  <h3 style="justify-content: center;">Technology Fairs</h3>
+
+  <div class="research-grid">
+    <a href="{{ site.baseurl }}/news/20250917-sido/" class="research-card">
+        <img src="{{ site.baseurl }}/media/images/transfer/20250917_sido/couple_full.jpeg" alt="SIDO 2025" style="height: 200px;">
+        <span>SIDO 2025</span>
+    </a>
+
+    <a href="{{ site.baseurl }}/news/20250206-tech-and-fest/" class="research-card">
+        <img src="{{ site.baseurl }}/media/images/transfer/20250206_tech_and_fest/PXL_20250206_120955865.jpg" alt="Tech&Fest 2025" style="height: 200px;">
+        <span>Tech&Fest 2025</span>
+    </a>
+  </div>
 
 </section>
 
@@ -376,6 +450,34 @@ affiliation: functions/affiliations/link.html
     text-align: justify;
 }
 
+.example-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  margin: 1rem 0 2rem;
+}
+
+.example-grid figure {
+  text-align: center;
+  margin: 0;
+  flex: 1 1 220px;  /* flexible width, minimum ~220px */
+  max-width: 300px;
+}
+
+.example-grid img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+
+.example-grid figcaption {
+  font-size: 0.9rem;
+  color: #555;
+  margin-top: 0.5rem;
+}
+
 .tri-sliders-container {
   width: 100%;
   margin: 0 auto;
@@ -403,6 +505,22 @@ affiliation: functions/affiliations/link.html
     height: auto;
     display: block;
     box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+
+.legend {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin: 0.5rem auto 1rem;
+  font-size: 0.95rem;
+  color: #555;
+}
+
+.legend span {
+  background: #f3f4f6;
+  padding: 4px 10px;
+  border-radius: 6px;
+  border: 1px solid #ddd;
 }
 
 </style>
