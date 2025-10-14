@@ -12,7 +12,7 @@ affiliation: functions/affiliations/link.html
 {%- assign general = site.data.general -%}
 {%- assign proj_name = general.name -%}
 
-<section class="home-section">
+<section id="about" class="home-section">
     <h1>Multi-camera Imaging Research and Acquisition<br>- The MIRA Platform -</h1>
 
     <ul>
@@ -55,7 +55,7 @@ affiliation: functions/affiliations/link.html
 
 <hr class="section-divider" />
 
-<section class="home-section">
+<section id="research" class="home-section">
     <h1>Research Themes</h1>
     <p>
         MIRA focuses on multi-modal spectral imaging and fusion, including calibration, registration, and super-resolution.
@@ -212,7 +212,7 @@ affiliation: functions/affiliations/link.html
     </div>
     
     <div class="tri-sliders-container">
-      <div style="width: 60%;">
+      <div style="width: 50%;">
         {% assign slider_media_dir = site.baseurl | append: '/' | append: 'media/tech-and-fest-2025/images/pair_1/frame_0000' %}
         {% assign left_before = slider_media_dir | append: "/lr_highlight.png" %}
         {% assign left_after  = slider_media_dir | append: "/sr_highlight.png" %}
@@ -241,7 +241,7 @@ affiliation: functions/affiliations/link.html
 
 <hr class="section-divider" />
 
-<section class="home-section">
+<section id="events" class="home-section">
   <h1>Events</h1>
 
   <h3 style="justify-content: center;">Technology Fairs</h3>
@@ -262,7 +262,9 @@ affiliation: functions/affiliations/link.html
 
 <hr class="section-divider" />
 
-<section class="home-section">
+<section id="contact" class="home-section">
+    <h1>Contact</h1>
+
     <p>
         For more information,
         <a href="{{- site.baseurl -}}/contact/" class="link">contact us</a>
@@ -431,7 +433,6 @@ affiliation: functions/affiliations/link.html
 }
 
 .research-descriptions {
-    max-width: 900px;
     margin: 1.5rem auto;
 }
 
@@ -462,7 +463,7 @@ affiliation: functions/affiliations/link.html
   text-align: center;
   margin: 0;
   flex: 1 1 220px;  /* flexible width, minimum ~220px */
-  max-width: 300px;
+  max-width: 250px;
 }
 
 .example-grid img {
@@ -493,15 +494,13 @@ affiliation: functions/affiliations/link.html
     justify-content: center;
     align-items: center;
     gap: 20px;
-    max-width: 100%;
     overflow: hidden;
     margin: 1rem 0;
 }
 
 /* Keep video responsive and centered */
 .video-grid video {
-    width: 95%;
-    max-width: 100%;
+    width: 80%;
     height: auto;
     display: block;
     box-shadow: 0 2px 8px rgba(0,0,0,0.15);
@@ -524,3 +523,4 @@ affiliation: functions/affiliations/link.html
 }
 
 </style>
+
