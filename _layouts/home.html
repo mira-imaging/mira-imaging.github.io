@@ -3,12 +3,21 @@ layout: banner_top
 ---
 
 <div class="home-content">
+<!-- === Home Sections Navbar === -->
+<!-- === Section Navigation Bar (for homepage) === -->
+    <nav class="home-nav">
+        <a href="#about">About</a>
+        <a href="#research">Research</a>
+        <a href="#events">Events</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
     <div class="home-main-content">
         {{- content -}}
     </div>
     <div class="home-news-sidebar">
         <div class="sidebar-news-block">
-            <h1>News</h1>
+            <h1>Latest News</h1>
             {%- assign news = site.data.news.list | slice: 0, 5 -%}
             {% if news == empty or news == nil %}
                 <p>No news yet under this project.</p>
@@ -29,9 +38,78 @@ layout: banner_top
                 </div>
                 {%- endfor -%}
                 <div class="sidebar-news-item">
-                    For older news, please visit the <a href="{{- site.baseurl -}}/news/" class="link">News</a> page.
+                    For more news, please visit the <a href="{{- site.baseurl -}}/news/" class="link">News</a> page.
                 </div>
             {% endif %}
         </div>
     </div>
 </div>
+
+
+<style>
+/* === HOME SECTION NAVBAR === */
+.home-nav {
+  position: sticky;
+  top: 70px;             /* offset = site header height */
+  z-index: 9;            /* stay below .site-header (z-index:10) */
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  padding: 0.8rem 1rem;
+  background: #ffffff;
+  border-bottom: 1px solid #e5e5e5;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.05);
+}
+
+.home-nav a {
+  color: #333;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 1rem;
+  transition: color 0.2s ease;
+}
+
+.home-nav a:hover {
+  color: #007acc;
+}
+
+/* === Smooth Scrolling for anchor links === */
+html {
+  scroll-behavior: smooth;
+}
+
+/* === Offset anchor scrolling to prevent hidden section titles === */
+:target::before {
+  content: "";
+  display: block;
+  height: 120px;    /* site header (≈70px) + home nav (≈50px) */
+  margin-top: -120px;
+}
+
+.home-nav a.active {
+  color: #007acc;
+  border-bottom: 2px solid #007acc;
+  padding-bottom: 2px;
+}
+
+</style>
+
+
+<script>
+  const sections = document.querySelectorAll('.home-section');
+  const navLinks = document.querySelectorAll('.home-nav a');
+
+  window.addEventListener('scroll', () => {
+    let current = '';
+    sections.forEach(section => {
+      const sectionTop = section.offsetTop - 140; // compensate header height
+      if (pageYOffset >= sectionTop) current = section.getAttribute('id');
+    });
+    navLinks.forEach(link => {
+      link.classList.remove('active');
+      if (link.getAttribute('href') === '#' + current) {
+        link.classList.add('active');
+      }
+    });
+  });
+</script>
