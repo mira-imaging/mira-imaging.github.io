@@ -104,3 +104,21 @@ affiliations:
     is_supporter: False
     is_supporter_teaching: False
     is_used_by_teaching: True
+
+  - key: uis
+    name: Universidad Industrial de Santander
+    link: https://uis.edu.co/en/
+    logo_subpath: affiliations/uis_logo.jpeg
+    logo_realtive_height: 1.0
+    is_supporter: False
+    is_supporter_teaching: False
+    is_used_by_teaching: False
+
+  - key: science_tokyo
+    name: Institute of Science Tokyo
+    link: https://www.isct.ac.jp/en
+    logo_subpath: affiliations/institute_of_science_tokyo.jpg
+    logo_realtive_height: 1.0
+    is_supporter: False
+    is_supporter_teaching: False
+    is_used_by_teaching: False
