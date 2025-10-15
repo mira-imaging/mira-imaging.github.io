@@ -108,14 +108,35 @@ affiliation: functions/affiliations/link.html
         related to <b>image processing</b> and <b>spectral data analysis</b>.
     </p>
     <div class="research-grid">
-      <a href="{{ site.baseurl }}/teaching/" class="research-card">
+      <a href="{{ site.baseurl }}/teaching/#courses" class="research-card">
           <img src="{{ site.baseurl }}/media/images/teaching/choosing-classes.jpg" alt="Courses" style="height: 200px;">
           <span>Courses</span>
       </a>
   
-      <a href="{{ site.baseurl }}/teaching/" class="research-card">
+      <a href="{{ site.baseurl }}/teaching/#student_projects" class="research-card">
           <img src="{{ site.baseurl }}/media/images/teaching/optical_setup.png" alt="Student Projects" style="height: 200px;">
           <span>Student Projects</span>
+      </a>
+    </div>
+</section>
+  
+<hr class="section-divider" />
+
+<section id="transfer" class="home-section">
+    <h1>Technology Transfer</h1>
+    <p>
+        MIRA aims at transferring state-of-the-art research to real-world applications.
+        More information can be found in <a href="{{ site.baseurl }}/transfer/">this page</a>.
+    </p>
+    <div class="research-grid">
+      <a class="research-card">
+          <img src="{{ site.baseurl }}/media/images/teaching/.jpg" alt="Agriculture" style="height: 200px;">
+          <span>Agriculture</span>
+      </a>
+  
+      <a class="research-card">
+          <img src="{{ site.baseurl }}/media/images/teaching/.png" alt="Waste Sorting" style="height: 200px;">
+          <span>Waste Sorting</span>
       </a>
     </div>
 </section>
@@ -125,9 +146,18 @@ affiliation: functions/affiliations/link.html
 <section id="events" class="home-section">
   <h1>Events</h1>
 
+  <h3 style="justify-content: center;">Presentations</h3>
+
+  <div class="research-grid research-grid-fixed-2-cards">
+    <a href="{{ site.baseurl }}/news/20250925-gdr-iasis-fusion-solutions/" class="research-card">
+        <img src="{{ site.baseurl }}/media/images/research/20250925_gdr_iasis_fusion_solutions/thumbnail.jpeg" alt="GdR IASIS 2025" style="height: 200px;">
+        <span>GdR IASIS Meeting</span>
+    </a>
+  </div>
+
   <h3 style="justify-content: center;">Technology Fairs</h3>
 
-  <div class="research-grid">
+  <div class="research-grid research-grid-fixed-2-cards">
     <a href="{{ site.baseurl }}/news/20250917-sido/" class="research-card">
         <img src="{{ site.baseurl }}/media/images/transfer/20250917_sido/couple_full.jpeg" alt="SIDO 2025" style="height: 200px;">
         <span>SIDO 2025</span>
@@ -263,6 +293,20 @@ affiliation: functions/affiliations/link.html
     gap: 2rem;
     padding: 10px;
     margin-bottom: 1rem;
+}
+
+/* Research section layout */
+.research-grid-fixed-2-cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);  /* two cards per row */
+}
+
+/* Responsive: one column on small screens */
+@media (max-width: 700px) {
+  .research-grid-fixed-2-cards {
+    grid-template-columns: 1fr;
+    width: 60%;
+  }
 }
 
 /* Individual card (button style) */
