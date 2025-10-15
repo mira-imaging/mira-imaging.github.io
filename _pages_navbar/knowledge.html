@@ -1,0 +1,548 @@
+---
+layout: banner_top
+title: Knowledge
+permalink: /knowledge/
+---
+
+
+<section id="research" class="home-section">
+    <h1>Research Themes</h1>
+    <p>
+        MIRA focuses on multi-modal spectral imaging and fusion, including calibration, registration, and super-resolution.
+        Below is some description of the different research themes tackled by the platform.
+    </p>
+    <div class="research-grid">
+        <a class="research-card">
+            <img src="{{ site.baseurl }}/media/images/research/Imagerie-hyperspectrale.jpg" alt="Spectral Imaging">
+            <span>Spectral Imaging</span>
+        </a>
+
+        <a class="research-card">
+            <img src="{{ site.baseurl }}/media/images/research/registration.png" alt="Registration">
+            <span>Registration</span>
+        </a>
+
+        <a class="research-card">
+            <img src="{{ site.baseurl }}/media/images/research/main_sr.jpg" alt="Super-resolution">
+            <span>Super-resolution</span>
+        </a>
+    </div>
+
+    <div class="research-descriptions">
+
+      <!-- === Spectral Imaging === -->
+      <details id="spectral-imaging-description" class="research-topic" close>
+        <summary><h3>Spectral Imaging</h3></summary>
+        <p>
+          We acquire images that go beyond the visible range to capture detailed spectral information for each pixel.  
+          Our workflow includes <b>preprocessing</b> and <b>radiometric calibration</b> of raw data to ensure accurate reflectance values and spectral consistency across sensors.  
+          This enables reliable analysis of materials, biological tissues, and manufactured products using their unique optical signatures.
+        </p>
+        <div class="example-grid example-grid-spectral-imaging">
+          <figure>
+            <img src="{{ site.baseurl }}/media/images/research/frame_000002/lr_raw.png" alt="Raw HSI">
+            <figcaption>Raw hyperspectral image (uncalibrated)</figcaption>
+          </figure>
+          <figure>
+            <img src="{{ site.baseurl }}/media/images/research/frame_000002/lr_preprocessed.png" alt="Calibrated HSI">
+            <figcaption>Radiometrically calibrated reflectance image</figcaption>
+          </figure>
+        </div>
+      </details>
+    
+      <!-- === Registration === -->
+      <details id="image-registration-description" class="research-topic" close>
+        <summary><h3>Image Registration</h3></summary>
+        <p>
+          We align images from multiple cameras or sensors so that every pixel represents the same point in the scene.  
+          This spatial matching is essential for combining data from color, infrared, and hyperspectral cameras accurately, ensuring high-quality fusion and comparison between modalities.
+        </p>
+        <div class="example-grid">
+          <figure>
+            <img src="{{ site.baseurl }}/media/images/research/frame_000002/hr_preprocessed.png" alt="Reference HR image">
+            <figcaption>Reference image (HR)</figcaption>
+          </figure>
+          <figure>
+            <img src="{{ site.baseurl }}/media/images/research/frame_000002/lr_preprocessed.png" alt="Target LR image">
+            <figcaption>Target image (LR, before alignment)</figcaption>
+          </figure>
+          <figure>
+            <img src="{{ site.baseurl }}/media/images/research/frame_000002/lr_aligned.png" alt="Registered LR image">
+            <figcaption>Target image after registration</figcaption>
+          </figure>
+        </div>
+      </details>
+    
+      <!-- === Super-resolution === -->
+      <details id="super-resolution-description" class="research-topic" close>
+        <summary><h3>Super-resolution</h3></summary>
+        <p>
+          We combine information from multiple low-resolution images or sensors to produce sharper, higher-resolution results.  
+          This enhances image detail and clarity, enabling improved visualization, quantitative analysis, and advanced applications such as defect detection and material mapping.
+        </p>
+        <div class="example-grid example-grid-super-resolution">
+          <figure>
+            <img src="{{ site.baseurl }}/media/images/research/frame_000002/zoom/hr_aligned.png" alt="Registered HR image">
+            <figcaption>Registered HR image</figcaption>
+          </figure>
+          <figure>
+            <img src="{{ site.baseurl }}/media/images/research/frame_000002/zoom/lr_aligned.png" alt="Registered LR image">
+            <figcaption>Registered LR image</figcaption>
+          </figure>
+          <figure>
+            <img src="{{ site.baseurl }}/media/images/research/frame_000002/zoom/sr_fused.png" alt="Super-resolved image">
+            <figcaption>Super-resolved fusion result</figcaption>
+          </figure>
+        </div>
+
+        <p>
+          Check <a href="#super-resolution-example">here</a> for an example case scenario and interactive demo.
+        </p>
+    </details>
+  
+    </div>
+
+    <hr class="section-divider">
+
+    <h1 id="super-resolution-example">Super-resolution</h1>
+    <h2>- Example Case Scenario -</h2>
+
+    <p>
+      In multimodal imaging, different cameras often capture complementary information.  
+      <b>Cam&nbsp;1</b> provides rich spectral data but lower spatial detail,  
+      while <b>Cam&nbsp;2</b> offers sharper spatial resolution with fewer spectral bands.  
+      Through <b>super-resolution fusion</b>, these data sources are combined to produce an image
+      that is both spatially detailed and spectrally rich, as summarized below:
+    </p>
+    
+    <table class="fusion-table">
+      <thead>
+        <tr>
+          <th>Camera / Result</th>
+          <th>Spectral Resolution</th>
+          <th>Spatial Resolution</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><b>Cam&nbsp;1</b></td>
+          <td>High</td>
+          <td>Low</td>
+          <td>Captures detailed spectral information for material analysis.</td>
+        </tr>
+        <tr>
+          <td><b>Cam&nbsp;2</b></td>
+          <td>Low</td>
+          <td>High</td>
+          <td>Captures fine spatial structures with fewer spectral bands.</td>
+        </tr>
+        <tr>
+          <td><b>Fused Image</b></td>
+          <td>High</td>
+          <td>High</td>
+          <td>Combines both to yield enhanced spatial and spectral quality.</td>
+        </tr>
+      </tbody>
+    </table>
+    
+    <p>
+      The video and sliders below demonstrate this process — showing how two complementary inputs  
+      are merged into a high-resolution spectral image.
+    </p>
+    
+    <h3 style="justify-content: center;">Video Illustration</h3>
+
+    <div class="legend">
+      <span><b>LR</b> = Low Resolution (coarser spatial detail)</span>
+      <span><b>HR</b> = High Resolution (finer spatial detail)</span>
+    </div>
+    
+    <div class="video-grid">
+      <video autoplay loop muted playsinline>
+        {% assign video_media_dir = site.baseurl | append: '/' | append: 'media/tech-and-fest-2025/images/pair_1/frame_0000' %}
+        <source src="{{ video_media_dir }}/comparison.webm" type="video/webm">
+        Your browser does not support the video tag.
+      </video>
+    </div>
+    
+    <h3 style="justify-content: center;">Comparison Sliders</h3>
+
+    <div class="legend">
+      <span><b>LR</b> = Low Resolution (coarser spatial detail)</span>
+      <span><b>HR</b> = High Resolution (finer spatial detail)</span>
+    </div>
+    
+    <div class="tri-sliders-container">
+      <div style="width: 50%;">
+        {% assign slider_media_dir = site.baseurl | append: '/' | append: 'media/tech-and-fest-2025/images/pair_1/frame_0000' %}
+        {% assign left_before = slider_media_dir | append: "/lr_highlight.png" %}
+        {% assign left_after  = slider_media_dir | append: "/sr_highlight.png" %}
+        {% assign top_before  = slider_media_dir | append: "/lr_patch.png" %}
+        {% assign top_after   = slider_media_dir | append: "/sr_patch.png" %}
+        {% assign bottom_before = slider_media_dir | append: "/hr_spectrum.png" %}
+        {% assign bottom_after  = slider_media_dir | append: "/sr_spectrum.png" %}
+        {% include tri_slider.html
+        left_before=left_before
+        left_after=left_after
+        left_label_before="Cam 1 (LR)"
+        left_label_after="Fusion (HR)"
+        top_before=top_before
+        top_after=top_after
+        top_label_before="Cam 1"
+        top_label_after="Fusion"
+        bottom_before=bottom_before
+        bottom_after=bottom_after
+        bottom_label_before="Cam 2"
+        bottom_label_after="Fusion"
+        %}
+      </div>
+    </div>
+
+</section>
+
+<link rel="stylesheet" href="{{ '/assets/css/tri-slider.css' | relative_url }}">
+<script src="{{ '/assets/js/tri-slider.js' | relative_url }}"></script>
+
+
+<style>
+  /* === Collapsible Research Topics === */
+.research-topic {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #fafafa;
+  margin: 1rem 0;
+  padding: 0.8rem 1.2rem;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.05);
+  transition: box-shadow 0.2s ease;
+}
+
+.research-topic:hover {
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.research-topic summary {
+  cursor: pointer;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.research-topic summary::-webkit-details-marker {
+  display: none; /* hide default arrow */
+}
+
+.research-topic summary h3 {
+  margin: 0;
+  color: #222;
+  font-size: 1.1rem;
+}
+
+.research-topic[open] summary h3::after {
+  content: "▲";
+  font-size: 0.8rem;
+  color: #666;
+  margin-left: 8px;
+}
+
+.research-topic:not([open]) summary h3::after {
+  content: "▼";
+  font-size: 0.8rem;
+  color: #666;
+  margin-left: 8px;
+}
+
+.research-topic p {
+  margin-top: 0.6rem;
+  color: #555;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+</style>
+
+
+<style>
+    .home-section {
+        margin: 0 auto;
+    }
+    
+    /* Center the main section titles */
+    .home-section h1 {
+        text-align: center;
+        font-size: 2rem;
+        font-weight: bold;
+        margin-bottom: 1rem;
+    }
+    
+    .home-section h2 {
+        text-align: center;
+        font-size: 1.5rem;
+        font-weight: bold;
+        margin-bottom: 1rem;
+    }
+    
+    .home-section h3 {
+        text-align: left;
+        font-size: 1.1rem;
+        font-weight: bold;
+        margin-bottom: 1rem;
+    }
+    
+    /* Content stays left-aligned */
+    .home-section p,
+    .home-section ul {
+        text-align: left;
+        margin-bottom: 1rem;
+    }
+    
+    .home-section p {
+        margin-bottom: 1rem;
+        line-height: 1.6;
+        color: #555;
+    }
+    
+    .home-section p + p {
+        margin-top: -0.3rem;
+    }
+    
+    .fusion-table {
+      width: 100%;
+      max-width: 800px;
+      margin: 1.5rem auto;
+      border-collapse: collapse;
+      text-align: left;
+      font-size: 0.95rem;
+      color: #444;
+    }
+    
+    .fusion-table thead {
+      background-color: #f3f4f6;
+    }
+    
+    .fusion-table th,
+    .fusion-table td {
+      border: 1px solid #ddd;
+      padding: 8px 12px;
+      vertical-align: top;
+    }
+    
+    .fusion-table th {
+      font-weight: bold;
+      color: #222;
+    }
+    
+    .fusion-table tbody tr:nth-child(even) {
+      background-color: #fafafa;
+    }
+    
+    .fusion-table tbody tr:hover {
+      background-color: #f0f0f0;
+    }
+    
+    /* Lists styling */
+    .section-list {
+        list-style: circle;
+        padding: 0;
+    }
+    
+    .section-list li {
+        margin: 0.5rem 0;
+    }
+    
+    /* Separator line */
+    .section-divider {
+        border: none;
+        border-top: 1px solid #ccc;
+        margin: 2rem auto;
+        width: 60%;
+        opacity: 0.6;
+    }
+    
+    
+    /* Research section layout */
+    .research-grid {
+        display: flex;
+        justify-content: center;
+        gap: 2rem;
+        padding: 10px;
+        margin-bottom: 1rem;
+    }
+    
+    /* Individual card (button style) */
+    .research-card {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-decoration: none;
+        background-color: #f8f8f8;
+        border-radius: 12px;
+        flex: 1;
+        padding: 1rem;
+        box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    
+    /* Image */
+    .research-card img {
+        width: 100%;
+        height: 130px;
+        object-fit: contain;
+        border-radius: 8px;
+        margin-bottom: 0.8rem;
+    }
+    
+    /* Text below the image */
+    .research-card span {
+        text-align: center;
+        color: #333;
+        font-weight: bold;
+        font-size: 1rem;
+    }
+    
+    /* Hover effect */
+    .research-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    }
+    
+    .centered-image {
+        text-align: center;
+        list-style: none; /* Remove bullet */
+    }
+    
+    .centered-image img {
+        display: inline-block;
+        max-width: 95%;
+        height: auto;
+    }
+    
+    .research-descriptions {
+        margin: 1.5rem auto;
+    }
+    
+    .research-descriptions h3 {
+        font-size: 1.2rem;
+        margin-top: 1.2rem;
+        color: #333;
+        text-align: left;
+    }
+    
+    .research-descriptions p {
+        margin-top: 0.4rem;
+        font-size: 1rem;
+        line-height: 1.6;
+        color: #555;
+        text-align: justify;
+    }
+    
+    .example-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1rem;
+      margin: 1rem 0 2rem;
+    }
+    
+    .example-grid figure {
+      text-align: center;
+      margin: 0;
+      flex: 1 1 220px;  /* flexible width, minimum ~220px */
+      max-width: 250px;
+    }
+    
+    .example-grid-spectral-imaging figure img {
+      height: 290px;
+      width: auto;
+      object-fit: contain;  /* keeps full image visible */
+      display: block;
+      margin: 0 auto;
+    }
+    
+    .example-grid-spectral-imaging figure {
+      max-width: none;      /* remove inherited 250px max-width */
+      flex: 0 1 auto;
+    }
+    
+    .example-grid img {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    }
+    
+    .example-grid figcaption {
+      font-size: 0.9rem;
+      color: #555;
+      margin-top: 0.5rem;
+    }
+    
+    .tri-sliders-container {
+      width: 100%;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 24px;
+    }
+    
+    .video-grid {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        overflow: hidden;
+        margin: 1rem 0;
+    }
+    
+    /* Keep video responsive and centered */
+    .video-grid video {
+        width: 80%;
+        height: auto;
+        display: block;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    }
+    
+    .legend {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      margin: 0.5rem auto 1rem;
+      font-size: 0.95rem;
+      color: #555;
+    }
+    
+    .legend span {
+      background: #f3f4f6;
+      padding: 4px 10px;
+      border-radius: 6px;
+      border: 1px solid #ddd;
+    }
+    
+    </style>
+    
+<style>
+/* Adjust anchor scroll position for fixed navbar */
+:target {
+  scroll-margin-top: 70px; /* adjust based on your navbar height */
+}
+</style>
+
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const hash = window.location.hash;
+      if (hash) {
+        const target = document.querySelector(hash);
+        if (target && target.tagName.toLowerCase() === "details") {
+          target.setAttribute("open", "true");
+          // Smooth scroll with offset for navbar
+          const yOffset = -90; // adjust for navbar height
+          const y = target.getBoundingClientRect().top + window.pageYOffset + yOffset;
+          window.scrollTo({ top: y, behavior: 'smooth' });
+        }
+      }
+    });
+    </script>
+    

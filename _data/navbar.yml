@@ -18,6 +18,10 @@ pages:
         permalink: /transfer/
         subpages:
 
+      - title: Knowledge
+        permalink: /knowledge/
+        subpages:
+
   - title: Members
     permalink: /members/
     subpages:
@@ -32,9 +36,9 @@ pages:
     permalink: /news/
     subpages:
 
-  - title: FAQ
-    permalink: /faq/
-    subpages:
+  # - title: FAQ
+  #   permalink: /faq/
+  #   subpages:
 
   # - title: Gallery
   #   permalink: /gallery/

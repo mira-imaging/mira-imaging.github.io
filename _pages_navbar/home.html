@@ -33,30 +33,77 @@ affiliation: functions/affiliations/link.html
         </li>
             
         <li>Aims at integration in <b>research</b>, <b>teaching</b>, and <b>technology transfer</b> projects:</li>
-        <div class="research-grid">
-            <a href="{{ site.baseurl }}/research" class="research-card">
-                <img src="{{ site.baseurl }}/media/images/research/main_sr.jpg" alt="Research">
-                <span>Research</span>
-            </a>
-    
-            <a href="{{ site.baseurl }}/teaching" class="research-card">
-                <img src="{{ site.baseurl }}/media/images/teaching/optical_setup.png" alt="Teaching">
-                <span>Teaching</span>
-            </a>
-    
-            <a href="{{ site.baseurl }}/transfer" class="research-card">
-                <img src="{{ site.baseurl }}/media/images/transfer/20250917_sido/couple_front.jpeg" alt="Technology Transfer">
-                <span>Technology Transfer</span>
-            </a>
-        </div>
     </ul>
+
+    <div class="research-grid">
+        <a href="{{ site.baseurl }}/research" class="research-card">
+            <img src="{{ site.baseurl }}/media/images/research/main_sr.jpg" alt="Research">
+            <span>Research</span>
+        </a>
+
+        <a href="{{ site.baseurl }}/teaching" class="research-card">
+            <img src="{{ site.baseurl }}/media/images/teaching/optical_setup.png" alt="Teaching">
+            <span>Teaching</span>
+        </a>
+
+        <a href="{{ site.baseurl }}/transfer" class="research-card">
+            <img src="{{ site.baseurl }}/media/images/transfer/20250917_sido/couple_front.jpeg" alt="Technology Transfer">
+            <span>Technology Transfer</span>
+        </a>
+    </div>
 
 </section>
 
 <hr class="section-divider" />
 
-{% include research_section.html %}
+<section id="research" class="home-section">
+    <h1>Research Themes</h1>
+    <p>
+        MIRA focuses on multi-modal spectral imaging and fusion, including calibration, registration, and super-resolution.  
+    </p>
+    <div class="research-grid">
+      <a href="{{ site.baseurl }}/knowledge/#spectral-imaging-description" class="research-card">
+          <img src="{{ site.baseurl }}/media/images/research/Imagerie-hyperspectrale.jpg" alt="Spectral Imaging">
+          <span>Spectral Imaging</span>
+      </a>
+  
+      <a href="{{ site.baseurl }}/knowledge/#image-registration-description" class="research-card">
+          <img src="{{ site.baseurl }}/media/images/research/registration.png" alt="Registration">
+          <span>Registration</span>
+      </a>
+  
+      <a href="{{ site.baseurl }}/knowledge/#super-resolution-description" class="research-card">
+          <img src="{{ site.baseurl }}/media/images/research/main_sr.jpg" alt="Super-resolution">
+          <span>Super-resolution</span>
+      </a>
+    </div>
+    <p>
+        For some description on each topic, visit <a href="{{ site.baseurl }}/knowledge">this link</a>.
+    </p>
+</section>
+  
+<hr class="section-divider" />
 
+<section id="teaching" class="home-section">
+    <h1>Teaching</h1>
+    <p>
+        MIRA provides academic and pedagogic supports via its scientific grade materials,  
+        contributing to university courses and student projects  
+        related to <b>image processing</b> and <b>spectral data analysis</b>.
+    </p>
+    <div class="research-grid">
+      <a href="{{ site.baseurl }}/teaching/" class="research-card">
+          <img src="{{ site.baseurl }}/media/images/teaching/choosing-classes.jpg" alt="Courses" style="height: 200px;">
+          <span>Courses</span>
+      </a>
+  
+      <a href="{{ site.baseurl }}/teaching/" class="research-card">
+          <img src="{{ site.baseurl }}/media/images/teaching/optical_setup.png" alt="Student Projects" style="height: 200px;">
+          <span>Student Projects</span>
+      </a>
+    </div>
+</section>
+  
 <hr class="section-divider" />
 
 <section id="events" class="home-section">
