@@ -4,91 +4,234 @@ title: Teaching
 permalink: /teaching/
 ---
 
-<div>
+<!-- <div>
     The equipment of MIRA is used in teaching programs at ENSE3 and Phelma of GrenobleINP-UGA, in the framework of academic courses and student projects.
-</div>
+</div> -->
 
-<br>
+<div class="teaching-content">
 
-<h1 class="teaching-section-title">
-    Courses
-</h1>
-<div class="teaching-content-block">
-    <ul>
-        <li class="teaching-item">
-            <div class="teaching-title">
-                Image Analysis Project
-            </div>
-            <div class="teaching-venue">
-                <b><i>SICOM</i></b>,
-                at the <b><i>Grenoble INP - Ense3</i></b>
-            </div>
-            <div class="teaching-links">
-                <a
-                class="teaching-link"
-                href="https://gricad-gitlab.univ-grenoble-alpes.fr/mullemat/sicom_image_analysis_project"
-                >
-                    <i style="font-style:normal" class="fab fa-fw fa-github"></i>
-                    Course Materials
-                </a>
-            </div>
-        </li>
-    </ul>
-</div>
+  <nav class="home-nav">
+      <a href="#courses">Courses</a>
+      <a href="#student_projects">Student Projects</a>
+  </nav>
 
-<br>
-
-<h1 class="teaching-section-title">
-    Student Projects
-</h1>
-{% assign projects_grouped = site.data.teaching.projects | where: "parent_project", "MIRA" | sort: "year" | reverse | group_by: "year"%}
-<div class="teaching-content-block">
-{% for pubs_year in projects_grouped %}
-    {% assign year = pubs_year.name %}
-    {% assign pubs = pubs_year.items %}
-    <div class="teaching-year-container">
-        <div class="teaching-year-header">
-            {{ year }}
-        </div>
+  <section id="courses" class="home-section">
+    <h1 class="teaching-section-title">
+        Courses
+    </h1>
+    <div class="teaching-content-block">
         <ul>
-        {% for pub in pubs %}
             <li class="teaching-item">
                 <div class="teaching-title">
-                    {{ pub.title }}
+                    Image Analysis Project
                 </div>
                 <div class="teaching-venue">
-                    <b><i>{{ pub.type }}</i></b>,
-                    at the <b><i>{{ pub.affiliation }}</i></b>
+                    <b><i>SICOM</i></b>,
+                    at the <b><i>Grenoble INP - Ense3</i></b>
                 </div>
-                <ul class="teaching-authors">
-                    <li>
-                        Students:
-                        {% for author in pub.students %}
-                            {% if forloop.last and forloop.first == false %}
-                                and {{ author }}
-                            {% elsif forloop.last %}
-                                {{ author }}
-                            {% else %}
-                                {{ author }},
-                            {% endif %}
-                        {% endfor %}
-                    </li>
-                    <li>
-                        Supervisors:
-                        {% for author in pub.supervisors %}
-                            {% if forloop.last and forloop.first == false %}
-                                and {{ author }}
-                            {% elsif forloop.last %}
-                                {{ author }}
-                            {% else %}
-                                {{ author }},
-                            {% endif %}
-                        {% endfor %}
-                    </li>
-                </ul>
+                <div class="teaching-links">
+                    <a
+                    class="teaching-link"
+                    href="https://gricad-gitlab.univ-grenoble-alpes.fr/mullemat/sicom_image_analysis_project"
+                    >
+                        <i style="font-style:normal" class="fab fa-fw fa-github"></i>
+                        Course Materials
+                    </a>
+                </div>
             </li>
-        {% endfor %}
         </ul>
     </div>
-{% endfor %}
+  </section>
+
+  <hr class="section-divider">
+
+  <section id="student_projects" class="home-section">
+    <h1 class="teaching-section-title">
+        Student Projects
+    </h1>
+    {% assign projects_grouped = site.data.teaching.projects | where: "parent_project", "MIRA" | sort: "year" | reverse | group_by: "year"%}
+    <div class="teaching-content-block">
+    {% for pubs_year in projects_grouped %}
+        {% assign year = pubs_year.name %}
+        {% assign pubs = pubs_year.items %}
+        <div class="teaching-year-container">
+            <div class="teaching-year-header">
+                {{ year }}
+            </div>
+            <ul>
+            {% for pub in pubs %}
+                <li class="teaching-item">
+                    <div class="teaching-title">
+                        {{ pub.title }}
+                    </div>
+                    <div class="teaching-venue">
+                        <b><i>{{ pub.type }}</i></b>,
+                        at the <b><i>{{ pub.affiliation }}</i></b>
+                    </div>
+                    <ul class="teaching-authors">
+                        <li>
+                            Students:
+                            {% for author in pub.students %}
+                                {% if forloop.last and forloop.first == false %}
+                                    and {{ author }}
+                                {% elsif forloop.last %}
+                                    {{ author }}
+                                {% else %}
+                                    {{ author }},
+                                {% endif %}
+                            {% endfor %}
+                        </li>
+                        <li>
+                            Supervisors:
+                            {% for author in pub.supervisors %}
+                                {% if forloop.last and forloop.first == false %}
+                                    and {{ author }}
+                                {% elsif forloop.last %}
+                                    {{ author }}
+                                {% else %}
+                                    {{ author }},
+                                {% endif %}
+                            {% endfor %}
+                        </li>
+                    </ul>
+                </li>
+            {% endfor %}
+            </ul>
+        </div>
+    {% endfor %}
+    </div>
+  </section>
+
 </div>
+
+<style>
+
+  .research-content {
+    align-items: start;
+    max-width: 900px;         /* set a fixed readable width */
+    margin: 0 auto;           /* center the whole grid horizontally */
+  }
+  
+  .home-section {
+      margin: 0 auto;
+  }
+  
+  /* Center the main section titles */
+  .home-section h1 {
+      text-align: left;
+      font-size: 2rem;
+      font-weight: bold;
+      margin-bottom: 1rem;
+  }
+  
+  .home-section h2 {
+      text-align: left;
+      font-size: 1.5rem;
+      font-weight: bold;
+      margin-bottom: 1rem;
+  }
+  
+  .home-section h3 {
+      text-align: left;
+      font-size: 1.1rem;
+      font-weight: bold;
+      margin-bottom: 1rem;
+  }
+  
+  /* Content stays left-aligned */
+  .home-section p,
+  .home-section ul {
+      text-align: left;
+      margin-bottom: 1rem;
+  }
+  
+  .home-section p {
+      margin-bottom: 1rem;
+      line-height: 1.6;
+      color: #555;
+  }
+  
+  .home-section p + p {
+      margin-top: -0.3rem;
+  }
+
+/* Separator line */
+.section-divider {
+    border: none;
+    border-top: 1px solid #ccc;
+    margin: 2rem auto;
+    width: 60%;
+    opacity: 0.6;
+}
+</style>
+
+
+<style>
+  /* === HOME SECTION NAVBAR === */
+  .home-nav {
+    position: sticky;
+    top: 70px;             /* offset = site header height */
+    z-index: 9;            /* stay below .site-header (z-index:10) */
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    padding: 0.8rem 1rem;
+    background: #ffffff;
+    border-bottom: 1px solid #e5e5e5;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.05);
+    margin-bottom: 1.5rem;
+  }
+  
+  .home-nav a {
+    color: #333;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1rem;
+    transition: color 0.2s ease;
+  }
+  
+  .home-nav a:hover {
+    color: #007acc;
+  }
+  
+  /* === Smooth Scrolling for anchor links === */
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  /* === Offset anchor scrolling to prevent hidden section titles === */
+  :target::before {
+    content: "";
+    display: block;
+    height: 120px;    /* site header (≈70px) + home nav (≈50px) */
+    margin-top: -120px;
+  }
+  
+  .home-nav a.active {
+    color: #007acc;
+    border-bottom: 2px solid #007acc;
+    padding-bottom: 2px;
+  }
+  
+  </style>
+  
+  
+  <script>
+    const sections = document.querySelectorAll('.home-section');
+    const navLinks = document.querySelectorAll('.home-nav a');
+  
+    window.addEventListener('scroll', () => {
+      let current = '';
+      sections.forEach(section => {
+        const sectionTop = section.offsetTop - 140; // compensate header height
+        if (pageYOffset >= sectionTop) current = section.getAttribute('id');
+      });
+      navLinks.forEach(link => {
+        link.classList.remove('active');
+        if (link.getAttribute('href') === '#' + current) {
+          link.classList.add('active');
+        }
+      });
+    });
+  </script>
+  
