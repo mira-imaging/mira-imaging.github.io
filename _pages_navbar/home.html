@@ -284,6 +284,19 @@ affiliation: functions/affiliations/link.html
   max-width: 250px;
 }
 
+.example-grid-spectral-imaging figure img {
+  height: 290px;
+  width: auto;
+  object-fit: contain;  /* keeps full image visible */
+  display: block;
+  margin: 0 auto;
+}
+
+.example-grid-spectral-imaging figure {
+  max-width: none;      /* remove inherited 250px max-width */
+  flex: 0 1 auto;
+}
+
 .example-grid img {
   width: 100%;
   height: auto;

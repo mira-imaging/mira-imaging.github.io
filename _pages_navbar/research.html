@@ -4,62 +4,87 @@ title: Research
 permalink: /research/
 ---
 
+<div class="research-content">
+
 <nav class="home-nav">
     <a href="#research">Research</a>
     <a href="#collaborations">Collaborations</a>
 </nav>
 
+<section id="research" class="home-section">
+  <h1>Research Themes</h1>
+  <div class="research-grid">
+    <a class="research-card">
+        <img src="{{ site.baseurl }}/media/images/research/Imagerie-hyperspectrale.jpg" alt="Spectral Imaging">
+        <span>Spectral Imaging</span>
+    </a>
 
-{% include research_section.html %}
+    <a class="research-card">
+        <img src="{{ site.baseurl }}/media/images/research/registration.png" alt="Registration">
+        <span>Registration</span>
+    </a>
 
+    <a class="research-card">
+        <img src="{{ site.baseurl }}/media/images/research/main_sr.jpg" alt="Super-resolution">
+        <span>Super-resolution</span>
+    </a>
+  </div>
+</section>
 
 <hr class="section-divider" />
 
 <section id="collaborations" class="home-section">
-    <h1>International Collaborations</h1>
-    <p>
-      The MIRA platform contributes to ongoing international research programs and bilateral collaborations, 
-      combining expertise in spectral imaging, fusion, and machine vision.
-    </p>
-  
-    <div class="collab-grid">
-      <!-- === UIS Colombia === -->
-      <div class="collab-card">
-        <img src="{{ site.baseurl }}/media/images/logos/affiliations/uis_logo.jpeg" alt="UIS Colombia">
-        <div class="collab-content">
-          <h2><a href="https://uis.edu.co/en/" target="_blank">Universidad Industrial de Santander</a>, Colombia</h2>
-          <p><b>Project:</b> Spectral Analysis of Cocoa — A Physical and Chemical Laboratory Approach</p>
-          <p><b>Dataset:</b> 
-            <a href="https://huggingface.co/datasets/ecos-nord-ginp-uis/CoCoaSpec" target="_blank">
-              CoCoaSpec (Hugging Face)
-            </a>
-          </p>
-        </div>
-      </div>
-  
-      <!-- === Tokyo Tech === -->
-      <div class="collab-card">
-        <img src="{{ site.baseurl }}/media/images/logos/affiliations/institute_of_science_tokyo.jpg" alt="Institute of Science Tokyo">
-        <div class="collab-content">
-          <h2><a href="https://www.isct.ac.jp/en" target="_blank">Institute of Science Tokyo</a>, Japan</h2>
-          <p><b>Focus:</b> Multisensor fusion and imaging for agricultural and robotic perception.</p>
-          <p><b>Multi-camera Visualizer:</b> 
-            <a href="https://github.com/mira-imaging/camera-gui" target="_blank">
-              MultiCamGUI (GitHub)
-            </a>
-          </p>
-        </div>
+  <h1>International Collaborations</h1>
+  <p>
+    The MIRA platform contributes to ongoing international research programs and bilateral collaborations, 
+    combining expertise in spectral imaging, fusion, and machine vision.
+  </p>
+
+  <div class="collab-grid">
+    <!-- === UIS Colombia === -->
+    <div class="collab-card">
+      <img src="{{ site.baseurl }}/media/images/logos/affiliations/uis_logo.jpeg" alt="UIS Colombia">
+      <div class="collab-content">
+        <h2><a href="https://uis.edu.co/en/" target="_blank">Universidad Industrial de Santander</a>, Colombia</h2>
+        <p><b>Project:</b> Spectral Analysis of Cocoa — A Physical and Chemical Laboratory Approach</p>
+        <p><b>Dataset:</b> 
+          <a href="https://huggingface.co/datasets/ecos-nord-ginp-uis/CoCoaSpec" target="_blank">
+            CoCoaSpec (Hugging Face)
+          </a>
+        </p>
       </div>
     </div>
-  </section>
 
+    <!-- === Tokyo Tech === -->
+    <div class="collab-card">
+      <img src="{{ site.baseurl }}/media/images/logos/affiliations/institute_of_science_tokyo.jpg" alt="Institute of Science Tokyo">
+      <div class="collab-content">
+        <h2><a href="https://www.isct.ac.jp/en" target="_blank">Institute of Science Tokyo</a>, Japan</h2>
+        <p><b>Focus:</b> Multisensor fusion and imaging for agricultural and robotic perception.</p>
+        <p><b>Multi-camera Visualizer:</b> 
+          <a href="https://github.com/mira-imaging/camera-gui" target="_blank">
+            MultiCamGUI (GitHub)
+          </a>
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
 
+</div>
 
 
 <link rel="stylesheet" href="{{ '/assets/css/tri-slider.css' | relative_url }}">
 <script src="{{ '/assets/js/tri-slider.js' | relative_url }}"></script>
 
 <style>
+
+.research-content {
+  align-items: start;
+  max-width: 900px;         /* set a fixed readable width */
+  margin: 0 auto;           /* center the whole grid horizontally */
+}
+
 .home-section {
     margin: 0 auto;
 }
@@ -391,6 +416,7 @@ permalink: /research/
       background: #ffffff;
       border-bottom: 1px solid #e5e5e5;
       box-shadow: 0 1px 4px rgba(0,0,0,0.05);
+      margin-bottom: 1.5rem;
     }
     
     .home-nav a {

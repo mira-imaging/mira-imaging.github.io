@@ -47,9 +47,7 @@
 .home-content {
     display: grid;
     grid-template-columns: 1fr;
-    gap: 1.5rem;
     align-items: start;
-    justify-items: center;    /* horizontally center grid items */
     max-width: 900px;         /* set a fixed readable width */
     margin: 0 auto;           /* center the whole grid horizontally */
 }
