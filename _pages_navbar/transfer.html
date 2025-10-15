@@ -1,0 +1,430 @@
+---
+layout: banner_top
+title: Technology Transfer
+permalink: /transfer/
+---
+
+<div class="transfer-content">
+
+<nav class="home-nav">
+    <a href="#events">Events</a>
+</nav>
+
+<section id="events" class="home-section">
+  <h1>Events</h1>
+
+  <h3 style="justify-content: center;">Technology Fairs</h3>
+
+  <div class="research-grid">
+    <a href="{{ site.baseurl }}/news/20250918-sido/" class="research-card">
+        <img src="{{ site.baseurl }}/media/images/transfer/20250918_sido/couple_full.jpeg" alt="SIDO 2025" style="height: 200px;">
+        <span>SIDO 2025</span>
+    </a>
+
+    <a href="{{ site.baseurl }}/news/20250206-tech-and-fest/" class="research-card">
+        <img src="{{ site.baseurl }}/media/images/transfer/20250206_tech_and_fest/PXL_20250206_120955865.jpg" alt="Tech&Fest 2025" style="height: 200px;">
+        <span>Tech&Fest 2025</span>
+    </a>
+  </div>
+
+</section>
+  
+
+<link rel="stylesheet" href="{{ '/assets/css/tri-slider.css' | relative_url }}">
+<script src="{{ '/assets/js/tri-slider.js' | relative_url }}"></script>
+
+<style>
+
+.transfer-content {
+  align-items: start;
+  max-width: 900px;         /* set a fixed readable width */
+  margin: 0 auto;           /* center the whole grid horizontally */
+}
+
+.home-section {
+    margin: 0 auto;
+}
+
+/* Center the main section titles */
+.home-section h1 {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.home-section h2 {
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.home-section h3 {
+    text-align: left;
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+/* Content stays left-aligned */
+.home-section p,
+.home-section ul {
+    text-align: left;
+    margin-bottom: 1rem;
+}
+
+.home-section p {
+    margin-bottom: 1rem;
+    line-height: 1.6;
+    color: #555;
+}
+
+.home-section p + p {
+    margin-top: -0.3rem;
+}
+
+.fusion-table {
+  width: 100%;
+  max-width: 800px;
+  margin: 1.5rem auto;
+  border-collapse: collapse;
+  text-align: left;
+  font-size: 0.95rem;
+  color: #444;
+}
+
+.fusion-table thead {
+  background-color: #f3f4f6;
+}
+
+.fusion-table th,
+.fusion-table td {
+  border: 1px solid #ddd;
+  padding: 8px 12px;
+  vertical-align: top;
+}
+
+.fusion-table th {
+  font-weight: bold;
+  color: #222;
+}
+
+.fusion-table tbody tr:nth-child(even) {
+  background-color: #fafafa;
+}
+
+.fusion-table tbody tr:hover {
+  background-color: #f0f0f0;
+}
+
+/* Lists styling */
+.section-list {
+    list-style: circle;
+    padding: 0;
+}
+
+.section-list li {
+    margin: 0.5rem 0;
+}
+
+/* Separator line */
+.section-divider {
+    border: none;
+    border-top: 1px solid #ccc;
+    margin: 2rem auto;
+    width: 60%;
+    opacity: 0.6;
+}
+
+
+/* Research section layout */
+.research-grid {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    padding: 10px;
+    margin-bottom: 1rem;
+}
+
+/* Individual card (button style) */
+.research-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    background-color: #f8f8f8;
+    border-radius: 12px;
+    flex: 1;
+    padding: 1rem;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Image */
+.research-card img {
+    width: 100%;
+    height: 130px;
+    object-fit: contain;
+    border-radius: 8px;
+    margin-bottom: 0.8rem;
+}
+
+/* Text below the image */
+.research-card span {
+    text-align: center;
+    color: #333;
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+/* Hover effect */
+.research-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+.centered-image {
+    text-align: center;
+    list-style: none; /* Remove bullet */
+}
+
+.centered-image img {
+    display: inline-block;
+    max-width: 95%;
+    height: auto;
+}
+
+.research-descriptions {
+    margin: 1.5rem auto;
+}
+
+.research-descriptions h3 {
+    font-size: 1.2rem;
+    margin-top: 1.2rem;
+    color: #333;
+    text-align: left;
+}
+
+.research-descriptions p {
+    margin-top: 0.4rem;
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #555;
+    text-align: justify;
+}
+
+.example-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  margin: 1rem 0 2rem;
+}
+
+.example-grid figure {
+  text-align: center;
+  margin: 0;
+  flex: 1 1 220px;  /* flexible width, minimum ~220px */
+  max-width: 250px;
+}
+
+.example-grid img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+
+.example-grid figcaption {
+  font-size: 0.9rem;
+  color: #555;
+  margin-top: 0.5rem;
+}
+
+.tri-sliders-container {
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+}
+
+.video-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    overflow: hidden;
+    margin: 1rem 0;
+}
+
+/* Keep video responsive and centered */
+.video-grid video {
+    width: 80%;
+    height: auto;
+    display: block;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+
+.legend {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin: 0.5rem auto 1rem;
+  font-size: 0.95rem;
+  color: #555;
+}
+
+.legend span {
+  background: #f3f4f6;
+  padding: 4px 10px;
+  border-radius: 6px;
+  border: 1px solid #ddd;
+}
+
+
+
+
+
+
+
+/* === Collaborations Section === */
+.collab-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  margin: 1.5rem 0 2rem;
+  padding: 10px;
+}
+
+.collab-card {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 1.2rem;
+  background-color: #f8f8f8;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  padding: 1rem;
+  width: 100%;
+  max-width: 750px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.collab-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.collab-card img {
+  width: 100px;
+  height: auto;
+  border-radius: 8px;
+  object-fit: contain;
+  background: white;
+  padding: 8px;
+}
+
+.collab-content {
+  flex: 1;
+  text-align: left;
+}
+
+.collab-content h2 {
+  margin: 0 0 0.4rem;
+  font-size: 1.2rem;
+  color: #222;
+}
+
+.collab-content a {
+  color: #004080;
+  text-decoration: none;
+}
+
+.collab-content a:hover {
+  text-decoration: underline;
+}
+
+.collab-content p {
+  margin: 0.3rem 0;
+  font-size: 0.95rem;
+  color: #555;
+}
+
+
+</style>
+
+
+<style>
+    /* === HOME SECTION NAVBAR === */
+    .home-nav {
+      position: sticky;
+      top: 70px;             /* offset = site header height */
+      z-index: 9;            /* stay below .site-header (z-index:10) */
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      padding: 0.8rem 1rem;
+      background: #ffffff;
+      border-bottom: 1px solid #e5e5e5;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.05);
+      margin-bottom: 1.5rem;
+    }
+    
+    .home-nav a {
+      color: #333;
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 1rem;
+      transition: color 0.2s ease;
+    }
+    
+    .home-nav a:hover {
+      color: #007acc;
+    }
+    
+    /* === Smooth Scrolling for anchor links === */
+    html {
+      scroll-behavior: smooth;
+    }
+    
+    /* === Offset anchor scrolling to prevent hidden section titles === */
+    :target::before {
+      content: "";
+      display: block;
+      height: 120px;    /* site header (≈70px) + home nav (≈50px) */
+      margin-top: -120px;
+    }
+    
+    .home-nav a.active {
+      color: #007acc;
+      border-bottom: 2px solid #007acc;
+      padding-bottom: 2px;
+    }
+    
+    </style>
+    
+    
+    <script>
+      const sections = document.querySelectorAll('.home-section');
+      const navLinks = document.querySelectorAll('.home-nav a');
+    
+      window.addEventListener('scroll', () => {
+        let current = '';
+        sections.forEach(section => {
+          const sectionTop = section.offsetTop - 140; // compensate header height
+          if (pageYOffset >= sectionTop) current = section.getAttribute('id');
+        });
+        navLinks.forEach(link => {
+          link.classList.remove('active');
+          if (link.getAttribute('href') === '#' + current) {
+            link.classList.add('active');
+          }
+        });
+      });
+    </script>
+    

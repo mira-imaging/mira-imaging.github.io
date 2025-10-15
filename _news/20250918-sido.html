@@ -1,0 +1,181 @@
+---
+layout: banner_top
+tri_slider: true
+---
+
+{% assign news_item = site.data.news.list | where: "page.url", page.url | first %}
+{% assign media_dir = site.baseurl | append: '/' | append: 'media/images/transfer/20250918_sido' %}
+
+<div class="page-container">
+
+  <!-- Page Title -->
+  <header class="page-header">
+    <h1 class="title">{{ news_item.page.title }}</h1>
+    <h2 class="subtitle">SIDO 2025 Demo</h2>
+  </header>
+
+  <!-- Description -->
+  <section class="description">
+    <p>{{ news_item.text }}</p>
+    <p>
+      <a href="https://www.linkedin.com/posts/richard-thibeaudeau_recherche-plateforme-iot-activity-7374407693895192576-rsf5/">
+        LinkedIn Post
+      </a>
+    </p>
+  </section>
+
+  <!-- Video Section -->
+  <section class="videos">
+    <h3 class="section-title">Demo Videos</h3>
+
+    <div class="video-grid">
+      <video autoplay loop muted playsinline width="80%">
+        <source src="{{ media_dir }}/images/pair_1/frame_0002/comparison.webm" type="video/webm">
+        Your browser does not support the video tag.
+      </video>
+    </div>
+    
+  </section>
+
+  <!-- Sliders Section -->
+  <section class="sliders">
+    <h3 class="section-title">Demo Sliders</h3>
+   
+    <div class="tri-sliders-container">
+      <div style="width: 50%;">
+        {% assign slider_media_dir = site.baseurl | append: '/' | append: 'media/sido-2025/images/pair_1/frame_0002' %}
+        {% assign left_before = slider_media_dir | append: "/lr_highlight.png" %}
+        {% assign left_after  = slider_media_dir | append: "/sr_highlight.png" %}
+        {% assign top_before  = slider_media_dir | append: "/lr_patch.png" %}
+        {% assign top_after   = slider_media_dir | append: "/sr_patch.png" %}
+        {% assign bottom_before = slider_media_dir | append: "/hr_spectrum.png" %}
+        {% assign bottom_after  = slider_media_dir | append: "/sr_spectrum.png" %}
+        {% include tri_slider.html
+        left_before=left_before
+        left_after=left_after
+        left_label_before="Cam 1 (LR)"
+        left_label_after="Fusion (HR)"
+        top_before=top_before
+        top_after=top_after
+        top_label_before="Cam 1"
+        top_label_after="Fusion"
+        bottom_before=bottom_before
+        bottom_after=bottom_after
+        bottom_label_before="Cam 2"
+        bottom_label_after="Fusion"
+        %}
+      </div>
+    </div>
+  </section>
+
+  <!-- Image Gallery -->
+  <section class="gallery">
+    <h3 class="section-title">Event Gallery</h3>
+    <div class="gallery-grid">
+      <img src="{{ media_dir }}/gallery/1758195802746.jpeg" alt="Event Photo 1" class="gallery-item">
+      <img src="{{ media_dir }}/gallery/PXL_20251015_165854.jpeg" alt="Event Photo 2" class="gallery-item">
+      <img src="{{ media_dir }}/gallery/PXL_20251015_165933.jpeg" alt="Event Photo 4" class="gallery-item">
+      <img src="{{ media_dir }}/gallery/PXL_20251015_170053.jpeg" alt="Event Photo 6" class="gallery-item">
+      <img src="{{ media_dir }}/gallery/PXL_20251015_170100.jpeg" alt="Event Photo 7" class="gallery-item">
+      <img src="{{ media_dir }}/gallery/PXL_20251015_165937.jpeg" alt="Event Photo 5" class="gallery-item">
+      <img src="{{ media_dir }}/gallery/PXL_20251015_152304.jpeg" alt="Event Photo 3" class="gallery-item">
+      <img src="{{ media_dir }}/gallery/PXL_20251015_170034.jpeg" alt="Event Photo 7" class="gallery-item">
+      <img src="{{ media_dir }}/gallery/PXL_20251015_170023.jpeg" alt="Event Photo 7" class="gallery-item">
+      <img src="{{ media_dir }}/gallery/PXL_20251015_170030.jpeg" alt="Event Photo 7" class="gallery-item">
+    </div>
+  </section>
+
+</div>
+
+<link rel="stylesheet" href="{{ '/assets/css/tri-slider.css' | relative_url }}">
+<script src="{{ '/assets/js/tri-slider.js' | relative_url }}"></script>
+
+<style>
+  .page-container {
+      max-width: 1200px;
+      margin: auto;
+      padding: 20px;
+      font-family: Arial, sans-serif;
+  }
+  
+  .page-header {
+      text-align: center;
+      margin-bottom: 30px;
+  }
+  
+  .title {
+      font-size: 2.5rem;
+      margin: 0;
+  }
+  
+  .subtitle {
+      font-size: 1.5rem;
+      color: #666;
+      margin: 5px 0 20px;
+  }
+  
+  .description p {
+      font-size: 1.1rem;
+      line-height: 1.6;
+      margin-bottom: 10px;
+  }
+  
+  .section-title {
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: #4a4a4a;
+      margin-bottom: 1.5rem;
+      text-align: center;
+  }
+  
+  .videos {
+    margin: 40px auto;
+    display: grid;
+    gap: 24px;                /* space between tri blocks */
+  }
+  
+  .video-grid {
+      width: 100%;            /* or 100%; max-width: 1000px; */
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+  }
+  
+  .sliders {
+    margin: 40px auto;
+  }
+  
+  .tri-sliders-container {
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+  }
+  
+  .gallery {
+      margin-top: 50px;
+  }
+  
+  .gallery-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+      justify-content: center;
+  }
+  
+  .gallery-item {
+      width: 256px;
+      height: 192px;
+      object-fit: cover;
+      border-radius: 6px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+      transition: transform 0.2s;
+  }
+  
+  .gallery-item:hover {
+      transform: scale(1.05);
+  }
+  </style>

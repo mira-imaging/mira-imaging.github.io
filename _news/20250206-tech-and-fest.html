@@ -24,7 +24,7 @@ tri_slider: true
     <h3 class="section-title">Demo Videos</h3>
 
     <div class="video-grid">
-      <video autoplay loop muted playsinline width="800">
+      <video autoplay loop muted playsinline width="80%">
         <source src="{{ media_dir }}/images/pair_1/frame_0000/comparison.webm" type="video/webm">
         Your browser does not support the video tag.
       </video>
@@ -37,13 +37,15 @@ tri_slider: true
     <h3 class="section-title">Demo Sliders</h3>
    
     <div class="tri-sliders-container">
-      {% assign left_before = media_dir | append: "/images/pair_1/frame_0000/lr_highlight.png" %}
-      {% assign left_after  = media_dir | append: "/images/pair_1/frame_0000/sr_highlight.png" %}
-      {% assign top_before  = media_dir | append: "/images/pair_1/frame_0000/lr_patch.png" %}
-      {% assign top_after   = media_dir | append: "/images/pair_1/frame_0000/sr_patch.png" %}
-      {% assign bottom_before = media_dir | append: "/images/pair_1/frame_0000/hr_spectrum.png" %}
-      {% assign bottom_after  = media_dir | append: "/images/pair_1/frame_0000/sr_spectrum.png" %}
-      {% include tri_slider.html
+      <div style="width: 50%;">
+        {% assign slider_media_dir = site.baseurl | append: '/' | append: 'media/tech-and-fest-2025/images/pair_1/frame_0000' %}
+        {% assign left_before = slider_media_dir | append: "/lr_highlight.png" %}
+        {% assign left_after  = slider_media_dir | append: "/sr_highlight.png" %}
+        {% assign top_before  = slider_media_dir | append: "/lr_patch.png" %}
+        {% assign top_after   = slider_media_dir | append: "/sr_patch.png" %}
+        {% assign bottom_before = slider_media_dir | append: "/hr_spectrum.png" %}
+        {% assign bottom_after  = slider_media_dir | append: "/sr_spectrum.png" %}
+        {% include tri_slider.html
         left_before=left_before
         left_after=left_after
         left_label_before="Cam 1 (LR)"
@@ -56,7 +58,8 @@ tri_slider: true
         bottom_after=bottom_after
         bottom_label_before="Cam 2"
         bottom_label_after="Fusion"
-      %}
+        %}
+      </div>
     </div>
   </section>
   
@@ -81,7 +84,95 @@ tri_slider: true
 
 </div>
 
-<link rel="stylesheet" href="{{ '/assets/css/blog-page.css' | relative_url }}">
 <link rel="stylesheet" href="{{ '/assets/css/tri-slider.css' | relative_url }}">
 <script src="{{ '/assets/js/tri-slider.js' | relative_url }}"></script>
 
+<style>
+.page-container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+}
+
+.page-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.title {
+    font-size: 2.5rem;
+    margin: 0;
+}
+
+.subtitle {
+    font-size: 1.5rem;
+    color: #666;
+    margin: 5px 0 20px;
+}
+
+.description p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+
+.section-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #4a4a4a;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.videos {
+  margin: 40px auto;
+  display: grid;
+  gap: 24px;                /* space between tri blocks */
+}
+
+.video-grid {
+    width: 100%;            /* or 100%; max-width: 1000px; */
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.sliders {
+  margin: 40px auto;
+}
+
+.tri-sliders-container {
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+}
+
+.gallery {
+    margin-top: 50px;
+}
+
+.gallery-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+}
+
+.gallery-item {
+    width: 256px;
+    height: 192px;
+    object-fit: cover;
+    border-radius: 6px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+    transition: transform 0.2s;
+}
+
+.gallery-item:hover {
+    transform: scale(1.05);
+}
+</style>
