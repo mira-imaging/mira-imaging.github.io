@@ -1,6 +1,7 @@
 ---
 layout: banner_top
 tri_slider: true
+title: SIDO 2025
 ---
 
 {% assign news_item = site.data.news.list | where: "page.url", page.url | first %}
@@ -30,7 +31,7 @@ tri_slider: true
 
     <div class="video-grid">
       <video autoplay loop muted playsinline width="80%">
-        <source src="{{ media_dir }}/images/pair_1/frame_0002/comparison.webm" type="video/webm">
+        <source src="{{ site.baseurl }}/media/sido-2025/images/pair_dynamic_indoor/frame_000002/comparison.webm" type="video/webm">
         Your browser does not support the video tag.
       </video>
     </div>
@@ -43,7 +44,7 @@ tri_slider: true
    
     <div class="tri-sliders-container">
       <div style="width: 50%;">
-        {% assign slider_media_dir = site.baseurl | append: '/' | append: 'media/sido-2025/images/pair_1/frame_0002' %}
+        {% assign slider_media_dir = site.baseurl | append: '/' | append: 'media/sido-2025/images/pair_dynamic_indoor/frame_000002' %}
         {% assign left_before = slider_media_dir | append: "/lr_highlight.png" %}
         {% assign left_after  = slider_media_dir | append: "/sr_highlight.png" %}
         {% assign top_before  = slider_media_dir | append: "/lr_patch.png" %}
