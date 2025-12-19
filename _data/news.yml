@@ -8,6 +8,14 @@ list:
       title: New Dataset Paper Submission in Collaboration with the Universidad Industrial de Santander in Colombia
     thumbnail: 
 
+  - text: M. Jouni presented the RGB-Hyperspectral fusion pipeline at the CNRS scientific meeting <a href=https://gdr-iasis.cnrs.fr/reunions/solutions-materielles-pour-la-fusion-de-donnees/>"Solutions matérielles pour la fusion de données"</a>.
+    date: Sep 2025
+    link: /news/20250925-gdr-iasis-fusion-solutions/
+    page:
+      url: /news/20250925-gdr-iasis-fusion-solutions/
+      title: Journée CNRS GdR IASIS
+    thumbnail: 
+
   - text: MIRA participated in the <a href=https://www.sido-lyon.com/en/>SIDO</a> event with a multi-camera <b>RGB-Hyperspectral fusion demonstrator</b>, combining a low-cost RGB camera with a low-cost hyperspectral camera. For information at the laboratory's website, visit <a href="https://www.gipsa-lab.grenoble-inp.fr/les-publications/toutes-les-actus/mira-au-sido-2025">this link</a>.
     date: Sep 2025
     link: /news/20250918-sido/

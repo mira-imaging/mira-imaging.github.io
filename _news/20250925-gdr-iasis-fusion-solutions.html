@@ -1,0 +1,26 @@
+---
+layout: page_padded
+tri_slider: true
+title: Journée CNRS GdR IASIS
+---
+
+{% assign news_item = site.data.news.list | where: "page.url", page.url | first %}
+
+<div class="page-container">
+
+  <!-- Page Title -->
+  <header class="page-header">
+    <h1 class="title">{{ news_item.page.title }}</h1>
+    <h2 class="subtitle">- Solutions matérielles pour la fusion de données -</h2>
+  </header>
+
+  <!-- Description -->
+  <section class="description">
+    <p>{{ news_item.text }}</p>
+    <br>
+    <img src="{{ site.baseurl }}/media/images/pipeline.jpg" alt="Super-resolution Pipeline" style="">
+  </section>
+
+<link rel="stylesheet" href="{{ '/assets/css/news-item-page.css' | relative_url }}">
+
+</div>
