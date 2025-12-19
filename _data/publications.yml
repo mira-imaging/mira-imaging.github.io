@@ -38,6 +38,6 @@ publications:
       - link: https://huggingface.co/datasets/ecos-nord-ginp-uis/CoCoaSpec
         icon: *ic-hf
         type: Dataset
-      - link: https://huggingface.co/datasets/ecos-nord-ginp-uis/CoCoaSpec
+      - link: https://github.com/kebincontreras/CoCoaSpec
         icon: *ic-github
         type: Code
