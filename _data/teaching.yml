@@ -156,10 +156,10 @@ projects:
       - Daniele Picone
     level: Engineering Diploma - BAC+4
     students:
+      - Ilyas Benkirane
+      - Gabriel Bensmaine
+      - Ferdinand Gosset
       - Yann Salvignol
-      - 
-      - 
-      - 
     comments: 
     
   - year: 2024-2025
@@ -175,3 +175,20 @@ projects:
     students:
       - Kari Rønningen
     comments: 
+    
+  - year: 2025-2026
+    title: 3D Scanner
+    parent_project: MIRA
+    type: Student Project
+    duration: 2 months
+    affiliation: Grenoble INP - Phelma
+    supervisors:
+      - Mohamad Jouni
+    level: Engineering Diploma - BAC+4
+    students:
+      - Lilian Haemmerer
+      - Alexandru-Andrei Maria
+      - Guillaume Addesa
+      - Pedro Augusto Chaves Pedroza
+    comments: 
+    
