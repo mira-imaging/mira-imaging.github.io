@@ -26,8 +26,8 @@ pages:
     permalink: /members/
     subpages:
 
-  # - title: Publications
-  #   permalink: /publications/
+  - title: Publications
+    permalink: /publications/
 
   # - title: Projects
   #   permalink: /projects/

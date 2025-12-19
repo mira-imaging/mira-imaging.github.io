@@ -1,25 +1,12 @@
-authors:
-  - &jounim M. Jouni
-  - &dallamum M. Dalla Mura
-
 types:
   - &journal
     name: Journal
     code: J
-  - &conference
-    name: Conference
-    code: C
-  - &thesis
-    name: Thesis
-    code: T
-  - &preprint
-    name: Preprint
-    code: P
 
 venues:
-  - &arxiv
-    title: arXiv
-    abbrv: preprint
+  - &scidata
+    title: Nature Scientific Data
+    abbrv: Sci. Data
 
 link_icons:
   - &ic-link fas fa-link
@@ -29,7 +16,28 @@ link_icons:
   - &ic-pdf fas fa-file-pdf
   - &ic-ppt fas fa-file-powerpoint
   - &ic-book fas fa-book
+  - &ic-hf fas fa-database
+  - &ic-github fa-brands fa-github
 
 full_publications_link: /publications/
 
 publications:
+  - title: A Multimodal hyperspectral dataset of cocoa beans with physicochemical annotation
+    authors:
+      - Kebin Contreras
+      - Mohamad Jouni
+      - Mauro Dalla Mura
+      - Jorge Bacca
+    type: *journal
+    venue: *scidata
+    year: 2025
+    links:
+      - link: https://www.nature.com/articles/s41597-025-06314-9
+        icon: *ic-link
+        type: Paper
+      - link: https://huggingface.co/datasets/ecos-nord-ginp-uis/CoCoaSpec
+        icon: *ic-hf
+        type: Dataset
+      - link: https://huggingface.co/datasets/ecos-nord-ginp-uis/CoCoaSpec
+        icon: *ic-github
+        type: Code
