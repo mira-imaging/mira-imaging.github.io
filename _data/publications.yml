@@ -34,7 +34,10 @@ publications:
     links:
       - link: https://www.nature.com/articles/s41597-025-06314-9
         icon: *ic-link
-        type: Paper
+        type: Paper (Sci. Data)
+      - link: https://hal.science/hal-05476083
+        icon: *ic-pdf
+        type: Paper (HAL)
       - link: https://huggingface.co/datasets/ecos-nord-ginp-uis/CoCoaSpec
         icon: *ic-hf
         type: Dataset
