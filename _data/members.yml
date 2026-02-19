@@ -5,8 +5,8 @@ categories:
   - &student
     type: Student
     order: "2"
-  - &leader
-    type: Leader
+  - &reference
+    type: Reference
     order: "0"
   - &previous-member
     type: Previous Member
@@ -25,18 +25,18 @@ link_icons:
 members:
   - key: dallamum
     name: Prof. Mauro Dalla Mura
-    category: *leader
-    role: Scientific Supervisor - Associate Professor
+    category: *reference
+    role: Scientific Reference - Associate Professor
     affiliation: Grenoble Institute of Technology
     photo: mauro_dallamura.png
     email: mauro.dalla-mura@grenoble-inp.fr
-    personal_link:  https://scholar.google.com/citations?user=qbdbtn4AAAAJ&hl=en
+    personal_link: https://scholar.google.com/citations?user=qbdbtn4AAAAJ&hl=en
     years: Since Feb 2024
 
   - key: negrea
     name: Amaury Nègre
-    category: *team-member
-    role: Technical Supervisor - Research Engineer
+    category: *reference
+    role: Technical Reference - Research Engineer
     affiliation: Grenoble Institute of Technology
     photo: amaury_negre.jpg
     email: amaury.negre@grenoble-inp.fr
@@ -45,6 +45,16 @@ members:
     icon_links:
       - link: https://github.com/negre
         icon: *ic-github
+  
+  - key: comisb
+    name: Barbara Comis
+    category: *reference
+    role: Industrial Partnerships Reference - Transfer & Valorization Engineer
+    affiliation: Grenoble Institute of Technology
+    photo: barbara_comis.jpeg
+    email: barbara.comis@gipsa-lab.grenoble-inp.fr
+    personal_link: https://www.gipsa-lab.grenoble-inp.fr/user/barbara.comis
+    years: Since Feb 2024
   
   - key: jounim
     name: Mohamad Jouni
