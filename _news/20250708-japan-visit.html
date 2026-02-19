@@ -1,23 +1,265 @@
 ---
-layout: page_padded
+layout: banner_top
 ---
 
 {% assign news_item = site.data.news.list | where: "page.url", page.url | first %}
+{% assign media_dir = site.baseurl | append: '/' | append: 'media/images/20250704_japan' %}
+
+<link rel="stylesheet" href="{{ '/assets/css/news-item-page.css' | relative_url }}">
 
 <div class="page-container">
 
-    <!-- Page Title -->
-    <header class="page-header">
-      <h1 class="title">{{ news_item.page.title }}</h1>
-      <h2 class="subtitle"></h2>
-    </header>
-  
-    <!-- Description -->
-    <section class="description">
-      <p>{{ news_item.text }}</p>
-    </section>
-  
-      <link rel="stylesheet" href="{{ '/assets/css/news-item-page.css' | relative_url }}">
-  
-  </div>
-  
+  <!-- Header -->
+  <header class="page-header">
+    <h1 class="title">Collaboration Visit to the Institute of Science Tokyo in Japan</h1>
+    <h2 class="subtitle">July - August 2025</h2>
+  </header>
+
+  <!-- Introduction -->
+  <section class="description">
+    <h3 class="section-title">Introduction</h3>
+
+    <p>
+      In July 2025, Prof. Mauro Dalla Mura, Mohamad Jouni, and Daniele Picone
+      conducted a six-week scientific collaboration visit at the 
+      <a href="https://www.isct.ac.jp/en" target="_blank">Institute of Science Tokyo</a>,
+      Japan, within the 
+      <a href="https://hatanakalab.wixsite.com/website" target="_blank">Hatanaka Lab</a>
+      (Department of Systems and Control Engineering, School of Engineering).
+    </p>
+
+    <p>
+      The visit was carried out in collaboration with Prof. Kuniaki Uto
+      and focused on the development of a multi-modal and multispectral
+      acquisition utility, aimed at precision agriculture applications.
+    </p>
+    
+    <div class="gallery-grid">
+      <img src="{{ media_dir }}/gallery/PXL_20250730_092222144.jpg.jpeg"
+          alt="Dual-camera setup"
+          class="section-image">
+      
+      <img src="{{ media_dir }}/gallery/PXL_20250801_113239500.jpg.jpeg"
+          alt="JetRover and the dual-camera setup"
+          class="section-image">
+    </div>
+
+  </section>
+
+  <!-- Multi-Camera System Development -->
+  <section class="description">
+    <h3 class="section-title">Development of a Multi-Camera Acquisition System</h3>
+
+    <p>
+      A central outcome of the visit was the design and implementation of a
+      Python-based graphical acquisition interface enabling the simultaneous
+      visualization and recording of hyperspectral and RGB images.
+      The corresponding sensors are:
+    </p>
+
+    <ul>
+      <li>
+        <strong>Hyperspectral sensor:</strong> XIMEA MQ02HG-IM-SM4x4-REDNIR
+        (4x4 color filter array in the RED/NIR range, corresponding to 16 spectral bands)
+      </li>
+      <li>
+        <strong>RGB sensor:</strong> The Imaging Source DFK 23UX236
+        (3-band Bayer color sensor)
+      </li>
+    </ul>
+
+    <p>
+      The graphical interface was implemented using PyQt5 and designed with a
+      device-independent camera abstraction layer to ensure modularity and
+      extensibility toward additional industrial camera systems.
+    </p>
+
+    <p>
+      The software supports:
+    </p>
+
+    <ul>
+      <li>Live stream visualization</li>
+      <li>Exposure time control with feedback</li>
+      <li>Frames-per-second adjustment</li>
+      <li>Mosaiced and demosaiced image visualization</li>
+      <li>Simultaneous dual-camera acquisition</li>
+      <li>Frame sequence recording in ENVI and NumPy formats</li>
+    </ul>
+
+    <p>
+      The acquisition utility is available as an open-source repository:
+      <br>
+      <a href="https://github.com/mira-imaging/camera-gui" target="_blank">
+        https://github.com/mira-imaging/camera-gui
+      </a>
+    </p>
+    
+    <div class="gallery-grid">
+      <img src="{{ media_dir }}/gallery/PXL_20250731_171135746.jpg.jpeg"
+          alt="Dual-camera setup"
+          class="section-image">
+      
+      <img src="{{ media_dir }}/gallery/PXL_20250731_171332795.jpg.jpeg"
+          alt="JetRover and the dual-camera setup"
+          class="section-image">
+    </div>
+
+  </section>
+
+  <!-- Mechanical Integration -->
+  <section class="description">
+    <h3 class="section-title">Mechanical Integration and Camera Mounting</h3>
+
+    <p>
+      To ensure stable spatial alignment between the hyperspectral and RGB
+      modalities, both sensors were mounted on a custom-designed horizontal
+      plate compatible with standard tripod systems.
+    </p>
+
+    <p>
+      The mounting solution guarantees:
+    </p>
+
+    <ul>
+      <li>Fixed relative positioning between sensors</li>
+      <li>Preserved baseline geometry</li>
+      <li>Reproducible mechanical configuration</li>
+      <li>Compatibility with robotic platforms</li>
+    </ul>
+
+    <p>
+      The design files (PDF drafts, STL models, Blender renders, and laser-cut
+      specifications) are included in the repository to ensure reproducibility
+      and facilitate deployment by collaborating teams.
+    </p>
+  </section>
+
+  <!-- JetRover Deployment -->
+  <section class="description">
+    <h3 class="section-title">Deployment on the JetRover Robotic Platform</h3>
+
+    <p>
+      The developed acquisition interface was successfully installed on the
+      Jetson embedded computing board of a JetRover robotic system.
+    </p>
+
+    <p>
+      This integration enables field-ready multi-modal data acquisition for:
+    </p>
+
+    <ul>
+      <li>Precision agriculture monitoring</li>
+      <li>Vegetation spectral analysis</li>
+      <li>RED/NIR-based crop health assessment</li>
+      <li>Autonomous robotic data collection</li>
+    </ul>
+
+    <p>
+      The system is scheduled for experimental deployment on agricultural fields
+      at the Suzukakedai campus under the supervision of Prof. Uto.
+      Future developments include the integration of the acquisition utility within a ROS 2-based robotic architecture.
+      This integration enables remote operation, distributed processing,
+      and seamless interoperability with navigation, localization, and data management modules.
+    </p>
+  </section>
+
+  <!-- Scientific Impact -->
+  <section class="description">
+    <h3 class="section-title">Scientific and Strategic Impact for the MIRA Platform</h3>
+
+    <p>
+      This collaboration contributes to the MIRA platform in three major
+      dimensions:
+    </p>
+
+    <ul>
+      <li>
+        <strong>Software Infrastructure:</strong>
+        Development of a reusable, modular acquisition framework compatible with robotic systems.
+      </li>
+      <li>
+        <strong>Hardware Integration:</strong>
+        Robot-based mounting of a physical multi-modal spectral imaging system.
+      </li>
+      <li>
+        <strong>Application Deployment:</strong>
+        Field-oriented multi-sensor acquisition pipeline for agricultural monitoring.
+      </li>
+      <li>
+        <strong>International Partnership:</strong>
+        Consolidation of long-term scientific collaborations between
+        Université Grenoble Alpes / Grenoble INP / GIPSA-lab (France)
+        and the Institute of Science Tokyo (Japan)
+        in robotic spectral-spatial image sensing and precision agriculture.
+      </li>
+    </ul>
+  </section>
+
+  <!-- Acknowledgements -->
+  <section class="description acknowledgements">
+    <h3 class="section-title">Acknowledgements</h3>
+
+    <p>
+      This work is supported by the <strong>Auvergne-Rhône-Alpes (AuRA)</strong> region
+      under the project <strong>"Pack Ambition International 2021"</strong>,
+      through <strong>Grant 21-007356-01FONC</strong> and
+      <strong>Grant 21-007356-02INV</strong>.
+    </p>
+
+    <p>
+      The visit forms part of an ongoing scientific collaboration between
+      Université Grenoble Alpes / Grenoble INP / GIPSA-lab (France) and the
+      Institute of Science Tokyo (Japan). The research activities were carried
+      out at the Hatanaka Lab, Department of Systems and Control Engineering,
+      School of Engineering, Institute of Science Tokyo.
+    </p>
+
+    <p>
+      The mobility support provided by the AuRA Region has enabled the
+      consolidation of international research links and the initiation of
+      structured discussions with the National Agriculture and Food Research
+      Organization (NARO), Japan.
+      These exchanges aim to establish joint research activities in real-time agricultural monitoring
+      using multimodal, multispectral, and hyperspectral imaging systems deployed on robotic platforms.
+    </p>
+
+    <h3 class="section-title">Supported By</h3>
+
+    <div style="margin-top: 30px;" align="center">
+      <img src="{{ site.baseurl }}/media/images/logos/affiliations/aura_logo.png" alt="Auvergne-Rhône-Alpes (AuRA)" width="500">
+      <br><br><br>
+      <div>
+        <img src="{{ site.baseurl }}/media/images/logos/affiliations/uga_logo.png" alt="Université Grenoble Alpes" height="100"/>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <img src="{{ site.baseurl }}/media/images/logos/affiliations/ginp_logo.png" alt="Grenoble INP" height="100"/>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <img src="{{ site.baseurl }}/media/images/logos/affiliations/gipsa_logo.png" alt="GIPSA-lab" height="100"/>
+      </div>
+      <br><br>
+      <img src="{{ site.baseurl }}/media/images/logos/affiliations/science_tokyo_logo.svg" alt="Institute of Science Tokyo" width="500"/>
+    </div>
+  </section>
+
+
+
+  <!-- Image Gallery -->
+  <section class="gallery">
+    <h3 class="section-title">Event Gallery</h3>
+    <div class="gallery-grid">
+      <img src="{{ media_dir }}/gallery/PXL_20250716_061627929~2.jpg.jpeg" alt="Gallery Photo" class="gallery-item">
+      <img src="{{ media_dir }}/gallery/PXL_20250716_062045828~2.jpg.jpeg" alt="Gallery Photo" class="gallery-item">
+      <img src="{{ media_dir }}/gallery/PXL_20250716_082225988.jpg.jpeg" alt="Gallery Photo" class="gallery-item">
+      <img src="{{ media_dir }}/gallery/PXL_20250728_054925558.jpg.jpeg" alt="Gallery Photo" class="gallery-item">
+      <img src="{{ media_dir }}/gallery/PXL_20250730_092222144.jpg.jpeg" alt="Gallery Photo" class="gallery-item">
+      <img src="{{ media_dir }}/gallery/PXL_20250730_092226855.jpg.jpeg" alt="Gallery Photo" class="gallery-item">
+      <img src="{{ media_dir }}/gallery/PXL_20250731_085709622.jpg.jpeg" alt="Gallery Photo" class="gallery-item">
+      <img src="{{ media_dir }}/gallery/PXL_20250731_085725705.jpg.jpeg" alt="Gallery Photo" class="gallery-item">
+      <img src="{{ media_dir }}/gallery/PXL_20250731_085800398.jpg.jpeg" alt="Gallery Photo" class="gallery-item">
+      <img src="{{ media_dir }}/gallery/PXL_20250731_171135746.jpg.jpeg" alt="Gallery Photo" class="gallery-item">
+      <img src="{{ media_dir }}/gallery/PXL_20250731_171332795.jpg.jpeg" alt="Gallery Photo" class="gallery-item">
+      <img src="{{ media_dir }}/gallery/PXL_20250801_113235858.jpg.jpeg" alt="Gallery Photo" class="gallery-item">
+      <img src="{{ media_dir }}/gallery/PXL_20250801_113239500.jpg.jpeg" alt="Gallery Photo" class="gallery-item">
+    </div>
+  </section>
+</div>

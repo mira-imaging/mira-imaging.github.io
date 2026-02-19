@@ -8,9 +8,6 @@ categories:
   - &leader
     type: Leader
     order: "0"
-  - &visitor
-    type: Visitor
-    order: "3"
   - &previous-member
     type: Previous Member
     order: "4"
