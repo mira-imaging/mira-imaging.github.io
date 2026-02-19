@@ -38,7 +38,7 @@ members:
 
   - key: negrea
     name: Amaury Nègre
-    category: *leader
+    category: *team-member
     role: Technical Supervisor - Research Engineer
     affiliation: Grenoble Institute of Technology
     photo: amaury_negre.jpg
