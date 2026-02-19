@@ -31,7 +31,7 @@ members:
     photo: mauro_dallamura.png
     email: mauro.dalla-mura@grenoble-inp.fr
     personal_link: https://scholar.google.com/citations?user=qbdbtn4AAAAJ&hl=en
-    years: Since Feb 2024
+    years: Since Oct 2024
 
   - key: negrea
     name: Amaury Nègre
@@ -41,7 +41,7 @@ members:
     photo: amaury_negre.jpg
     email: amaury.negre@grenoble-inp.fr
     personal_link: https://www.gipsa-lab.grenoble-inp.fr/user/amaury.negre
-    years: Since Feb 2024
+    years: Since Oct 2024
     icon_links:
       - link: https://github.com/negre
         icon: *ic-github
@@ -54,7 +54,7 @@ members:
     photo: barbara_comis.jpeg
     email: barbara.comis@gipsa-lab.grenoble-inp.fr
     personal_link: https://www.gipsa-lab.grenoble-inp.fr/user/barbara.comis
-    years: Since Feb 2024
+    years: Since Oct 2024
   
   - key: jounim
     name: Mohamad Jouni
@@ -64,7 +64,7 @@ members:
     photo: mohamad_jouni.png
     email: mohamad.jouni@grenoble-inp.fr
     personal_link: https://www.gipsa-lab.grenoble-inp.fr/user/mohamad.jouni
-    years: Since Feb 2024
+    years: Since Oct 2024
     icon_links:
       - link: https://github.com/mhmdjouni
         icon: *ic-github
@@ -79,7 +79,7 @@ members:
     photo: matthieu_muschinowski.jpeg
     email: matthieu.muschinowski@grenoble-inp.fr
     personal_link: https://www.gipsa-lab.grenoble-inp.fr/user/matthieu.muschinowski
-    years: Since Jan 2025
+    years: Since Jan 2026
     icon_links:
   
   - key: xavierl
@@ -90,7 +90,7 @@ members:
     photo: xavier_laval.jpeg
     email: xavier.laval@grenoble-inp.fr
     personal_link: https://www.gipsa-lab.grenoble-inp.fr/user/xavier.laval
-    years: Since Jan 2025
+    years: Since Jan 2026
     icon_links:
   
   - key: piconed
