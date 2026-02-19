@@ -1,6 +1,6 @@
 categories:
   - &team-member
-    type: Team
+    type: Researcher / Engineer / Developer
     order: "1"
   - &student
     type: Student
@@ -94,7 +94,7 @@ members:
     photo: daniele_picone.jpeg
     email: daniele.picone@grenoble-inp.fr
     personal_link: https://scholar.google.com/citations?user=Hg5fPvsAAAAJ&hl=en
-    years: 2024 - 2025
+    years: Feb 2025 - Sep 2025
     icon_links:
       - link: https://github.com/danaroth83
         icon: *ic-github
