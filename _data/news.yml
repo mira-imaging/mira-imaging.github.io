@@ -1,5 +1,13 @@
 # For now, the news list should be sorted manually
 list:
+  - text: MIRA participated in the <a href=https://www.tech-fest.fr/en/>Tech&Fest</a> event with a multi-camera <b>RGB-Hyperspectral fusion demonstrator</b>, combining a low-cost RGB camera with a low-cost hyperspectral camera. For information at the laboratory's website, visit <a href="https://www.gipsa-lab.grenoble-inp.fr/les-publications/toutes-les-actus/le-gipsa-lab-au-techfest-2026">this link</a>.
+    date: Feb 2026
+    link: /news/20260204-tech-fest/
+    page:
+      url: /news/20260204-tech-fest/
+      title: Tech & Fest 2026
+    thumbnail: 
+
   - text: Our paper to Nature Scientific Data has been accepted! This work is in collaboration with the Universidad Industrial de Santander in Colombia.
     date: Nov 2025
     link: /publications/
