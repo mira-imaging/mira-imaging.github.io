@@ -1,9 +1,6 @@
 projects:
 
-  - name: V-Hyper
+  - name: Placeholder
     description: >-
-      V-Hyper stands for Hyperspectral Vision.
-        The project aims at improving the spatial and spectral resolution of snapshot hyperspectral cameras
-        via multispectral and hyperspectral image fusion techniques. The goal is to build a real multi-camera
-        demonstrator with cameras possessing complementary spatial and spectral characteristics.
-    link: https://v-hyper.github.io
+      Placeholder.
+    link: https://example.com

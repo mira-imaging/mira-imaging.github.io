@@ -175,12 +175,12 @@ projects:
     students:
       - Kari Rønningen
     comments: 
-    
+
   - year: 2025-2026
     title: 3D Scanner
     parent_project: MIRA
     type: Student Project
-    duration: 2 months
+    duration: 3 months
     affiliation: Grenoble INP - Phelma
     supervisors:
       - Mohamad Jouni
@@ -189,6 +189,23 @@ projects:
       - Lilian Haemmerer
       - Alexandru-Andrei Maria
       - Guillaume Addesa
+      - Yoann Thomassier
       - Pedro Augusto Chaves Pedroza
     comments: 
-    
+
+  - year: 2025-2026
+    title: "MUSA: Multimodal Spectral Acquisition"
+    parent_project: MIRA
+    type: Student Project
+    duration: 3 months
+    affiliation: Grenoble INP - Phelma
+    supervisors:
+      - Mohamad Jouni
+    level: Engineering Diploma - BAC+4
+    students:
+      - Seamus O'Connell
+      - Dominique Toussaint
+      - Pirita Liikavainio
+      - Mateo Ilanas
+      - Basile Joshua
+    comments: 
