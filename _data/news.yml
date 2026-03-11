@@ -63,3 +63,11 @@ list:
       url: /news/20241107-colombia-visit/
       title: Collaboration Visit to the Universidad Industrial de Santander in Colombia
     thumbnail: 
+
+  - text: MIRA deployed its Toucan multispectral and Ultris SR5 hyperspectral cameras at the <a href="https://www.legi.grenoble-inp.fr/web/?lang=en">LEGI laboratory</a> to evaluate the benefits of spectral imaging for fluid flow characterization compared to conventional RGB systems.
+    date: Apr 2024
+    link: /news/20240409-legi-acquisition/
+    page:
+      url: /news/20240409-legi-acquisition/
+      title: Acquisition Session at the LEGI Laboratory
+    thumbnail: 

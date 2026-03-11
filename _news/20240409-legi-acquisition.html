@@ -1,0 +1,201 @@
+---
+layout: banner_top
+---
+
+{% assign news_item = site.data.news.list | where: "page.url", page.url | first %}
+{% assign media_dir = site.baseurl | append: '/' | append: 'media/images/20240409_legi_acquisition' %}
+
+<link rel="stylesheet" href="{{ '/assets/css/news-item-page.css' | relative_url }}">
+
+<div class="page-container">
+
+  <!-- Header -->
+  <header class="page-header">
+    <h1 class="title">MIRA at LEGI: Multimodal Spectral Image Acquisition Campaign for Flow Characterization</h1>
+    <h2 class="subtitle">April 9, 2024</h2>
+  </header>
+
+  <!-- Introduction -->
+  <section class="description">
+    <h3 class="section-title">Introduction</h3>
+
+    <p>
+      In April 2024, the MIRA platform participated in an experimental campaign at
+      <a href="https://www.legi.grenoble-inp.fr/web/?lang=en">LEGI (Laboratoire des Écoulements Géophysiques et Industriels)</a>.
+      The objective was to evaluate multispectral and hyperspectral imaging technologies for the characterization
+      of fluid flows compared to conventional RGB imaging.
+    </p>
+
+  </section>
+
+  <!-- Devices -->
+  <section class="description">
+    <h3 class="section-title">Imaging Systems Provided by MIRA</h3>
+    
+    <p>
+      For this campaign, as the liquid flows continuously, <b>snapshot</b> imaging systems are required.
+      The MIRA platform provided the following devices:
+      <ul>
+        <li>
+          <strong>Multispectral camera:</strong> Silios Toucan
+          (4x4 color filter array in the VIS/NIR range, corresponding to 10 spectral bands)
+        </li>
+        <li>
+          <strong>Hyperspectral camera:</strong> Cubert Ultris SR5
+          (51 spectral bands in the VIS/NIR range)
+        </li>
+      </ul>
+    </p>
+    
+    <p>
+      The Toucan provides images at 512x512 spatial resolution, comprising 10 spectral bands,
+      while the Ultris SR5 provides images at 275x290 spatial resolution, comprising 51 spectral bands.
+      These complementary characteristics allow to compare between conventional RGB imaging and multi/hyper-spectral imaging.
+    </p>
+    
+    <div class="gallery-grid">
+      <figure class="gallery-figure">
+        <img src="{{ media_dir }}/PXL_20260311_142523195.jpeg"
+            alt="Toucan Camera (Multispectral)"
+            class="section-image">
+        <figcaption>
+          <strong>Silios Toucan (Multispectral)</strong>
+        </figcaption>
+      </figure>
+
+      <figure class="gallery-figure">
+        <img src="{{ media_dir }}/PXL_20260311_142507152.jpeg"
+            alt="Ultris SR5 (Hyperspectral)"
+            class="section-image">
+        <figcaption>
+          <strong>Cubert Ultris SR5 (Hyperspectral)</strong>
+        </figcaption>
+      </figure>
+    </div>
+
+  </section>
+
+  <!-- Setup -->
+  <section class="description">
+    <h3 class="section-title">Experimental Setup</h3>
+
+    <p>
+      The imaging systems were installed around a LEGI experimental setup dedicated to flow characterization.
+      The configuration involved:
+    </p>
+
+    <ul>
+      <li>
+        Controlled illumination conditions (dim room).
+      </li>
+      <li>
+        Laser-based excitation.
+      </li>
+      <li>
+        Dynamic flow scenarios.
+      </li>
+    </ul>
+    
+    <div class="gallery-grid">
+      <figure class="gallery-figure">
+        <img src="{{ media_dir }}/20240409_162334.jpg"
+            alt="Camera setup"
+            class="section-image">
+        <figcaption>
+          <strong>Camera setup. From left to right:<br>Toucan, Ultris SR5, Sony (RGB)</strong>
+        </figcaption>
+      </figure>
+
+      <figure class="gallery-figure">
+        <img src="{{ media_dir }}/20240409_181736.jpg"
+            alt="Fluid container"
+            class="section-image">
+        <figcaption>
+          <strong>Fluid container, excited by a laser.</strong>
+        </figcaption>
+      </figure>
+    </div>
+
+  </section>
+
+  <!-- MIRA Role -->
+  <section class="description">
+    <h3 class="section-title">Role of the MIRA Platform</h3>
+
+    <p>
+      The MIRA platform contributed both instrumentation and technical expertise to the campaign. 
+      In addition to deploying the Silios Toucan multispectral and Cubert Ultris SR5 hyperspectral cameras, 
+      MIRA prepared the acquisition workflows, and organized the resulting dataset (approximately 30 GB).
+    </p>
+
+    <p>
+      The platform also supported discussions on spectral band selectivity, practical acquisition constraints, 
+      and the trade-offs between spatial and spectral resolution inherent to multispectral and hyperspectral systems. 
+      This collaboration illustrates the role of MIRA as a technological support platform, enabling application-driven
+      evaluation of advanced spectral imaging systems in interdisciplinary experimental settings.
+    </p>
+
+  </section>
+
+  <!-- Acknowledgements -->
+  <section class="description acknowledgements">
+    <h3 class="section-title">Acknowledgements</h3>
+
+    <p>
+      This work is supported partially by:
+    </p>
+
+    <ul>
+      <li>
+        The French <strong>National Research Agency (ANR)</strong>,
+        in the framework of the <strong>"Investissements d'avenir"</strong> programme,
+        project <strong>V-Hyper: Hyper-Vision</strong>,
+        reference <strong>ANR-15-IDEX-02</strong>.
+      </li>
+      <li>
+        The <strong>Université Grenoble Alpes</strong>,
+        in the framework of the <strong>"LabEx Persyval (2022)"</strong> programme,
+        project <strong>SPECTRIM</strong>.
+      </li>
+    </ul>
+
+    <h3 class="section-title">Supported By</h3>
+
+    <div style="margin-top: 30px;" align="center">
+      <img src="{{ site.baseurl }}/media/images/logos/affiliations/anr.png" alt="Agence National de Recherche (ANR)" height="80px">  
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <img src="{{ site.baseurl }}/media/images/logos/affiliations/persyval.png" alt="LabEx Persyval" height="80px"/>  
+      <br><br><br>
+      <div>
+        <img src="{{ site.baseurl }}/media/images/logos/affiliations/uga_logo.png" alt="Université Grenoble Alpes" height="100px"/>  
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <img src="{{ site.baseurl }}/media/images/logos/affiliations/ginp_logo.png" alt="Grenoble INP" height="100px"/>  
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <img src="{{ site.baseurl }}/media/images/logos/affiliations/gipsa_logo.png" alt="GIPSA-lab" height="100px"/>  
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <img src="{{ site.baseurl }}/media/images/logos/affiliations/legi.jpg" alt="LEGI" height="100px"/>  
+      </div>
+      <br><br>
+      <img src="{{ media_dir }}/20240409_183231.jpg" alt="Team photo" style="width: 500px; border-radius: 6px;">  
+    </div>
+    
+  </section>
+
+
+
+  <!-- Image Gallery -->
+  <section class="gallery">
+    <h3 class="section-title">Event Gallery</h3>
+    <div class="gallery-grid">
+      <img src="{{ media_dir }}/PXL_20260311_142507152.jpeg" alt="Gallery Photo" class="gallery-item">
+      <img src="{{ media_dir }}/PXL_20260311_142523195.jpeg" alt="Gallery Photo" class="gallery-item">
+      <img src="{{ media_dir }}/20240409_162334.jpg" alt="Gallery Photo" class="gallery-item">
+      <img src="{{ media_dir }}/20240409_182330.jpg" alt="Gallery Photo" class="gallery-item">
+      <img src="{{ media_dir }}/20240409_163143.jpg" alt="Gallery Photo" class="gallery-item">
+      <img src="{{ media_dir }}/20240409_163154.jpg" alt="Gallery Photo" class="gallery-item">
+      <img src="{{ media_dir }}/20240409_181729.jpg" alt="Gallery Photo" class="gallery-item">
+      <img src="{{ media_dir }}/20240409_181736.jpg" alt="Gallery Photo" class="gallery-item">
+      <img src="{{ media_dir }}/20240409_183231.jpg" alt="Gallery Photo" class="gallery-item large">
+    </div>
+  </section>
+</div>
