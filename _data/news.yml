@@ -10,7 +10,7 @@ list:
 
   - text: Our paper to Nature Scientific Data has been accepted! This work is in collaboration with the Universidad Industrial de Santander in Colombia.
     date: Nov 2025
-    link: /publications/
+    link: /news/20251127-paper-cocoaspec/
     page:
       url: /news/20251127-paper-cocoaspec/
       title: "CoCoaSpec: A Multimodal hyperspectral dataset of cocoa beans with physicochemical annotation"
