@@ -1,0 +1,128 @@
+---
+layout: page_padded
+title: CoCoaSpec Paper 2025
+---
+
+{% assign news_item = site.data.news.list | where: "page.url", page.url | first %}
+{% assign media_dir = site.baseurl | append: '/' | append: 'media/images/20251127_cocoaspec_pub' %}
+{% assign pub = site.data.publications.publications | where: "id", "ContrerasJDB25:scidata" | first %}
+
+<div class="page-container">
+
+  <!-- Page Title -->
+  <header class="page-header">
+    <h1 class="title">{{ news_item.page.title }}</h1>
+    <h2 class="authors">
+        <sup>1</sup>Kebin Contreras,
+        <sup>2</sup>Mohamad Jouni,
+        <sup>2, 3</sup>Mauro Dalla Mura,
+        <sup>1</sup>Jorge Bacca
+    </h2>
+    <h2 class="affiliations">
+        <sup>1</sup>Universidad Industrial de Santander, 68002, Bucaramanga, Colombia
+        <br>
+        <sup>2</sup>Univ. Grenoble Alpes, CNRS, Grenoble INP, GIPSA-Lab, 38000, Grenoble, France
+        <br>
+        <sup>3</sup>Institut Universitaire de France (IUF), 75231, Paris, France
+    </h2>
+
+    <div class="publication-links publication-links-centered" style="text-align: center;">
+    {% for link in pub.links %}
+        {% if link.link %}
+            {%- if link.link contains '://' -%}
+            <a href="{{ link.link }}" class="publication-link">
+            {%- else -%}
+            <a href="{{ site.baseurl }}{{ link.link }}" class="publication-link">
+            {%- endif -%}
+                <i style="font-style:normal" class="{{- link.icon -}}"></i>
+                {{ link.type }}
+            </a>
+        {% endif %}
+    {% endfor %}
+    </div>
+  </header>
+
+  <!-- Description -->
+  <section class="description">
+    <p>{{ news_item.text }}</p>
+    <p style="font-weight: bold; text-align: center;">
+      - Abstract -
+    </p>
+    <p>
+      Assessing cocoa bean quality using spectral information offers a noninvasive and objective alternative to traditional,
+      often subjective and destructive, methods. However, progress has been limited by the lack of comprehensive datasets
+      across multiple spectral resolutions. This work presents a new dataset capturing the spectral properties of cocoa
+      beans at different spatiospectral resolutions, enabling non-invasive quality assessment and scalable evaluation methodologies.
+      It comprises 19 scenes acquired with four imaging devices under both open (invasive) and closed (non-invasive) conditions,
+      along with corresponding physicochemical measurements. Data collection follows the Colombian standard NTC 1252:2021,
+      which labels beans as well, partially, or poorly fermented. Global physicochemical properties - moisture, polyphenols, and cadmium -
+      were measured using gravimetric analysis, UV-visible spectroscopy, and atomic absorption spectroscopy with microwave digestion.
+      Hyperspectral images were obtained using four devices covering up to the 350–1000 nm spectral range.
+      Statistical analysis shows the dataset distinguishes between cocoa quality levels under both open and closed conditions,
+      supporting the development of automated classification methods.
+    </p>
+
+    <br>
+    
+    <div class="gallery-grid">
+      <figure class="gallery-figure">
+        <img src="{{ media_dir }}/41597_2025_6314_Fig12_HTML.webp"
+            alt="Samples of "
+            class="section-image"
+            style="
+            height: 600px;
+            box-shadow: 0 0px 0px;
+            "
+            >
+        <figcaption>
+            <strong>
+                Two representative scenes captured with four cameras:
+                Specim IQ, Ultris, Toucan, and EOS M50.
+                Green boxes indicate well-fermented beans,
+                red boxes indicate poorly fermented beans,
+                and blue boxes indicate partially fermented beans.
+            </strong>
+        </figcaption>
+      </figure>
+    </div>
+
+  </section>
+
+  <section class="description acknowledgements">
+    <h3 class="section-title">Acknowledgements</h3>
+
+    <p>
+      The authors thank Dr. Bernard Schmitt from the Institut de Planétologie et Astrophisique de Grenoble (IPAG) for providing the Specim IQ camera.
+      Data acquisitions were carried out with the support of the Multi-camera Imaging Research and Acquisition (MIRA) Platform of GIPSA-lab.
+    </p>
+    <p>
+      This work has been partially supported by the ECOS Nord project n. C24M01,
+      by the French National Research Agency (ANR)
+      under grants ANR-15-IDEX-02, ANR-20-ASTR-0006 and ANR-23-IACL-0006
+      and by the Institut Carnot Logiciels et Systèmes Intelligents and LabEx PERSYVAL.
+    </p>
+    <p>
+      In addition, gratitude is due to cocoa field expert Miguel Beltran for his expertise,
+      which contributed to the contextualization and documentation of cocoa quality parameters in this dataset.
+      Additional thanks are given to Juan Daniel Suarez Jaimes and Juan Sebastian Espinosa Espinosa for part of the labeled processes,
+      and the laboratory of Optics of High Dimensional Signal Processing group (HDSP) for the acquisition process.
+    </p>
+    
+  </section>
+
+  <section>
+    <div class="publication-links publication-links-centered" style="text-align: center;">
+        <b>
+        <a href="{{- site.baseurl -}}/publications/" class="publication-btn publication-btn-text">
+            Publications Page
+        </a>
+        <a href="{{- site.baseurl -}}/news/" class="publication-btn publication-btn-text">
+            News Page
+        </a>
+        </b>
+    </div>
+  </section>
+
+<link rel="stylesheet" href="{{ '/assets/css/news-item-page.css' | relative_url }}">
+
+</div>

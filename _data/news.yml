@@ -12,8 +12,8 @@ list:
     date: Nov 2025
     link: /publications/
     page:
-      url: /publications/
-      title: New Dataset Paper Submission in Collaboration with the Universidad Industrial de Santander in Colombia
+      url: /news/20251127-paper-cocoaspec/
+      title: "CoCoaSpec: A Multimodal hyperspectral dataset of cocoa beans with physicochemical annotation"
     thumbnail: 
 
   - text: M. Jouni presented the RGB-Hyperspectral fusion pipeline at the CNRS scientific meeting <a href=https://gdr-iasis.cnrs.fr/reunions/solutions-materielles-pour-la-fusion-de-donnees/>"Solutions matérielles pour la fusion de données"</a>.

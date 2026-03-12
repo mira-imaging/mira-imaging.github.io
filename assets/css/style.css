@@ -616,6 +616,10 @@
     gap: 0.5rem;
 }
 
+.publication-links-centered {
+    justify-content: center;
+}
+
 .publication-link {
     background-color: #158CBA;
     border: none;
