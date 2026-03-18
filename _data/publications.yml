@@ -44,4 +44,7 @@ publications:
       - link: https://github.com/kebincontreras/CoCoaSpec
         icon: *ic-github
         type: Code
+      - link: /news/20251127-paper-cocoaspec/
+        icon: *ic-link
+        type: News
     id: "ContrerasJDB25:scidata"
