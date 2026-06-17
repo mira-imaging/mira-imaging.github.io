@@ -5,6 +5,7 @@ _site
 vendor
 
 Gemfile.lock
+.bundle
 
 .idea/
 images/banners/orig
