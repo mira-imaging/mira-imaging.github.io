@@ -13,22 +13,35 @@ permalink: /transfer/
 <section id="events" class="home-section">
   <h1>Events</h1>
 
+  <h3 style="justify-content: center;">Presentations</h3>
+
+  <div class="research-grid research-grid-fixed-2-cards">
+    <a href="{{ site.baseurl }}/news/20250925-gdr-iasis-fusion-solutions/" class="research-card">
+        <img src="{{ site.baseurl }}/media/images/research/20250925_gdr_iasis_fusion_solutions/thumbnail.jpg" alt="GdR IASIS 2025" style="height: 200px;">
+        <span>GdR IASIS Meeting on<br>- Materials-based Solutions for Data Fusion -<br>25/09/2025</span>
+    </a>
+  </div>
+
   <h3 style="justify-content: center;">Technology Fairs</h3>
 
-  <div class="research-grid">
+  <div class="research-grid research-grid-fixed-2-cards">
+    <a href="{{ site.baseurl }}/news/20260204-tech-fest/" class="research-card">
+        <img src="{{ site.baseurl }}/media/images/banners/orig/PXL_20260205_135243816.jpg.jpeg" alt="Tech&Fest 2026" style="height: 200px;">
+        <span>Tech&Fest 2026<br>04/02/2026</span>
+    </a>
+
     <a href="{{ site.baseurl }}/news/20250918-sido/" class="research-card">
         <img src="{{ site.baseurl }}/media/images/transfer/20250918_sido/couple_full.jpeg" alt="SIDO 2025" style="height: 200px;">
-        <span>SIDO 2025</span>
+        <span>SIDO 2025<br>18/09/2025</span>
     </a>
 
     <a href="{{ site.baseurl }}/news/20250206-tech-and-fest/" class="research-card">
         <img src="{{ site.baseurl }}/media/images/transfer/20250206_tech_and_fest/PXL_20250206_120955865.jpg" alt="Tech&Fest 2025" style="height: 200px;">
-        <span>Tech&Fest 2025</span>
+        <span>Tech&Fest 2025<br>06/02/2025</span>
     </a>
   </div>
 
-</section>
-  
+</section>  
 
 <link rel="stylesheet" href="{{ '/assets/css/tri-slider.css' | relative_url }}">
 <script src="{{ '/assets/js/tri-slider.js' | relative_url }}"></script>
@@ -147,6 +160,20 @@ permalink: /transfer/
     margin-bottom: 1rem;
 }
 
+/* Research section layout */
+.research-grid-fixed-2-cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);  /* two cards per row */
+}
+
+/* Responsive: one column on small screens */
+@media (max-width: 700px) {
+  .research-grid-fixed-2-cards {
+    grid-template-columns: 1fr;
+    width: 60%;
+  }
+}
+
 /* Individual card (button style) */
 .research-card {
     display: flex;
@@ -227,6 +254,19 @@ permalink: /transfer/
   margin: 0;
   flex: 1 1 220px;  /* flexible width, minimum ~220px */
   max-width: 250px;
+}
+
+.example-grid-spectral-imaging figure img {
+  height: 290px;
+  width: auto;
+  object-fit: contain;  /* keeps full image visible */
+  display: block;
+  margin: 0 auto;
+}
+
+.example-grid-spectral-imaging figure {
+  max-width: none;      /* remove inherited 250px max-width */
+  flex: 0 1 auto;
 }
 
 .example-grid img {
