@@ -25,6 +25,9 @@ collections:
   news:
     output: true
     permalink: /:collection/:name/
+  members:
+    output: true
+    permalink: /:name/
 
 
 

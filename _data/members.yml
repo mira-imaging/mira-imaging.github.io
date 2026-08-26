@@ -30,7 +30,7 @@ members:
     affiliation: Grenoble Institute of Technology
     photo: mauro_dallamura.png
     email: mauro.dalla-mura@grenoble-inp.fr
-    personal_link: https://scholar.google.com/citations?user=qbdbtn4AAAAJ&hl=en
+    personal_link: /mdm/  # https://scholar.google.com/citations?user=qbdbtn4AAAAJ&hl=en
     years: Since Oct 2024
 
   - key: negrea
@@ -63,7 +63,7 @@ members:
     affiliation: Floralis - UGA
     photo: mohamad_jouni.png
     email: mohamad.jouni@grenoble-inp.fr
-    personal_link: https://www.gipsa-lab.grenoble-inp.fr/user/mohamad.jouni
+    personal_link: /mj/  # https://www.gipsa-lab.grenoble-inp.fr/user/mohamad.jouni
     years: Since Oct 2024
     icon_links:
       - link: https://github.com/mhmdjouni
