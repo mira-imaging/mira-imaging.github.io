@@ -1,0 +1,131 @@
+---
+layout: page_padded
+title: BMVC Paper 2026
+---
+
+{% assign news_item = site.data.news.list | where: "page.url", page.url | first %}
+{% assign pub = site.data.publications.publications | where: "id", "JouniGD26:bmvc" | first %}
+
+<div class="page-container">
+
+  <!-- Page Title -->
+  <header class="page-header">
+    <h1 class="title">{{ news_item.page.title }}</h1>
+
+    <h2 class="authors">
+      <sup>1</sup>Mohamad Jouni,
+      <sup>1</sup>Aurélien Godet,
+      <sup>1, 2</sup>Mauro Dalla Mura
+    </h2>
+
+    <h2 class="affiliations">
+      <sup>1</sup>Univ. Grenoble Alpes, CNRS, Grenoble INP, GIPSA-Lab, 38000 Grenoble, France
+      <br>
+      <sup>2</sup>Institut Universitaire de France (IUF), Paris, France
+    </h2>
+
+    <div class="publication-links publication-links-centered" style="text-align: center;">
+    {% for link in pub.links %}
+        {% if link.link %}
+            {%- if link.link contains '://' -%}
+            <a href="{{ link.link }}" class="publication-link">
+            {%- else -%}
+            <a href="{{ site.baseurl }}{{ link.link }}" class="publication-link">
+            {%- endif -%}
+                <i style="font-style:normal" class="{{- link.icon -}}"></i>
+                {{ link.type }}
+            </a>
+        {% endif %}
+    {% endfor %}
+    </div>
+  </header>
+
+
+  <!-- Abstract -->
+  <section class="description">
+    <p>{{ news_item.text }}</p>
+
+    <h3 class="section-title">Abstract</h3>
+
+    <p>
+      Compact snapshot hyperspectral cameras provide rich instantaneous spectral measurements
+      for ground-level machine vision, but at lower spatial resolution than standard RGB cameras.
+      RGB-guided hyperspectral super-resolution (HSR) addresses this limitation by transferring
+      spatial detail from a high-resolution RGB guide to a low-resolution hyperspectral image (HSI).
+      These dual-camera systems are typically in a horizontal rig geometry, requiring cross-camera
+      image alignment due to different fields of view. However, residual misregistration can inject
+      spurious high-frequency details. Existing learned unaligned-fusion methods are usually trained
+      for a fixed spectral support and spatial scale factors and can be computationally demanding,
+      limiting their flexibility across sensors.
+    </p>
+
+    <p>
+      We propose a lightweight and interpretable RGB-guided HSR framework combining cross-modal
+      flow alignment with model-based Gram-Schmidt orthogonalization fusion. The method first warps
+      the RGB guide onto the HSI grid, then estimates an energy-based confidence weight map by
+      measuring local alignment reliability. This map is then used both in a weighted least-squares
+      spectral regression and in a gated fusion between the RGB-guided SR estimate and an
+      HSI-preserving estimate. Unlike existing learned methods, the proposed framework has a low
+      computational footprint and supports different VIS-NIR spectral supports and scale factors
+      without retraining.
+    </p>
+
+    <p>
+      Experiments on the Real benchmark show that the proposed method improves reconstruction
+      accuracy over learned fusion baselines while remaining substantially faster. On a 34-frame
+      sequence acquired with our real RGB-HSI dual-camera setup, a reduced-resolution quantitative
+      evaluation validates the method under genuine cross-sensor radiometric, noise, and geometric
+      differences, while native-resolution qualitative results demonstrate deployment on the full
+      51-band visible-near-infrared acquisition beyond the 31-band setting of existing learned
+      baselines.
+    </p>
+
+  </section>
+
+
+  <!-- Acknowledgements -->
+  <section class="description acknowledgements">
+
+    <h3 class="section-title">Acknowledgements</h3>
+
+    <p>
+      This work was supported by the Institut Carnot Logiciels et Systèmes Intelligents (Carnot LSI)
+      and by the French National Research Agency (ANR) under the France 2030 programme with reference
+      ANR-23-IACL-0006. The computations were performed using the GRICAD infrastructure
+      (GRANT CPER07_13 CIRA, ANR10 LABX56, ANR-10-EQPX-29-01).
+    </p>
+
+    <p>
+      Data acquisitions were carried out with the support of the
+      Multi-camera Imaging Research and Acquisition (MIRA) Platform
+      (<a href="https://mira-imaging.github.io/">https://mira-imaging.github.io/</a>)
+      of GIPSA-lab, which provided the camera setup and the acquisition and research resources used
+      in this work. The MIRA Platform is developed with the financial support of the Institut Carnot
+      Logiciels et Systèmes Intelligents (Carnot LSI).
+    </p>
+
+    <p>
+      The authors thank Dr. Amaury Negre for his contributions to the ROS-based acquisition software and to the acquisition of the Ultris-RPi sequence.
+    </p>
+
+  </section>
+
+
+  <!-- Navigation -->
+  <section>
+    <div class="publication-links publication-links-centered" style="text-align: center;">
+      <b>
+        <a href="{{- site.baseurl -}}/publications/" class="publication-btn publication-btn-text">
+          Publications Page
+        </a>
+
+        <a href="{{- site.baseurl -}}/news/" class="publication-btn publication-btn-text">
+          News Page
+        </a>
+      </b>
+    </div>
+  </section>
+
+  <link rel="stylesheet" href="{{ '/assets/css/news-item-page.css' | relative_url }}">
+
+</div>

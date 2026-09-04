@@ -1,5 +1,13 @@
 # For now, the news list should be sorted manually
 list:
+  - text: Our paper <b>"Lightweight Interpretable RGB-Guided Hyperspectral Super-Resolution under Real Cross-resolution Misalignment"</b> has been accepted to BMVC 2026! The work presents a lightweight confidence-aware approach for RGB-guided hyperspectral super-resolution under real cross-resolution misalignment.
+    date: Aug 2026
+    link: /news/20260811-paper-lightweight-sr/
+    page:
+      url: /news/20260811-paper-lightweight-sr/
+      title: "Lightweight Interpretable RGB-Guided Hyperspectral Super-Resolution under Real Cross-resolution Misalignment"
+    thumbnail:
+
   - text: MIRA participated in the <a href=https://www.tech-fest.fr/en/>Tech&Fest</a> event with a multi-camera <b>RGB-Hyperspectral fusion demonstrator</b>, combining a low-cost RGB camera with a low-cost hyperspectral camera. For information at the laboratory's website, visit <a href="https://www.gipsa-lab.grenoble-inp.fr/les-publications/toutes-les-actus/le-gipsa-lab-au-techfest-2026">this link</a>.
     date: Feb 2026
     link: /news/20260204-tech-fest/

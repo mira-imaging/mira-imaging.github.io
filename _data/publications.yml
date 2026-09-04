@@ -79,7 +79,7 @@ publications:
       # - link: https://bmvc2026.bmva.org/programme/accepted_papers/
       #   icon: *ic-video
       #   type: Video
-      - link: /news/20261113-paper-lightweight-sr/
+      - link: /news/20260811-paper-lightweight-sr/
         icon: *ic-link
         type: News
     id: "JouniGD26:bmvc"
