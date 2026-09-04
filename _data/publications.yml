@@ -2,11 +2,17 @@ types:
   - &journal
     name: Journal
     code: J
+  - &conference
+    name: Conference
+    code: C
 
 venues:
   - &scidata
     title: Nature Scientific Data
     abbrv: Sci. Data
+  - &bmvc
+    title: British Machine Vision Conference
+    abbrv: BMVC
 
 link_icons:
   - &ic-link fas fa-link
@@ -48,3 +54,23 @@ publications:
         icon: *ic-link
         type: News
     id: "ContrerasJDB25:scidata"
+
+  - title: Lightweight Interpretable RGB-Guided Hyperspectral Super-Resolution under Real Cross-resolution Misalignment
+    authors:
+      - Mohamad Jouni
+      - Aurélien Godet
+      - Mauro Dalla Mura
+    type: *conference
+    venue: *bmvc
+    year: 2026
+    links:
+      # - link: https://bmvc2026.bmva.org/programme/accepted_papers/
+      #   icon: *ic-link
+      #   type: Paper (BMVC)
+      - link: https://arxiv.org/abs/2609.01060
+        icon: *ic-pdf
+        type: Paper (arXiv)
+      - link: https://hal.science/hal-05727748
+        icon: *ic-pdf
+        type: Paper (HAL)
+    id: "JouniGD26:scidata"
