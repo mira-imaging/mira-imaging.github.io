@@ -64,13 +64,22 @@ publications:
     venue: *bmvc
     year: 2026
     links:
-      # - link: https://bmvc2026.bmva.org/programme/accepted_papers/
-      #   icon: *ic-link
-      #   type: Paper (BMVC)
+      - link: https://bmvc2026.bmva.org/programme/accepted_papers/
+        icon: *ic-link
+        type: Accept. Papers (BMVC)
       - link: https://arxiv.org/abs/2609.01060
         icon: *ic-pdf
         type: Paper (arXiv)
       - link: https://hal.science/hal-05727748
         icon: *ic-pdf
         type: Paper (HAL)
-    id: "JouniGD26:scidata"
+      # - link: https://bmvc2026.bmva.org/programme/accepted_papers/
+      #   icon: *ic-poster
+      #   type: Poster
+      # - link: https://bmvc2026.bmva.org/programme/accepted_papers/
+      #   icon: *ic-video
+      #   type: Video
+      - link: /news/20261113-paper-lightweight-sr/
+        icon: *ic-link
+        type: News
+    id: "JouniGD26:bmvc"
