@@ -12,9 +12,105 @@ permalink: /research/
     <a href="#themes">Themes</a>
 </nav>
 
+
 <section id="projects" class="home-section">
   <h1>Research Projects</h1>
+
+  <p class="research-intro">
+    MIRA develops multimodal imaging systems and image reconstruction algorithms spanning the complete
+    imaging pipeline, from sensor acquisition and calibration to registration, restoration, fusion, and deployment.
+    Particular emphasis is placed on spectral and hyperspectral imaging, multimodal sensor configurations,
+    reconstruction under real acquisition conditions, and practical hybrid multi-camera systems.
+  </p>
+
+  <div class="project-grid">
+
+    <article class="project-card">
+      <h2>RGB-Hyperspectral Registration and Fusion</h2>
+      <p>
+        Developing registration and fusion methods for RGB and hyperspectral cameras
+        operating at different spatial resolutions. The research focuses on real
+        cross-sensor misalignment, uncertainty in geometric alignment, and
+        spectral-preserving super-resolution under imperfect registration.
+      </p>
+      <div class="project-tags">
+        <span>Hyperspectral Imaging</span>
+        <span>Registration</span>
+        <span>Super-resolution</span>
+        <span>Image Fusion</span>
+      </div>
+    </article>
+
+    <article class="project-card">
+      <h2>Spectral Image Restoration and Learned Priors</h2>
+      <p>
+        Investigating restoration methods for hyperspectral imagery using
+        spectral-domain models and transferable priors learned from conventional
+        imagery. Current research includes denoising, model-based reconstruction,
+        and learned priors for spectral inverse problems.
+      </p>
+      <div class="project-tags">
+        <span>Image Restoration</span>
+        <span>Denoising</span>
+        <span>Deep Learning</span>
+        <span>Inverse Problems</span>
+      </div>
+    </article>
+
+    <article class="project-card">
+      <h2>Multimodal/hybrid Spectral Acquisition</h2>
+      <p>
+        Designing reproducible multi-camera systems for synchronized multimodal
+        acquisition, with emphasis on RGB, multispectral, and hyperspectral sensors.
+        Research includes camera integration, acquisition software,
+        and deployment on robotic and mobile platforms.
+      </p>
+      <div class="project-tags">
+        <span>Multi-camera Systems</span>
+        <span>Robotics</span>
+        <span>Acquisition</span>
+      </div>
+      <div class="project-links">
+        <a href="https://github.com/mira-imaging/camera-gui" target="_blank">MultiCamGUI</a>
+      </div>
+    </article>
+
+    <article class="project-card">
+      <h2>Spectral Calibration and Sensor Characterization</h2>
+      <p>
+        Studying the physical and radiometric properties of spectral imaging systems,
+        including radiometric calibration, spectral response, noise and exposure
+        characteristics, spatial degradation, and consistency across sensors.
+      </p>
+      <div class="project-tags">
+        <span>Calibration</span>
+        <span>Image Formation</span>
+        <span>Sensor Characterization</span>
+      </div>
+    </article>
+
+    <article class="project-card">
+      <h2>Spectral Datasets and Application-Driven Imaging</h2>
+      <p>
+        Building multimodal spectral datasets and acquisition protocols for scientific
+        and industrial applications. MIRA combines controlled imaging, sensor
+        characterization, physical measurements, and reproducible processing for
+        quantitative spectral analysis.
+      </p>
+      <div class="project-tags">
+        <span>Datasets</span>
+        <span>Spectral Analysis</span>
+        <span>Applications</span>
+      </div>
+      <div class="project-links">
+        <a href="https://huggingface.co/datasets/ecos-nord-ginp-uis/CoCoaSpec"
+           target="_blank">CoCoaSpec</a>
+      </div>
+    </article>
+
+  </div>
 </section>
+
 
 <hr class="section-divider" />
 
@@ -462,7 +558,87 @@ permalink: /research/
     
     </style>
     
-    
+
+<style>
+  .research-intro {
+  max-width: 780px;
+  margin: 0 auto 1.5rem;
+}
+
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.2rem;
+  margin: 1.5rem 0 2rem;
+}
+
+.project-card {
+  display: flex;
+  flex-direction: column;
+  background: #f8f8f8;
+  border-radius: 12px;
+  padding: 1.3rem;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.project-card h2 {
+  text-align: left;
+  font-size: 1.2rem;
+  margin: 0 0 0.7rem;
+  color: #222;
+}
+
+.project-card p {
+  flex: 1;
+  margin: 0 0 1rem;
+  font-size: 0.95rem;
+}
+
+.project-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-top: auto;
+}
+
+.project-tags span {
+  font-size: 0.78rem;
+  background: #e9ecef;
+  color: #444;
+  border-radius: 999px;
+  padding: 0.25rem 0.6rem;
+}
+
+.project-links {
+  margin-top: 0.9rem;
+  font-size: 0.9rem;
+}
+
+.project-links a {
+  color: #004080;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.project-links a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 700px) {
+  .project-grid {
+    grid-template-columns: 1fr;
+  }
+}
+</style>
+
+
+
     <script>
       const sections = document.querySelectorAll('.home-section');
       const navLinks = document.querySelectorAll('.home-nav a');
