@@ -1,0 +1,124 @@
+---
+layout: page_padded
+title: ICIP Paper 2026
+---
+
+{% assign news_item = site.data.news.list | where: "page.url", page.url | first %}
+{% assign pub = site.data.publications.publications | where: "id", "PiconeJD26:icip" | first %}
+{% assign media_dir = site.baseurl | append: '/' | append: 'media/images/20260430_icip_pub' %}
+
+<div class="page-container">
+
+  <!-- Page Title -->
+  <header class="page-header">
+    <h1 class="title">{{ news_item.page.title }}</h1>
+
+    <h2 class="authors">
+      <sup>1</sup>Daniele Picone,
+      <sup>1</sup>Mohamad Jouni,
+      <sup>1</sup>Mauro Dalla Mura
+    </h2>
+
+    <h2 class="affiliations">
+      <sup>1</sup>Univ. Grenoble Alpes, CNRS, Grenoble INP, GIPSA-Lab, 38000 Grenoble, France
+    </h2>
+
+    <div class="publication-links publication-links-centered" style="text-align: center;">
+    {% for link in pub.links %}
+        {% if link.link %}
+            {%- if link.link contains '://' -%}
+            <a href="{{ link.link }}" class="publication-link">
+            {%- else -%}
+            <a href="{{ site.baseurl }}{{ link.link }}" class="publication-link">
+            {%- endif -%}
+                <i style="font-style:normal" class="{{- link.icon -}}"></i>
+                {{ link.type }}
+            </a>
+        {% endif %}
+    {% endfor %}
+    </div>
+  </header>
+
+
+  <!-- Abstract -->
+  <section class="description">
+    <p>{{ news_item.text }}</p>
+
+    <h3 class="section-title">Abstract</h3>
+
+    <p>
+      Hyperspectral image restoration faces several challenges, including limited training data,
+      strong sensor specificity, and high spectral dimensionality. These limitations hinder the
+      learning of robust hyperspectral priors, motivating the reuse of priors learned from
+      large-scale RGB data. In this work, we propose a minimally trained, lightweight adapter
+      that repurposes frozen pretrained RGB denoisers for hyperspectral restoration through a
+      projection mapping.
+    </p>
+
+    <p>
+      The method denoises low-dimensional spectral projections and reconstructs the hyperspectral
+      cube through constrained linear aggregation, while preserving plug-and-play compatibility
+      and the stability properties of the underlying RGB denoiser. Experiments on denoising,
+      deblurring, and super-resolution across multiple datasets demonstrate consistent improvements
+      over hyperspectral-specific baselines, showing the strong transferability of large-scale
+      RGB priors.
+    </p>
+
+  </section>
+
+  <br>
+
+<div class="gallery-grid">
+  <figure class="gallery-figure">
+    <img
+      src="{{ media_dir }}/architecture.webp"
+      alt="Overview of the proposed method"
+      class="section-image"
+      style="
+        width: 100%;
+        max-width: 700px;
+        height: auto;
+        box-shadow: 0 0 0;
+      "
+    >
+<figcaption>
+  <strong>
+    Overview of the proposed hyperspectral adapter for leveraging pretrained RGB denoisers.
+    The hyperspectral input is encoded into low-dimensional channel groups, processed by a shared
+    pretrained denoiser, and decoded and aggregated back into the hyperspectral domain.
+  </strong>
+</figcaption>
+</figure>
+</div>
+
+  <!-- Acknowledgements -->
+  <section class="description acknowledgements">
+
+    <h3 class="section-title">Acknowledgements</h3>
+
+    <p>
+      This work is partially supported by grants ANR FuMultiSPOC (ANR-20-ASTR-0006)
+      and ANR MIAI Cluster (ANR-23-IACL-0006).
+    </p>
+
+  </section>
+
+
+  <!-- Navigation -->
+  <section>
+    <div class="publication-links publication-links-centered" style="text-align: center;">
+      <b>
+        <a href="{{- site.baseurl -}}/publications/" class="publication-btn publication-btn-text">
+          Publications Page
+        </a>
+
+        <a href="{{- site.baseurl -}}/news/" class="publication-btn publication-btn-text">
+          News Page
+        </a>
+      </b>
+    </div>
+  </section>
+
+  <link rel="stylesheet" href="{{ '/assets/css/news-item-page.css' | relative_url }}">
+
+</div>

@@ -13,6 +13,9 @@ venues:
   - &bmvc
     title: British Machine Vision Conference
     abbrv: BMVC
+  - &icip
+    title: IEEE International Conference on Image Processing
+    abbrv: ICIP
 
 link_icons:
   - &ic-link fas fa-link
@@ -54,6 +57,29 @@ publications:
         icon: *ic-link
         type: News
     id: "ContrerasJDB25:scidata"
+
+  - title: Leveraging pretrained RGB denoisers for hyperspectral image restoration
+    authors:
+      - Daniele Picone
+      - Mohamad Jouni
+      - Mauro Dalla Mura
+    type: *conference
+    venue: *icip
+    year: 2026
+    links:
+      - link: https://ieeexplore.ieee.org/abstract/document/11630149
+        icon: *ic-link
+        type: Paper (IEEE Xplore)
+      - link: https://arxiv.org/abs/2605.24769
+        icon: *ic-pdf
+        type: Paper (arXiv)
+      - link: https://hal.science/hal-05631436
+        icon: *ic-pdf
+        type: Paper (HAL)
+      - link: /news/20260430-paper-adapters/
+        icon: *ic-link
+        type: News
+    id: "PiconeJD26:icip"
 
   - title: Lightweight Interpretable RGB-Guided Hyperspectral Super-Resolution under Real Cross-resolution Misalignment
     authors:

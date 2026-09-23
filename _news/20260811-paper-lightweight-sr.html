@@ -5,6 +5,7 @@ title: BMVC Paper 2026
 
 {% assign news_item = site.data.news.list | where: "page.url", page.url | first %}
 {% assign pub = site.data.publications.publications | where: "id", "JouniGD26:bmvc" | first %}
+{% assign media_dir = site.baseurl | append: '/' | append: 'media/images/20260811_bmvc_pub' %}
 
 <div class="page-container">
 
@@ -82,6 +83,30 @@ title: BMVC Paper 2026
 
   </section>
 
+  <br>
+
+<div class="gallery-grid">
+  <figure class="gallery-figure">
+    <img
+      src="{{ media_dir }}/overview.webp"
+      alt="Overview of the proposed method"
+      class="section-image"
+      style="
+        width: 100%;
+        max-width: 1100px;
+        height: auto;
+        box-shadow: 0 0 0;
+      "
+    >
+    <figcaption>
+      <strong>
+    Overview of the proposed confidence-aware RGB-guided hyperspectral super-resolution framework,
+    combining HSI preprocessing, cross-modal registration, reliability estimation, and
+    confidence-aware fusion.
+      </strong>
+    </figcaption>
+  </figure>
+</div>
 
   <!-- Acknowledgements -->
   <section class="description acknowledgements">

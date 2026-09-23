@@ -8,6 +8,14 @@ list:
       title: "Lightweight Interpretable RGB-Guided Hyperspectral Super-Resolution under Real Cross-resolution Misalignment"
     thumbnail:
 
+  - text: Our paper <b>"Leveraging pretrained RGB denoisers for hyperspectral image restoration"</b> has been accepted to ICIP 2026! The work proposes a lightweight adapter for reusing frozen pretrained RGB denoisers across hyperspectral image restoration tasks.
+    date: Apr 2026
+    link: /news/20260430-paper-adapters/
+    page:
+      url: /news/20260430-paper-adapters/
+      title: "Leveraging pretrained RGB denoisers for hyperspectral image restoration"
+    thumbnail:
+
   - text: MIRA participated in the <a href=https://www.tech-fest.fr/en/>Tech&Fest</a> event with a multi-camera <b>RGB-Hyperspectral fusion demonstrator</b>, combining a low-cost RGB camera with a low-cost hyperspectral camera. For information at the laboratory's website, visit <a href="https://www.gipsa-lab.grenoble-inp.fr/les-publications/toutes-les-actus/le-gipsa-lab-au-techfest-2026">this link</a>.
     date: Feb 2026
     link: /news/20260204-tech-fest/
