@@ -26,8 +26,9 @@ members:
   - key: dallamum
     name: Prof. Mauro Dalla Mura
     category: *reference
-    role: Scientific Reference - Associate Professor
-    affiliation: Grenoble Institute of Technology
+    role: Scientific Reference<br>Associate Professor
+    affiliations:
+      - GIPSA-lab - Grenoble INP - UGA
     photo: mauro_dallamura.png
     email: mauro.dalla-mura@grenoble-inp.fr
     personal_link: /mdm/  # https://scholar.google.com/citations?user=qbdbtn4AAAAJ&hl=en
@@ -36,8 +37,9 @@ members:
   - key: negrea
     name: Amaury Nègre
     category: *reference
-    role: Technical Reference - Research Engineer
-    affiliation: Grenoble Institute of Technology
+    role: Technical Reference<br>Research Engineer
+    affiliations:
+      - GIPSA-lab - Grenoble INP - UGA
     photo: amaury_negre.jpg
     email: amaury.negre@grenoble-inp.fr
     personal_link: https://www.gipsa-lab.grenoble-inp.fr/user/amaury.negre
@@ -49,8 +51,9 @@ members:
   - key: comisb
     name: Barbara Comis
     category: *reference
-    role: Industrial Partnerships Reference - Transfer & Valorization Engineer
-    affiliation: Grenoble Institute of Technology
+    role: Industrial Partnerships Reference<br>Valorization Engineer
+    affiliations:
+      - GIPSA-lab - Grenoble INP - UGA
     photo: barbara_comis.jpeg
     email: barbara.comis@gipsa-lab.grenoble-inp.fr
     personal_link: https://www.gipsa-lab.grenoble-inp.fr/user/barbara.comis
@@ -59,8 +62,9 @@ members:
   - key: jounim
     name: Mohamad Jouni
     category: *team-member
-    role: Main Dev. / Image Processing - Research Engineer
-    affiliation: Floralis - UGA
+    role: Main Dev/Image Processing<br>Research Engineer
+    affiliations:
+      - GIPSA-lab - Floralis - UGA
     photo: mohamad_jouni.png
     email: mohamad.jouni@grenoble-inp.fr
     personal_link: /mj/  # https://www.gipsa-lab.grenoble-inp.fr/user/mohamad.jouni
@@ -74,8 +78,9 @@ members:
   - key: matthieum0
     name: Matthieu Muschinowski
     category: *team-member
-    role: Transfer & Valorisation - Research Engineer
-    affiliation: Grenoble Institute of Technology
+    role: Transfer & Valorisation<br>Research Engineer
+    affiliations:
+      - GIPSA-lab - Grenoble INP - UGA
     photo: matthieu_muschinowski.jpeg
     email: matthieu.muschinowski@grenoble-inp.fr
     personal_link: https://www.gipsa-lab.grenoble-inp.fr/user/matthieu.muschinowski
@@ -85,19 +90,36 @@ members:
   - key: xavierl
     name: Xavier Laval
     category: *team-member
-    role: Equipement - Research Engineer
-    affiliation: Grenoble Institute of Technology
+    role: Equipement<br>Research Engineer
+    affiliations:
+      - GIPSA-lab - Grenoble INP - UGA
     photo: xavier_laval.jpeg
     email: xavier.laval@grenoble-inp.fr
     personal_link: https://www.gipsa-lab.grenoble-inp.fr/user/xavier.laval
     years: Since Jan 2026
     icon_links:
   
+  - key: baccaj
+    name: Jorge Bacca
+    category: *team-member
+    role: <sup>1</sup>&nbsp;Postdoctoral Researcher<br><sup>2</sup>&nbsp;Associate Professor
+    affiliations:
+      - <sup>1</sup>&nbsp;GIPSA-lab - Grenoble INP - UGA
+      - <sup>2</sup>&nbsp;Universidad Industrial de Santander
+    photo: jorge_bacca.jpeg
+    email: jbacquin@uis.edu.co
+    personal_link: https://scholar.google.com/citations?user=I5f1HjEAAAAJ
+    years: Since Mar 2026
+    icon_links:
+      - link: https://github.com/jorgebaccauis
+        icon: *ic-github
+  
   - key: piconed
     name: Daniele Picone
     category: *previous-member
-    role: External Collaborator - Postdoctoral Researcher
-    affiliation: Grenoble Institute of Technology
+    role: External Collaborator<br>Postdoctoral Researcher
+    affiliations:
+      - GIPSA-lab - Grenoble INP - UGA
     photo: daniele_picone.jpeg
     email: daniele.picone@grenoble-inp.fr
     personal_link: https://scholar.google.com/citations?user=Hg5fPvsAAAAJ&hl=en
@@ -110,7 +132,8 @@ members:
     name: Kari Torfinnsdatter Rønningen
     category: *previous-student
     role: Student Research Project
-    affiliation: Grenoble Institute of Technology
+    affiliations:
+      - GIPSA-lab - Grenoble INP - UGA
     photo: 
     email: kari.ronningen@grenoble-inp.org
     personal_link: 

@@ -44,9 +44,13 @@ permalink: /members/
                 <i class="member-role">
                     {{- member.role -}}
                 </i>
-                <a class="member-affiliation">
-                    {{- member.affiliation -}}
-                </a>
+                <div class="member-affiliations">
+                    {%- for affiliation in member.affiliations -%}
+                        <span class="member-affiliation">
+                            {{- affiliation -}}
+                        </span>
+                    {%- endfor -%}
+                </div>
                 <span class="member-year">
                     {{- member.years -}}
                 </span>

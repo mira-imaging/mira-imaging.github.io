@@ -471,6 +471,7 @@
     flex-direction: row; /* Stack photo and info vertically */
     gap: 1rem; /* gap-x-4 equivalent */
     box-sizing: border-box;
+    padding: 0.5rem 0;
 }
 
 /* Member Photo */
@@ -503,16 +504,29 @@
     font-size: 0.95rem;
 }
 
+/* Member Affiliations */
+.member-affiliations {
+    display: flex;
+    flex-direction: column;
+    gap: 0.1rem;
+}
+
 /* Member Affiliation */
 .member-affiliation {
     color: #696969;
     font-size: 0.90rem;
 }
 
+.member-role sup,
+.member-affiliation sup {
+    font-size: 0.7em;
+    vertical-align: super;
+}
+
 /* Member Affiliation */
 .member-year {
     /* color: #696969; */
-    font-size: 0.90rem;
+    font-size: 0.85rem;
 }
 
 /* Member Affiliation */
