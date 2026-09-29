@@ -113,6 +113,36 @@ members:
     icon_links:
       - link: https://github.com/jorgebaccauis
         icon: *ic-github
+
+  - key: monroyb
+    name: Brayan Monroy
+    category: *student
+    role: PhD Student
+    affiliations:
+      - GIPSA-lab - Grenoble INP - UGA
+      - Universidad Industrial de Santander
+    photo: brayan_monroy.jpeg
+    email: brayansneider22@gmail.com
+    personal_link: https://scholar.google.com/citations?user=p9zuZ9EAAAAJ
+    years: Since Mar 2026
+    icon_links:
+      - link: https://github.com/bemc22
+        icon: *ic-github
+
+  - key: contrerask
+    name: Kebin Contreras
+    category: *student
+    role: PhD Student
+    affiliations:
+      - GIPSA-lab - Grenoble INP - UGA
+      - Universidad Industrial de Santander
+    photo: kebin_contreras.jpeg
+    email: kebinandrescontreras@gmail.com
+    personal_link: https://scholar.google.com/citations?user=s-Una0EAAAAJ
+    years: Since Mar 2026
+    icon_links:
+      - link: https://github.com/kebincontreras
+        icon: *ic-github
   
   - key: piconed
     name: Daniele Picone
