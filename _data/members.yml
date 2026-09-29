@@ -3,7 +3,7 @@ categories:
     type: Researcher / Engineer / Developer
     order: "1"
   - &student
-    type: Student
+    type: Student / PhD
     order: "2"
   - &reference
     type: Reference
