@@ -1,0 +1,30 @@
+{% assign session_location = include.session.location | default: include.group.location %}
+<article class="reading-group-session">
+  <h{{ include.heading_level }} class="reading-group-session-title">{{ include.session.title | escape }}</h{{ include.heading_level }}>
+  <p class="reading-group-session-meta">
+    <time datetime="{{ include.session.date | escape }}">{{ include.session.date | date: "%B %-d, %Y" | escape }}</time>
+    {% if include.session.time and include.session.time != empty %}
+      <span> · {{ include.session.time | escape }}{% if include.group.timezone and include.group.timezone != empty %} ({{ include.group.timezone | escape }}){% endif %}</span>
+    {% endif %}
+    {% if session_location and session_location != empty %}
+      <span> · {{ session_location | escape }}</span>
+    {% endif %}
+  </p>
+  <p class="reading-group-presenters">
+    <strong>Presenter{% if include.session.presenters.size > 1 %}s{% endif %}:</strong>
+    {% for person in include.session.presenters %}{% unless forloop.first %}, {% endunless %}{% include reading_group/person.html person=person %}{% endfor %}
+  </p>
+  {% if include.session.abstract and include.session.abstract != empty %}
+    <details class="reading-group-abstract">
+      <summary>Abstract</summary>
+      <div>{{ include.session.abstract | markdownify }}</div>
+    </details>
+  {% endif %}
+  {% if include.session.speaker_bio and include.session.speaker_bio != empty %}
+    <details class="reading-group-abstract">
+      <summary>About the Speaker</summary>
+      <div>{{ include.session.speaker_bio | markdownify }}</div>
+    </details>
+  {% endif %}
+  {% include reading_group/links.html links=include.session.links %}
+</article>

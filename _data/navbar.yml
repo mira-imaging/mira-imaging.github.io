@@ -18,6 +18,10 @@ pages:
         permalink: /transfer/
         subpages:
 
+      - title: Reading Group
+        permalink: /reading-group/
+        subpages:
+
       - title: Knowledge
         permalink: /knowledge/
         subpages:

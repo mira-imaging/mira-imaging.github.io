@@ -1,0 +1,16 @@
+{%- assign person_name = include.person.name -%}
+{%- assign person_link = include.person.link -%}
+{%- if include.person.member_key -%}
+  {%- assign group_member = site.data.members.members | where: "key", include.person.member_key | first -%}
+  {%- assign person_name = group_member.name | default: include.person.member_key -%}
+  {%- assign person_link = group_member.personal_link -%}
+{%- endif -%}
+{%- if person_link and person_link != empty -%}
+  {%- assign link_start = person_link | slice: 0, 2 -%}
+  {%- unless person_link contains ':' or link_start == '//' -%}
+    {%- assign person_link = person_link | relative_url -%}
+  {%- endunless -%}
+  <a href="{{ person_link | escape }}">{{ person_name | escape }}</a>
+{%- else -%}
+  {{- person_name | escape -}}
+{%- endif -%}

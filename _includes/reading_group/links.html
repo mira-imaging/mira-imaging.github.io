@@ -1,0 +1,21 @@
+{%- capture resource_links -%}
+  {%- for resource in include.links -%}
+    {%- if resource.link and resource.link != empty and resource.type and resource.type != empty -%}
+      {%- assign resource_url = resource.link -%}
+      {%- assign link_start = resource_url | slice: 0, 2 -%}
+      {%- unless resource_url contains ':' or link_start == '//' -%}
+        {%- assign resource_url = resource_url | relative_url -%}
+      {%- endunless -%}
+      <li>
+        <a href="{{ resource_url | escape }}">
+          {% if resource.icon and resource.icon != empty %}<i class="{{ resource.icon | escape }}" aria-hidden="true"></i>{% endif %}
+          {{ resource.type | escape }}
+        </a>
+      </li>
+    {%- endif -%}
+  {%- endfor -%}
+{%- endcapture -%}
+{%- assign resource_links = resource_links | strip -%}
+{%- if resource_links != empty %}
+  <ul class="reading-group-links">{{ resource_links }}</ul>
+{% endif -%}

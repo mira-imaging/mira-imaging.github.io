@@ -1,0 +1,73 @@
+---
+layout: page_padded
+title: Reading Group
+permalink: /reading-group/
+---
+{% assign group = site.data.reading_group %}
+{% assign upcoming_sessions = group.sessions | where: "status", "upcoming" | sort: "date" %}
+{% assign past_sessions = group.sessions | where: "status", "past" | sort: "date" | reverse %}
+
+<div class="reading-group">
+  <h1>{{ page.title | escape }}</h1>
+
+  {% if group.description and group.description != empty %}
+    <div class="reading-group-description">{{ group.description | markdownify }}</div>
+  {% endif %}
+
+  {% capture group_info %}
+    {% if group.schedule and group.schedule != empty %}
+      <dt>Schedule</dt><dd>{{ group.schedule | escape }}</dd>
+    {% endif %}
+    {% if group.location and group.location != empty %}
+      <dt>Location</dt><dd>{{ group.location | escape }}</dd>
+    {% endif %}
+    {% if group.timezone and group.timezone != empty %}
+      <dt>Timezone</dt><dd>{{ group.timezone | escape }}</dd>
+    {% endif %}
+  {% endcapture %}
+  {% assign group_info = group_info | strip %}
+  {% if group_info != empty %}
+    <dl class="reading-group-info">{{ group_info }}</dl>
+  {% endif %}
+
+  {% include reading_group/links.html links=group.links %}
+
+  <section class="reading-group-section" aria-labelledby="upcoming-sessions">
+    <h2 id="upcoming-sessions">Upcoming Sessions</h2>
+    {% if upcoming_sessions.size > 0 %}
+      {% for session in upcoming_sessions %}
+        {% include reading_group/session.html session=session group=group heading_level=3 %}
+      {% endfor %}
+    {% else %}
+      <p>No upcoming sessions announced yet.</p>
+    {% endif %}
+  </section>
+
+  <section class="reading-group-section" aria-labelledby="past-sessions">
+    <h2 id="past-sessions">Past Sessions</h2>
+    {% if past_sessions.size > 0 %}
+      {% assign past_years = past_sessions | group_by_exp: "session", "session.date | date: '%Y'" %}
+      {% for year in past_years %}
+        <div class="reading-group-year">
+          <h3 class="reading-group-year-title">{{ year.name | escape }}</h3>
+          {% for session in year.items %}
+            {% include reading_group/session.html session=session group=group heading_level=4 %}
+          {% endfor %}
+        </div>
+      {% endfor %}
+    {% else %}
+      <p>No past sessions yet.</p>
+    {% endif %}
+  </section>
+
+  {% if group.organizers.size > 0 %}
+    <section class="reading-group-section" aria-labelledby="reading-group-organizers">
+      <h2 id="reading-group-organizers">Organizers</h2>
+      <ul class="reading-group-organizers">
+        {% for person in group.organizers %}
+          <li>{% include reading_group/person.html person=person %}</li>
+        {% endfor %}
+      </ul>
+    </section>
+  {% endif %}
+</div>

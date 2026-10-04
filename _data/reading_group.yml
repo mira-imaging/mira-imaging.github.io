@@ -1,0 +1,106 @@
+# Content for /reading-group/. See README.md for the format and examples.
+# Description, session abstracts, and speaker biographies support Markdown.
+description: |
+  The **PICSA Reading Group** is a series of research talks and paper discussions
+  organized within the **PICSA group at GIPSA-lab**. It brings together researchers,
+  students, and visiting colleagues to share recent advances in computational
+  imaging, inverse problems, spectral imaging, multimodal fusion, and machine
+  learning, exchange ideas, and explore new collaborations.
+
+  Everyone interested is welcome to attend. **MIRA hosts this page** for the group.
+
+# Participation links: type, link, and an optional Font Awesome icon.
+links:
+  # - type: Contact
+  #   link: /contact/
+  #   icon: fas fa-envelope
+  # - type: Research themes
+  #   link: /knowledge/
+  #   icon: fas fa-book
+
+# People: member_key from members.yml, or a guest name and optional link.
+organizers:
+  - member_key: baccaj
+  - member_key: jounim
+
+# Sessions require a quoted YYYY-MM-DD date, title, presenters, and status.
+# Set status to upcoming or past explicitly; dates do not change it automatically.
+sessions:
+  - date: "2026-09-30"
+    title: "Multispectral Extended Depth-of-Field Imaging via Stochastic Wavefront Optimization"
+    status: past
+    time: "13:00"
+    location: "Room B153, GIPSA-lab"
+    presenters:
+      - name: Exequiel Oliva (PUCV, Chile)
+    abstract: |
+      Extended depth-of-field (EDoF) is a desirable attribute for imaging systems
+      where all features in the scene are in focus despite their relative distance.
+      Traditional imaging systems can achieve EDoF by reducing the aperture size
+      at the expense of signal-to-noise ratio, particularly relevant in spectral
+      imaging systems where incoming light is further divided. By designing and
+      integrating diffractive optical elements (DOEs) placed at the aperture plane
+      of the imaging system, wavefront coding has enabled EDoF while maintaining
+      a larger aperture size at the expense of post-processing. Nevertheless,
+      chromatic aberrations may appear and can often be confused with defocus,
+      jeopardizing reconstruction fidelity.
+
+      This work presents a novel design approach for a multispectral-aware DOE
+      for EDoF. By considering and modeling a refractive-diffractive optical setup,
+      the proposed system uses a stochastic optimization framework to optimize DOE
+      patterns, simultaneously preserving spectral fidelity and extending the depth
+      of field. The optimization process exploits the covariance matrix adaptation
+      evolution strategy (CMA-ES), efficiently exploring complex, high-dimensional
+      phase configurations without requiring explicit gradient information.
+
+      The optimized DOE is evaluated in a simulated imaging pipeline, where the
+      EDoF multispectral datacube is deblurred using Richardson–Lucy deconvolution.
+      Both qualitative and quantitative results demonstrate that the proposed DOE
+      significantly improves depth invariance and spectral fidelity compared to
+      conventional and state-of-the-art DOE designs, offering a cost-effective
+      solution for real-world multispectral EDoF applications.
+    speaker_bio: |
+      **Exequiel Oliva** is a Ph.D. student at **Pontificia Universidad Católica
+      de Valparaíso (PUCV), Chile**, visiting **GIPSA-lab**. This invited seminar
+      marked the beginning of the PICSA research-talk series.
+
+      Exequiel Oliva received his B.Sc. degree in 2025 and Engineering Diploma
+      in Electronics Engineering in 2026 from Pontificia Universidad Católica
+      de Valparaíso (PUCV), Chile, where he is currently pursuing his Ph.D. in
+      Electrical Engineering. His research interests include computational imaging,
+      inverse problems, computational and diffractive optics, wavefront coding,
+      multispectral and hyperspectral imaging, and deep learning for image
+      reconstruction. His current research focuses on the joint design of optical
+      elements and computational reconstruction algorithms, particularly using
+      diffractive optical elements for spectral and spatial imaging applications.
+      He is a Student Member of IEEE and OPTICA.
+
+  # # Real archived external talk, listed at https://tensor-networks.github.io/.
+  # - date: "2023-11-07"
+  #   title: "MultiHU-TD: Multi-feature Hyperspectral Unmixing Based on Tensor Decomposition"
+  #   status: past
+  #   location: "Tensor Network Reading Group"
+  #   presenters:
+  #     - member_key: jounim
+  #   abstract: |
+  #     Presented at the **Tensor Network Reading Group**, before the launch of
+  #     the PICSA Reading Group.
+
+  #     MultiHU-TD uses tensor decomposition to combine spectral information with
+  #     additional image features for hyperspectral unmixing. The framework enforces
+  #     abundances that sum to one and gives the tensor factors a physical
+  #     interpretation. Morphological features and neighbourhood patches illustrate
+  #     how spatial information can be incorporated into the model.
+  #   links:
+  #     - type: Paper
+  #       link: https://arxiv.org/abs/2310.03860
+  #       icon: fas fa-file-pdf
+  #     - type: Slides
+  #       link: https://tensor-networks.github.io/notes/MultiHUTD_slides.pdf
+  #       icon: fas fa-file-powerpoint
+  #     - type: Recording
+  #       link: https://youtu.be/OUimbKVZtvs
+  #       icon: fas fa-video
+  #     - type: Original programme
+  #       link: https://tensor-networks.github.io/
+  #       icon: fas fa-link

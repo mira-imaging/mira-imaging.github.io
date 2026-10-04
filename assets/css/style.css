@@ -801,3 +801,134 @@
     background-color: #0056b3; /* darken on hover */
 }
 
+/**
+* Reading Group
+*/
+
+.reading-group {
+    max-width: 900px;
+    margin: 0 auto;
+    overflow-wrap: anywhere;
+}
+
+.reading-group h1,
+.reading-group h2 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #4a4a4a;
+    margin-bottom: 1.5rem;
+}
+
+.reading-group-info {
+    display: grid;
+    grid-template-columns: max-content minmax(0, 1fr);
+    gap: 0.4rem 1rem;
+}
+
+.reading-group-info dt {
+    font-weight: bold;
+}
+
+.reading-group-info dd {
+    margin: 0;
+}
+
+.reading-group-section {
+    margin-top: 2rem;
+}
+
+.reading-group-year {
+    margin-bottom: 2rem;
+}
+
+.reading-group-year-title {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #4a4a4a;
+    border-bottom: 1px solid #a1a1a1;
+    padding-bottom: 0.5rem;
+}
+
+.reading-group-session {
+    margin-bottom: 1.5rem;
+}
+
+.reading-group-session-title {
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin-bottom: 0.35rem;
+}
+
+.reading-group-session-meta {
+    color: #414141;
+    margin-bottom: 0.35rem;
+}
+
+.reading-group-presenters {
+    margin-bottom: 0.5rem;
+}
+
+.reading-group-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    list-style: none;
+    margin: 0.75rem 0 1rem;
+    padding: 0;
+}
+
+.reading-group-links li {
+    max-width: 100%;
+}
+
+.reading-group-links a {
+    display: inline-block;
+    box-sizing: border-box;
+    max-width: 100%;
+    background-color: #158CBA;
+    color: white;
+    padding: 3px 8px;
+    border-radius: 4px;
+    font-size: 14px;
+    text-decoration: none;
+}
+
+.reading-group-links a:hover {
+    background-color: #0056b3;
+}
+
+.reading-group-abstract {
+    margin: 0.75rem 0;
+}
+
+.reading-group-abstract summary {
+    width: fit-content;
+    color: #158CBA;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.reading-group-abstract[open] summary {
+    margin-bottom: 0.5rem;
+}
+
+.reading-group a:focus-visible,
+.reading-group-abstract summary:focus-visible {
+    outline: 2px solid #0056b3;
+    outline-offset: 3px;
+}
+
+.reading-group-organizers {
+    margin-left: 1.25rem;
+}
+
+@media screen and (max-width: 550px) {
+    .reading-group-info {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 0.2rem;
+    }
+
+    .reading-group-info dd {
+        margin-bottom: 0.5rem;
+    }
+}
