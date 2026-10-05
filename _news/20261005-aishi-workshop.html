@@ -4,6 +4,11 @@ title: Mauro Dalla Mura and Jorge Bacca at the AISHI Workshop
 ---
 
 {% assign news_item = site.data.news.list | where: "page.url", page.url | first %}
+{% assign profile_dir = site.data.general.images_dirs.profile_pictures %}
+{% assign mauro = site.data.members.members | where: "key", "dallamum" | first %}
+{% assign jorge = site.data.members.members | where: "key", "baccaj" | first %}
+{% assign mauro_photo = mauro.photo | default: "default.png" %}
+{% assign jorge_photo = jorge.photo | default: "default.png" %}
 
 <article class="page-container">
   <header class="page-header">
@@ -25,11 +30,25 @@ title: Mauro Dalla Mura and Jorge Bacca at the AISHI Workshop
 
   <section class="description" aria-labelledby="aishi-talks">
     <h2 id="aishi-talks" class="section-title">Talks</h2>
-    <h3><a href="https://scholar.google.com/citations?user=qbdbtn4AAAAJ&amp;hl=en">Prof. Mauro Dalla Mura</a></h3>
-    <p><strong>Leveraging RGB imagery for hyperspectral image restoration</strong></p>
+    <div class="news-talk">
+      <img class="news-talk-photo"
+           src="{{ profile_dir | append: '/' | append: mauro_photo | relative_url }}"
+           alt="Prof. Mauro Dalla Mura" width="96" height="96" loading="lazy">
+      <div class="news-talk-content">
+        <h3><a href="https://scholar.google.com/citations?user=qbdbtn4AAAAJ&amp;hl=en">Prof. Mauro Dalla Mura</a></h3>
+        <p><strong>Leveraging RGB imagery for hyperspectral image restoration</strong></p>
+      </div>
+    </div>
 
-    <h3><a href="https://scholar.google.com/citations?user=I5f1HjEAAAAJ">Prof. Jorge Bacca</a></h3>
-    <p><strong>Deep Optical Co-Design for Compressive Spectral Imaging</strong></p>
+    <div class="news-talk">
+      <img class="news-talk-photo"
+           src="{{ profile_dir | append: '/' | append: jorge_photo | relative_url }}"
+           alt="Prof. Jorge Bacca" width="96" height="96" loading="lazy">
+      <div class="news-talk-content">
+        <h3><a href="https://scholar.google.com/citations?user=I5f1HjEAAAAJ">Prof. Jorge Bacca</a></h3>
+        <p><strong>Deep Optical Co-Design for Compressive Spectral Imaging</strong></p>
+      </div>
+    </div>
   </section>
 
   <section class="description" aria-labelledby="aishi-details">
