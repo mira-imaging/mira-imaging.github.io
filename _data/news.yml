@@ -1,5 +1,34 @@
 # For now, the news list should be sorted manually
 list:
+  - text: >-
+      <b>Prof. Mauro Dalla Mura</b> and <b>Prof. Jorge Bacca</b> will give talks at the
+      <a href="https://ml4hyper3d.sciencesconf.org/">AISHI Workshop on Machine Learning
+      for Hyperspectral Imaging (ML4Hyper3D)</a>, taking place on <b>6-7 October 2026</b>
+      in Villeurbanne, France.
+    date: Oct 2026
+    link: /news/20261005-aishi-workshop/
+    page:
+      url: /news/20261005-aishi-workshop/
+      title: "Mauro Dalla Mura and Jorge Bacca at the AISHI Workshop"
+    thumbnail:
+    event:
+      name: "AISHI Workshop on Machine Learning for Hyperspectral Imaging (ML4Hyper3D)"
+      link: https://ml4hyper3d.sciencesconf.org/
+      dates: "6-7 October 2026"
+      location: "I-FACTORY, Université de Lyon - Campus de la Doua, Villeurbanne, France"
+      description: >-
+        Organized as part of the [Artificial Intelligence for Spectral/Hyperspectral
+        Imaging (AISHI) initiative](https://aishi-hub.github.io/), this two-day workshop
+        focuses on using machine learning and artificial intelligence to reconstruct,
+        process, and analyse hyperspectral data. Its scope spans applications in
+        astronomy, geology, environmental monitoring, agriculture, and biomedical
+        imaging.
+    talks:
+      - speaker_key: dallamum
+        title: "Leveraging RGB imagery for hyperspectral image restoration"
+      - speaker_key: baccaj
+        title: "Deep Optical Co-Design for Compressive Spectral Imaging"
+
   - text: Our paper <b>"Lightweight Interpretable RGB-Guided Hyperspectral Super-Resolution under Real Cross-resolution Misalignment"</b> has been accepted to BMVC 2026! The work presents a lightweight confidence-aware approach for RGB-guided hyperspectral super-resolution under real cross-resolution misalignment.
     date: Aug 2026
     link: /news/20260811-paper-lightweight-sr/

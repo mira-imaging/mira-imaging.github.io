@@ -54,7 +54,7 @@ sessions:
       phase configurations without requiring explicit gradient information.
 
       The optimized DOE is evaluated in a simulated imaging pipeline, where the
-      EDoF multispectral datacube is deblurred using Richardson–Lucy deconvolution.
+      EDoF multispectral datacube is deblurred using Richardson-Lucy deconvolution.
       Both qualitative and quantitative results demonstrate that the proposed DOE
       significantly improves depth invariance and spectral fidelity compared to
       conventional and state-of-the-art DOE designs, offering a cost-effective

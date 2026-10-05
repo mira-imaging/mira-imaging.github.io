@@ -1,0 +1,57 @@
+---
+layout: page_padded
+title: Mauro Dalla Mura and Jorge Bacca at the AISHI Workshop
+---
+
+{% assign news_item = site.data.news.list | where: "page.url", page.url | first %}
+{% assign event = news_item.event %}
+
+<article class="page-container">
+  <header class="page-header">
+    <h1 class="title">{{ news_item.page.title | escape }}</h1>
+    <p class="subtitle">{{ event.dates | escape }}</p>
+  </header>
+
+  <section class="description">
+    <p>{{ news_item.text }}</p>
+    {{ event.description | markdownify }}
+  </section>
+
+  <section class="description" aria-labelledby="aishi-talks">
+    <h2 id="aishi-talks" class="section-title">Talks</h2>
+    {% for talk in news_item.talks %}
+      {% assign speaker = site.data.members.members | where: "key", talk.speaker_key | first %}
+      {% assign speaker_name = speaker.name | remove_first: "Prof. " | prepend: "Prof. " %}
+      {% assign speaker_link = speaker.personal_link %}
+      {% if speaker_link and speaker_link != empty %}
+        {% unless speaker_link contains '://' %}
+          {% assign speaker_link = speaker_link | relative_url %}
+        {% endunless %}
+      {% endif %}
+      <h3>
+        {% if speaker_link and speaker_link != empty %}
+          <a href="{{ speaker_link | escape }}">{{ speaker_name | escape }}</a>
+        {% else %}
+          {{ speaker_name | escape }}
+        {% endif %}
+      </h3>
+      <p><strong>{{ talk.title | escape }}</strong></p>
+    {% endfor %}
+  </section>
+
+  <section class="description" aria-labelledby="aishi-details">
+    <h2 id="aishi-details" class="section-title">Workshop Details</h2>
+    <p><strong>Dates:</strong> {{ event.dates | escape }}</p>
+    <p><strong>Location:</strong> {{ event.location | escape }}</p>
+    <p>
+      Visit the <a href="{{ event.link | escape }}">official workshop website</a>
+      for practical information and programme updates.
+    </p>
+  </section>
+
+  <nav class="publication-links publication-links-centered" aria-label="News navigation">
+    <a href="{{ '/news/' | relative_url }}" class="publication-btn publication-btn-text">News Page</a>
+  </nav>
+</article>
+
+<link rel="stylesheet" href="{{ '/assets/css/news-item-page.css' | relative_url }}">
