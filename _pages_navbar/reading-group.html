@@ -63,9 +63,20 @@ permalink: /reading-group/
   {% if group.organizers.size > 0 %}
     <section class="reading-group-section" aria-labelledby="reading-group-organizers">
       <h2 id="reading-group-organizers">Organizers</h2>
+      {% assign profile_dir = site.data.general.images_dirs.profile_pictures %}
       <ul class="reading-group-organizers">
         {% for person in group.organizers %}
-          <li>{% include reading_group/person.html person=person %}</li>
+          {% assign organizer_photo = "default.png" %}
+          {% if person.member_key %}
+            {% assign organizer_member = site.data.members.members | where: "key", person.member_key | first %}
+            {% assign organizer_photo = organizer_member.photo | default: "default.png" %}
+          {% endif %}
+          <li class="reading-group-organizer">
+            <img class="reading-group-organizer-photo"
+                 src="{{ profile_dir | append: '/' | append: organizer_photo | relative_url }}"
+                 alt="" width="112" height="112" loading="lazy">
+            <div class="reading-group-organizer-name">{% include reading_group/person.html person=person %}</div>
+          </li>
         {% endfor %}
       </ul>
     </section>
