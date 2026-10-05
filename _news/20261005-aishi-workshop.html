@@ -4,47 +4,40 @@ title: Mauro Dalla Mura and Jorge Bacca at the AISHI Workshop
 ---
 
 {% assign news_item = site.data.news.list | where: "page.url", page.url | first %}
-{% assign event = news_item.event %}
 
 <article class="page-container">
   <header class="page-header">
     <h1 class="title">{{ news_item.page.title | escape }}</h1>
-    <p class="subtitle">{{ event.dates | escape }}</p>
+    <p class="subtitle">6-7 October 2026</p>
   </header>
 
   <section class="description">
     <p>{{ news_item.text }}</p>
-    {{ event.description | markdownify }}
+    <p>
+      Organized as part of the
+      <a href="https://aishi-hub.github.io/">Artificial Intelligence for Spectral/Hyperspectral Imaging (AISHI) initiative</a>,
+      this two-day workshop focuses on using machine learning and artificial
+      intelligence to reconstruct, process, and analyse hyperspectral data. Its
+      scope spans applications in astronomy, geology, environmental monitoring,
+      agriculture, and biomedical imaging.
+    </p>
   </section>
 
   <section class="description" aria-labelledby="aishi-talks">
     <h2 id="aishi-talks" class="section-title">Talks</h2>
-    {% for talk in news_item.talks %}
-      {% assign speaker = site.data.members.members | where: "key", talk.speaker_key | first %}
-      {% assign speaker_name = speaker.name | remove_first: "Prof. " | prepend: "Prof. " %}
-      {% assign speaker_link = speaker.personal_link %}
-      {% if speaker_link and speaker_link != empty %}
-        {% unless speaker_link contains '://' %}
-          {% assign speaker_link = speaker_link | relative_url %}
-        {% endunless %}
-      {% endif %}
-      <h3>
-        {% if speaker_link and speaker_link != empty %}
-          <a href="{{ speaker_link | escape }}">{{ speaker_name | escape }}</a>
-        {% else %}
-          {{ speaker_name | escape }}
-        {% endif %}
-      </h3>
-      <p><strong>{{ talk.title | escape }}</strong></p>
-    {% endfor %}
+    <h3><a href="https://scholar.google.com/citations?user=qbdbtn4AAAAJ&amp;hl=en">Prof. Mauro Dalla Mura</a></h3>
+    <p><strong>Leveraging RGB imagery for hyperspectral image restoration</strong></p>
+
+    <h3><a href="https://scholar.google.com/citations?user=I5f1HjEAAAAJ">Prof. Jorge Bacca</a></h3>
+    <p><strong>Deep Optical Co-Design for Compressive Spectral Imaging</strong></p>
   </section>
 
   <section class="description" aria-labelledby="aishi-details">
     <h2 id="aishi-details" class="section-title">Workshop Details</h2>
-    <p><strong>Dates:</strong> {{ event.dates | escape }}</p>
-    <p><strong>Location:</strong> {{ event.location | escape }}</p>
+    <p><strong>Dates:</strong> 6-7 October 2026</p>
+    <p><strong>Location:</strong> I-FACTORY, Université de Lyon - Campus de la Doua, Villeurbanne, France</p>
     <p>
-      Visit the <a href="{{ event.link | escape }}">official workshop website</a>
+      Visit the <a href="https://ml4hyper3d.sciencesconf.org/">official workshop website</a>
       for practical information and programme updates.
     </p>
   </section>
