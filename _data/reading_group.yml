@@ -33,6 +33,7 @@ sessions:
     location: "Room B153, GIPSA-lab"
     presenters:
       - name: Exequiel Oliva (PUCV, Chile)
+        photo: exequiel_oliva_icip_pp.jpeg
     abstract: |
       Extended depth-of-field (EDoF) is a desirable attribute for imaging systems
       where all features in the scene are in focus despite their relative distance.

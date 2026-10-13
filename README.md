@@ -81,6 +81,10 @@ the page template and navigation do not need to change when adding sessions.
 - `organizers` and session `presenters` contain people. For a MIRA member, use
   `member_key` matching a `key` in `_data/members.yml`; their name and
   `personal_link` are taken from that file. Guests use `name` and an optional `link`.
+- Session portraits use the member's existing `photo`. Guests can add a `photo`
+  filename from `media/images/profile_pictures/`; omit it to use `default.png`.
+  To add Exequiel's portrait later, place the image in that directory and add
+  `photo: exequiel_oliva.jpg` to his entry under the session's `presenters`.
 - Each session requires `date` as a **quoted `YYYY-MM-DD` string**, `title`, a
   nonempty `presenters` list, and `status` set to `upcoming` or `past`.
   Optional fields are `time`, `location`, Markdown `abstract`, Markdown
@@ -88,6 +92,12 @@ the page template and navigation do not need to change when adding sessions.
   **About the Speaker** section.
   The session location defaults to the group location, and session times are
   displayed with the group timezone when provided.
+
+The **Abstract** and **About the Speaker** buttons start collapsed. Opening one
+closes the other within that session; clicking the open button collapses it.
+Sessions operate independently, and buttons for absent content are hidden.
+Without JavaScript, the content remains accessible through native expandable
+sections.
 
 For example, add entries following this structure
 (the details below are illustrative, not actual meetings):
