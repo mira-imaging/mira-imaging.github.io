@@ -30,6 +30,15 @@ link_icons:
 
 full_publications_link: /publications/
 
+# Match published author names to Members without changing the printed names.
+# Authors not listed here remain plain text.
+author_members:
+  Kebin Contreras: contrerask
+  Mohamad Jouni: jounim
+  Mauro Dalla Mura: dallamum
+  Jorge Bacca: baccaj
+  Daniele Picone: piconed
+
 publications:
   - title: A Multimodal hyperspectral dataset of cocoa beans with physicochemical annotation
     authors:
@@ -40,6 +49,11 @@ publications:
     type: *journal
     venue: *scidata
     year: 2025
+    thumbnail: /media/images/20251127_cocoaspec_pub/41597_2025_6314_Fig12_HTML.webp
+    thumbnail_alt: Cocoa bean scenes acquired with four cameras and annotated by fermentation quality
+    summary: >-
+      A multimodal cocoa-bean dataset combines spectral images from four cameras
+      with physicochemical measurements to support non-invasive quality assessment.
     links:
       - link: https://www.nature.com/articles/s41597-025-06314-9
         icon: *ic-link
@@ -66,6 +80,11 @@ publications:
     type: *conference
     venue: *icip
     year: 2026
+    thumbnail: /media/images/20260430_icip_pub/architecture.webp
+    thumbnail_alt: Encoder and decoder adapters surrounding a pretrained RGB denoiser
+    summary: >-
+      Lightweight adapters reuse frozen pretrained RGB denoisers for hyperspectral
+      restoration through spectral projections and learned reconstruction.
     links:
       - link: https://ieeexplore.ieee.org/abstract/document/11630149
         icon: *ic-link
@@ -89,6 +108,12 @@ publications:
     type: *conference
     venue: *bmvc
     year: 2026
+    thumbnail: /media/images/20260811_bmvc_pub/overview.webp
+    thumbnail_alt: Cross-modal registration and confidence-aware RGB-guided hyperspectral fusion
+    summary: >-
+      Cross-modal alignment and confidence-aware fusion improve RGB-guided
+      hyperspectral super-resolution under real camera misalignment with a low
+      computational footprint.
     links:
       - link: https://bmvc2026.bmva.org/programme/accepted_papers/
         icon: *ic-link

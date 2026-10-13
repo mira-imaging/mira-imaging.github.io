@@ -1,0 +1,86 @@
+{% assign pub = include.pub %}
+{% assign details_url = pub.detail_page %}
+{% assign paper_url = nil %}
+{% assign preprint_url = nil %}
+{% for resource in pub.links %}
+  {% if resource.link and resource.link != empty %}
+    {% capture resource_label %}{% include publications/resource-label.html link=resource %}{% endcapture %}
+    {% if resource_label == 'Details' and details_url == nil %}{% assign details_url = resource.link %}{% endif %}
+    {% if resource_label == 'Paper' and paper_url == nil %}{% assign paper_url = resource.link %}{% endif %}
+    {% if resource_label == 'arXiv' and preprint_url == nil %}{% assign preprint_url = resource.link %}{% endif %}
+  {% endif %}
+{% endfor %}
+{% assign paper_url = paper_url | default: preprint_url %}
+{% assign title_url = details_url | default: paper_url %}
+{% capture title_href %}{% include publications/url.html url=title_url %}{% endcapture %}
+
+<article class="publications-page-item{% unless pub.thumbnail and pub.thumbnail != empty %} publications-page-item-no-image{% endunless %}">
+  {% if pub.thumbnail and pub.thumbnail != empty %}
+    {% capture image_href %}{% include publications/url.html url=pub.thumbnail %}{% endcapture %}
+    <div class="publications-page-thumbnail">
+      {% if title_url %}<a href="{{ title_href }}">{% endif %}
+      <img src="{{ image_href }}" alt="{{ pub.thumbnail_alt | default: pub.title | escape }}" loading="lazy">
+      {% if title_url %}</a>{% endif %}
+    </div>
+  {% endif %}
+  <div class="publications-page-content">
+    <h3 class="publications-page-title">
+      {% if title_url %}<a href="{{ title_href }}">{{ pub.title | escape }}</a>{% else %}{{ pub.title | escape }}{% endif %}
+    </h3>
+    <p class="publications-page-authors">
+      {%- for author in pub.authors -%}
+        {%- unless forloop.first -%}{% if forloop.last %}{{ ' and ' }}{% else %}{{ ', ' }}{% endif %}{%- endunless -%}
+        {%- assign member_key = site.data.publications.author_members[author] -%}
+        {%- assign author_member = site.data.members.members | where: 'key', member_key | first -%}
+        {%- if member_key and author_member -%}
+          {%- if author_member.personal_link and author_member.personal_link != empty -%}
+            {%- capture author_href -%}{% include publications/url.html url=author_member.personal_link %}{%- endcapture -%}
+            <a class="publications-page-member" href="{{ author_href }}">{{ author | escape }}</a>
+          {%- else -%}
+            <span class="publications-page-member">{{ author | escape }}</span>
+          {%- endif -%}
+        {%- else -%}
+          {{- author | escape -}}
+        {%- endif -%}
+      {%- endfor -%}
+    </p>
+    <p class="publications-page-venue">
+      {% if pub.type.name %}<span class="publications-page-type">{{ pub.type.name | escape }}</span>{% endif %}
+      {{ pub.venue.title | escape }}{% if pub.venue.abbrv %} ({{ pub.venue.abbrv | escape }}){% endif %}{% if pub.venue.title %}, {% endif %}{{ pub.year | escape }}
+    </p>
+    {% if pub.summary and pub.summary != empty %}
+      <p class="publications-page-summary">{{ pub.summary | escape }}</p>
+    {% endif %}
+    <div class="publications-page-resources">
+      {% assign resource_groups = 'Paper|arXiv|HAL|Code|Dataset|Details|Programme|Other' | split: '|' %}
+      {% for resource_group in resource_groups %}
+        {% for resource in pub.links %}
+          {% if resource.link and resource.link != empty %}
+            {% capture resource_label %}{% include publications/resource-label.html link=resource %}{% endcapture %}
+            {% assign resource_category = resource_label %}
+            {% unless resource_groups contains resource_label %}{% assign resource_category = 'Other' %}{% endunless %}
+            {% if resource_category == resource_group %}
+              {% capture resource_href %}{% include publications/url.html url=resource.link %}{% endcapture %}
+              <a class="publications-page-button" href="{{ resource_href }}" aria-label="{{ resource_label }} for {{ pub.title | escape }}">
+                {% if resource.icon %}<i class="{{ resource.icon | escape }}" aria-hidden="true"></i>{% endif %}
+                {{ resource_label }}
+              </a>
+            {% endif %}
+          {% endif %}
+        {% endfor %}
+      {% endfor %}
+    </div>
+    {% capture citation %}{% if pub.bibtex %}{{ pub.bibtex }}{% else %}{% if pub.type.code == 'J' %}@article{% elsif pub.type.code == 'C' %}@inproceedings{% else %}@misc{% endif %}{ {{- pub.id | default: include.fallback_id -}},
+  title = { {{- pub.title -}} },
+  author = { {{- pub.authors | join: ' and ' -}} },
+{% if pub.venue.title %}  {% if pub.type.code == 'J' %}journal{% else %}booktitle{% endif %} = { {{- pub.venue.title -}} },
+{% endif %}  year = { {{- pub.year -}} }{% if paper_url %},
+  url = { {{- paper_url -}} }{% endif %}
+}
+{% endif %}{% endcapture %}
+    <details class="publications-page-citation">
+      <summary class="publications-page-button" aria-label="BibTeX for {{ pub.title | escape }}">BibTeX</summary>
+      <pre><code>{{ citation | strip | escape }}</code></pre>
+    </details>
+  </div>
+</article>

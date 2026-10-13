@@ -4,82 +4,31 @@ title: Publications
 permalink: /publications/
 ---
 {% assign pubs_config = site.data.publications %}
+<link rel="stylesheet" href="{{ '/assets/css/publications-page.css' | relative_url }}">
 
-{%- if pubs_config.full_publications_link contains '://' -%}
-    <a href="{{- pubs_config.full_publications_link -}}" class="publication-btn publication-btn-text">
-{%- else -%}
-    <a href="{{ site.baseurl }}{{- pubs_config.full_publications_link -}}" class="publication-btn publication-btn-text">
-{%- endif -%}
-    Full publication list
-</a>
+<div class="publications-page">
+  <header class="publications-page-header">
+    <h1>Selected Publications</h1>
+    <p>Selected research in multimodal imaging, hyperspectral acquisition, and reconstruction.</p>
+    {% assign full_list = pubs_config.full_publications_link %}
+    {% if full_list and full_list != empty and full_list != '/publications/' and full_list != '/publications-legacy/' %}
+      <a class="publications-page-full-list" href="{% include publications/url.html url=full_list %}">Full publication list</a>
+    {% endif %}
+  </header>
 
-<h1 class="publication-section-title">
-    Selected Publications
-</h1>
-
-{% assign pubs = pubs_config.publications %}
-
-{% if pubs == empty or pubs == nil %}
-
-  <p>No publications yet under this project.</p>
-
-{% else %}
-
-    {% assign pubs_grouped = pubs | sort: "date" | reverse | group_by: "year" %}
-
-    <div>
-    {% for pubs_year in pubs_grouped %}
-        {% assign year = pubs_year.name %}
-        {% assign pubs = pubs_year.items %}
-        <div class="publication-year-container">
-            <div class="year-header">
-                {{ year }}
-            </div>
-            {% for pub in pubs %}
-                <div class="publication-item">
-                    <div class="publication-title">
-                        {{ pub.title }}
-                    </div>
-                    <div class="publication-authors">
-                    {% for author in pub.authors %}
-                        {% if forloop.last and forloop.first == false %}
-                            and {{ author }}
-                        {% elsif forloop.last %}
-                            {{ author }}
-                        {% else %}
-                            {{ author }},
-                        {% endif %}
-                    {% endfor %}
-                    </div>
-                    <div class="publication-venue">
-                        <i>
-                        <span class="publication-type">{{- pub.type.code -}}</span>
-                        {% if pub.venue.abbrv %}
-                            {{ pub.venue.title }} ({{ pub.venue.abbrv }}),
-                        {% else %}
-                            {{ pub.venue.title }},
-                        {% endif %}
-                        {{ pub.year }}
-                        </i>
-                    </div>
-                    <div class="publication-links">
-                        {% for link in pub.links %}
-                            {% if link.link %}
-                                {%- if link.link contains '://' -%}
-                                    <a href="{{ link.link }}" class="publication-link">
-                                {%- else -%}
-                                    <a href="{{ site.baseurl }}{{ link.link }}" class="publication-link">
-                                {%- endif -%}
-                                        <i style="font-style:normal" class="{{- link.icon -}}"></i>
-                                        {{ link.type }}
-                                    </a>
-                            {% endif %}
-                        {% endfor %}
-                    </div>
-                </div>
-            {% endfor %}
-        </div>
+  {% if pubs_config.publications.size > 0 %}
+    {% assign publication_years = pubs_config.publications | group_by: 'year' | sort: 'name' | reverse %}
+    {% for publication_year in publication_years %}
+      <section class="publications-page-year" aria-labelledby="publications-page-year-{{ publication_year.name | escape }}">
+        <h2 id="publications-page-year-{{ publication_year.name | escape }}">{{ publication_year.name | escape }}</h2>
+        {% assign year_publications = publication_year.items | reverse %}
+        {% for pub in year_publications %}
+          {% assign fallback_id = publication_year.name | append: '-' | append: forloop.index %}
+          {% include publications/item.html pub=pub fallback_id=fallback_id %}
+        {% endfor %}
+      </section>
     {% endfor %}
-    </div>
-
-{% endif %}
+  {% else %}
+    <p>No publications yet under this project.</p>
+  {% endif %}
+</div>

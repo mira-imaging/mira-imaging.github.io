@@ -1,0 +1,6 @@
+{%- assign beta_link_start = include.url | slice: 0, 2 -%}
+{%- if include.url contains ':' or beta_link_start == '//' -%}
+  {{- include.url | escape -}}
+{%- else -%}
+  {{- include.url | relative_url | escape -}}
+{%- endif -%}

@@ -151,6 +151,39 @@ to check the build. Publish through the site's existing workflow.
 
 ---
 
+### 4. Maintaining Publications
+
+**Publications** at `/publications/` uses the new layout and reads
+`_data/publications.yml`. The previous template is preserved as
+`_pages_navbar/publications_legacy.html`, available at `/publications-legacy/`
+without a navbar entry. Both use the same publication records.
+
+The page supports optional `thumbnail` (image URL), `thumbnail_alt`, and plain-text
+`summary` fields. It uses an entry's existing **News** link for its title and
+**Details** button; optional `detail_page` can override that destination.
+`author_members` maps published author names to Members keys, preserving the
+author spelling and order while resolving profile links from Members.
+
+Years are shown newest first. Within each year, later YAML entries appear first,
+so appending a paper puts it above earlier entries for that year without requiring
+invented dates. Resource labels and ordering are normalized; all existing links
+remain available. The full-list link is omitted when it points back to either
+Publications layout.
+
+Expandable **BibTeX** citations use the existing title, authors, venue, year, and
+paper/preprint link. An optional `bibtex` field can supply a fuller citation.
+Detailed abstracts and research figures remain on the existing news pages.
+
+To change the desktop thumbnail column width, edit
+`--publication-thumbnail-width` in the `.publications-page` rule at the top of
+`assets/css/publications-page.css` (default `230px`, for example `300px`). The
+text column takes the remaining space, and the gap is controlled by `gap` in
+`.publications-page-item`. On screens up to `650px`, images move above the text;
+`--publication-thumbnail-mobile-max-width` controls their maximum width
+(default `360px`, always limited to the available space).
+
+---
+
 ## Contributing
 
 Contributions of all kinds are welcome! Here's how you can help:

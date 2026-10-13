@@ -1,0 +1,18 @@
+{%- assign beta_resource_type = include.link.type | downcase -%}
+{%- if beta_resource_type contains 'arxiv' -%}
+  arXiv
+{%- elsif beta_resource_type contains 'hal' -%}
+  HAL
+{%- elsif beta_resource_type contains 'accept' -%}
+  Programme
+{%- elsif beta_resource_type == 'news' or beta_resource_type == 'details' -%}
+  Details
+{%- elsif beta_resource_type contains 'paper' -%}
+  Paper
+{%- elsif beta_resource_type == 'code' -%}
+  Code
+{%- elsif beta_resource_type == 'dataset' -%}
+  Dataset
+{%- else -%}
+  {{- include.link.type | default: 'Resource' | escape -}}
+{%- endif -%}

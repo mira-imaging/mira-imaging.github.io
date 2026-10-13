@@ -1,0 +1,205 @@
+.publications-page {
+    /* Desktop thumbnail column and mobile image cap. */
+    --publication-thumbnail-width: 200px;
+    --publication-thumbnail-mobile-max-width: 360px;
+    max-width: 1050px;
+    margin: 0 auto;
+    overflow-wrap: anywhere;
+}
+
+.publications-page h1 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #4a4a4a;
+    margin-bottom: 0.5rem;
+}
+
+.publications-page-header {
+    margin-bottom: 2rem;
+}
+
+.publications-page-header > p {
+    color: #414141;
+    margin-bottom: 0.75rem;
+}
+
+.publications-page-full-list {
+    font-size: 0.9rem;
+}
+
+.publications-page-year {
+    margin-bottom: 2rem;
+}
+
+.publications-page-year > h2 {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #4a4a4a;
+    border-bottom: 1px solid #a1a1a1;
+    padding-bottom: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.publications-page-item {
+    display: grid;
+    grid-template-columns: var(--publication-thumbnail-width) minmax(0, 1fr);
+    align-items: start;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.publications-page-item-no-image {
+    grid-template-columns: minmax(0, 1fr);
+}
+
+.publications-page-thumbnail {
+    padding: 0.5rem;
+    background: white;
+    border: 1px solid #e0e0e0;
+    border-radius: 6px;
+}
+
+.publications-page-thumbnail a {
+    display: block;
+}
+
+.publications-page-thumbnail img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.publications-page-content {
+    min-width: 0;
+}
+
+.publications-page-title {
+    font-size: 1.1rem;
+    font-weight: bold;
+    line-height: 1.45;
+    margin-bottom: 0.35rem;
+}
+
+.publications-page-title a {
+    color: #242424;
+    text-decoration: none;
+}
+
+.publications-page-title a:hover {
+    color: #158CBA;
+    text-decoration: underline;
+}
+
+.publications-page-authors {
+    margin-bottom: 0.35rem;
+}
+
+.publications-page-member {
+    color: inherit;
+    font-weight: 600;
+}
+
+a.publications-page-member {
+    text-decoration: underline;
+    text-decoration-color: #c5c5c5;
+    text-underline-offset: 3px;
+}
+
+a.publications-page-member:hover {
+    color: #158CBA;
+}
+
+.publications-page-venue {
+    color: #414141;
+    font-size: 0.95rem;
+    margin-bottom: 0.65rem;
+}
+
+.publications-page-type {
+    display: inline-block;
+    padding: 0.1rem 0.4rem;
+    margin-right: 0.35rem;
+    border-radius: 4px;
+    background: #f0f0f0;
+    font-size: 0.8rem;
+}
+
+.publications-page-summary {
+    margin-bottom: 0.75rem;
+    color: #414141;
+}
+
+.publications-page-resources {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    gap: 0.5rem;
+}
+
+.publications-page-button {
+    display: inline-block;
+    box-sizing: border-box;
+    width: fit-content;
+    max-width: 100%;
+    padding: 0.25rem 0.75rem;
+    background: #158CBA;
+    color: white;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    line-height: 1.5;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.publications-page-button:hover {
+    background: #0056b3;
+    color: white;
+    text-decoration: none;
+}
+
+.publications-page-button i {
+    margin-right: 0.2rem;
+}
+
+.publications-page-citation {
+    margin-top: 0.5rem;
+}
+
+.publications-page-citation > summary {
+    display: list-item;
+}
+
+.publications-page-citation pre {
+    margin-top: 0.75rem;
+    padding: 0.75rem;
+    border: 1px solid #e0e0e0;
+    border-radius: 4px;
+    background: #f7f7f7;
+    white-space: pre-wrap;
+    overflow-wrap: anywhere;
+    font-size: 0.85rem;
+}
+
+.publications-page-citation code {
+    border: 0;
+    padding: 0;
+    background: transparent;
+}
+
+.publications-page a:focus-visible,
+.publications-page summary:focus-visible {
+    outline: 2px solid #0056b3;
+    outline-offset: 3px;
+}
+
+@media screen and (max-width: 650px) {
+    .publications-page-item {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 1rem;
+    }
+
+    .publications-page-thumbnail {
+        width: min(100%, var(--publication-thumbnail-mobile-max-width));
+        box-sizing: border-box;
+    }
+}
