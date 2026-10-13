@@ -1,0 +1,137 @@
+---
+layout: page_padded
+title: Brayan Monroy and Mohamad Jouni at the GdR IASIS Workshop
+---
+
+{% assign news_item = site.data.news.list | where: "page.url", page.url | first %}
+{% assign profile_dir = site.data.general.images_dirs.profile_pictures %}
+{% assign brayan = site.data.members.members | where: "key", "monroyb" | first %}
+{% assign mohamad = site.data.members.members | where: "key", "jounim" | first %}
+{% assign brayan_photo = brayan.photo | default: "default.png" %}
+{% assign mohamad_photo = mohamad.photo | default: "default.png" %}
+
+<article class="page-container">
+  <header class="page-header">
+    <h1 class="title">{{ news_item.page.title | escape }}</h1>
+    <p class="subtitle">15 October 2026</p>
+  </header>
+
+  <section class="description">
+    <p>{{ news_item.text }}</p>
+    <p>
+      The workshop, <strong>Self-Supervised Visual Learning: Methods, Applications and Challenges</strong>,
+      brings together researchers to discuss visual representation learning without
+      labels, including its applications, limits in generalization, and data
+      requirements.
+    </p>
+  </section>
+
+  <section class="description" aria-labelledby="iasis-talks">
+    <h2 id="iasis-talks" class="section-title">Talks</h2>
+    <div class="news-talk-entry">
+      <div class="news-talk">
+        <img class="news-talk-photo"
+             src="{{ profile_dir | append: '/' | append: brayan_photo | relative_url }}"
+             alt="Brayan Monroy" width="96" height="96" loading="lazy">
+        <div class="news-talk-content">
+          <h3><a href="https://scholar.google.com/citations?user=p9zuZ9EAAAAJ">Brayan Monroy</a></h3>
+          <p><strong>Learning to Recorrupt: Noise Distribution Agnostic Self-Supervised Image Denoising</strong></p>
+          <p>Scheduled presentation: 11:55-12:20.</p>
+        </div>
+      </div>
+      <details class="news-talk-abstract">
+        <summary aria-label="Abstract for Brayan Monroy's talk">Abstract</summary>
+        <p>
+          Self-supervised image denoising methods have traditionally relied on
+          architectural constraints, pseudo-pair constructions, or specialized loss
+          functions to avoid the trivial identity mapping. Among these, approaches
+          such as Noisier2Noise or R2R create training pairs by adding synthetic noise
+          to noisy images. While effective, these recorruption-based approaches
+          require precise knowledge of the noise distribution, which is often
+          unavailable.
+          <b>We present Learning to Recorrupt (L2R)</b>, a self-supervised framework that
+          does not require exact knowledge of the noise distribution. Our method
+          introduces a learnable recorruptor jointly optimized with the denoiser
+          through a min-max saddle-point objective.
+          The proposed method achieves state-of-the-art performance among methods
+          without prior knowledge of the noise distribution across unconventional
+          and heavy-tailed noise distributions, such as log-gamma and Laplace, as
+          well as spatially correlated noise, while obtaining competitive results
+          on real-world denoising benchmarks characterized by signal-dependent noise.
+        </p>
+        <p>
+          <a href="https://gdr-iasis.cnrs.fr/reunions/self-supervised-visual-learning-methods-applications-and-challenges-2/">Workshop programme</a>
+        </p>
+      </details>
+    </div>
+
+    <div class="news-talk-entry">
+      <div class="news-talk">
+        <img class="news-talk-photo"
+             src="{{ profile_dir | append: '/' | append: mohamad_photo | relative_url }}"
+             alt="Mohamad Jouni" width="96" height="96" loading="lazy">
+        <div class="news-talk-content">
+          <h3><a href="{{ '/mj/' | relative_url }}">Mohamad Jouni</a></h3>
+          <p><strong>SHARP: Self-Supervised Hyperspectral Alignment and Plug-and-Play Reconstruction for RGB-Guided Super-Resolution</strong></p>
+          <p>Scheduled presentation: 15:45-16:10.</p>
+        </div>
+      </div>
+      <details class="news-talk-abstract">
+        <summary aria-label="Abstract for Mohamad Jouni's talk">Abstract</summary>
+        <p>
+          RGB-guided hyperspectral super-resolution (HSR) aims to recover a
+          high-spatial-resolution hyperspectral image (HSI) by combining the spectral
+          information of a low-resolution HSI with the spatial detail of a
+          high-resolution RGB observation. In real dual-camera systems, however,
+          the two modalities are rarely pixel-wise aligned.
+          Separate viewpoints and optics induce depth-dependent parallax, occlusions,
+          and spatially varying misregistration, while spectral, radiometric, and
+          resolution differences make cross-modal registration particularly
+          challenging. Consequently, inaccurate alignment may transfer inconsistent
+          or spurious RGB structures into the reconstructed HSI. This problem is
+          further challenged in real snapshot acquisitions by hyperspectral sensor
+          noise and the absence of clean high-resolution hyperspectral targets.
+          <b>We introduce SHARP</b>, a self-supervised framework that couples learned
+          cross-modal alignment with Plug-and-Play hyperspectral reconstruction for
+          real RGB-HSI acquisitions. Our approach combines cross-modal dense
+          registration with iterative Plug-and-Play reconstruction and adapts the
+          registration component without clean supervision.
+          Rather than relying on clean high-resolution hyperspectral targets, the
+          framework exploits two repeated noisy HSI measurements of the same static
+          scene while sharing the same RGB guidance, inspired on Noise2Noise
+          objective. We also investigate a further-recorruption strategy to generate
+          two conditionally independent hyperspectral observations from a single
+          noisy measurement, enabling self-supervised reconstruction when repeated
+          acquisitions are unavailable.
+          Experiments on real data acquired with our snapshot RGB-HSI dual-camera
+          system, show that self-supervised adaptation can improve denoising and
+          stabilize cross-modal registration without clean references. Our ongoing
+          work focuses on integrating an explicit HSR forward model with
+          self-supervised registration and reconstruction, and on studying robustness
+          to noise, radiometric mismatch, and varying spectral configurations, beyond
+          the commonly used 31-band [400-700] nm spectral coverage.
+        </p>
+        <p>
+          <a href="https://gdr-iasis.cnrs.fr/reunions/self-supervised-visual-learning-methods-applications-and-challenges-2/">Workshop programme</a>
+        </p>
+      </details>
+    </div>
+  </section>
+
+  <section class="description" aria-labelledby="iasis-details">
+    <h2 id="iasis-details" class="section-title">Workshop Details</h2>
+    <p><strong>Date:</strong> 15 October 2026</p>
+    <p><strong>Time:</strong> 09:30-17:30 (Paris local time)</p>
+    <p><strong>Location:</strong> LIPADE, Université Paris Cité, 45 rue des Saints-Pères, 75006 Paris, France</p>
+    <p>
+      Visit the <a href="https://gdr-iasis.cnrs.fr/reunions/self-supervised-visual-learning-methods-applications-and-challenges-2/">official workshop website</a>
+      for the programme and practical information.
+    </p>
+  </section>
+
+  <nav class="publication-links publication-links-centered" aria-label="News navigation">
+    <a href="{{ '/news/' | relative_url }}" class="publication-btn publication-btn-text">News Page</a>
+  </nav>
+</article>
+
+<link rel="stylesheet" href="{{ '/assets/css/news-item-page.css' | relative_url }}">

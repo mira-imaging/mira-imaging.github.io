@@ -1,6 +1,17 @@
 # For now, the news list should be sorted manually
 list:
   - text: >-
+      <b>Mohamad Jouni</b> and <b>Brayan Monroy</b> will present their work at the
+      <a href="https://gdr-iasis.cnrs.fr/reunions/self-supervised-visual-learning-methods-applications-and-challenges-2/">GdR IASIS workshop on self-supervised visual learning</a>
+      on <b>15 October 2026</b> at Université Paris Cité, Paris, France.
+    date: Oct 2026
+    link: /news/20261013-gdr-iasis-self-supervised-learning/
+    page:
+      url: /news/20261013-gdr-iasis-self-supervised-learning/
+      title: "Mohamad Jouni and Brayan Monroy at the GdR IASIS Workshop"
+    thumbnail:
+
+  - text: >-
       <b>Prof. Mauro Dalla Mura</b> and <b>Prof. Jorge Bacca</b> will give talks at the
       <a href="https://ml4hyper3d.sciencesconf.org/">AISHI Workshop on Machine Learning
       for Hyperspectral Imaging (ML4Hyper3D)</a>, taking place on <b>6-7 October 2026</b>
