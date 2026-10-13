@@ -141,10 +141,13 @@ a.publications-page-member:hover {
     box-sizing: border-box;
     width: fit-content;
     max-width: 100%;
+    margin: 0;
     padding: 0.25rem 0.75rem;
     background: #158CBA;
     color: white;
     border-radius: 4px;
+    border: 0;
+    font-family: inherit;
     font-size: 0.9rem;
     line-height: 1.5;
     text-decoration: none;
@@ -165,8 +168,20 @@ a.publications-page-member:hover {
     margin-top: 0.5rem;
 }
 
+.publications-page-citation-enhanced {
+    margin-top: 0;
+}
+
+.publications-page-disclosure-marker {
+    margin-right: 0.35rem;
+}
+
 .publications-page-citation > summary {
     display: list-item;
+}
+
+.publications-page-citation > summary[hidden] {
+    display: none;
 }
 
 .publications-page-citation pre {
@@ -187,7 +202,8 @@ a.publications-page-member:hover {
 }
 
 .publications-page a:focus-visible,
-.publications-page summary:focus-visible {
+.publications-page summary:focus-visible,
+.publications-page button:focus-visible {
     outline: 2px solid #0056b3;
     outline-offset: 3px;
 }
