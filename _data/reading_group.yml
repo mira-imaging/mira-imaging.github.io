@@ -22,6 +22,7 @@ links:
 organizers:
   - member_key: baccaj
   - member_key: jounim
+  - member_key: dallamum
 
 # Sessions require a quoted YYYY-MM-DD date, title, presenters, and status.
 # Set status to upcoming or past explicitly; dates do not change it automatically.
