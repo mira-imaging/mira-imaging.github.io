@@ -26,6 +26,48 @@ organizers:
 # Sessions require a quoted YYYY-MM-DD date, title, presenters, and status.
 # Set status to upcoming or past explicitly; dates do not change it automatically.
 sessions:
+  - date: "2026-10-20"
+    title: "Self-supervised Learning in Image Denoising with GR2R and L2R"
+    status: upcoming
+    time: "13:00"
+    location: "Room B153, GIPSA-lab"
+    presenters:
+      - name: Brayan Monroy (UIS, Colombia)
+        photo: brayan_monroy.jpeg
+    abstract: |
+      Learning to denoise images without clean reference data is essential in scientific imaging,
+      where ground truth is often unavailable. This talk presents two complementary frameworks
+      that train denoisers directly from noisy observations:
+      Generalized Recorrupted-to-Recorrupted (GR2R) and Learning to Recorrupt (L2R).
+      
+      GR2R extends recorruption-based self-supervision beyond Gaussian noise
+      to broader additive noise models and the natural exponential family,
+      including Poisson and Gamma distributions. By constructing training pairs
+      from individual noisy observations, it yields objectives equivalent
+      in expectation to supervised losses, up to model-independent constants,
+      under appropriate conditions. Its connection to Stein's unbiased risk estimation
+      provides a theoretical foundation without requiring explicit divergence computation.
+      
+      L2R addresses a central limitation of this approach: the need for prior knowledge
+      of the noise distribution. It introduces a learnable recorruptor jointly optimized
+      with the denoiser through a min–max objective, adapting auxiliary noise statistics
+      directly from noisy data. Experiments demonstrate its effectiveness for non-Gaussian,
+      heavy-tailed, and spatially correlated noise, alongside competitive performance
+      on real imaging benchmarks with signal-dependent noise.
+      
+      The talk will discuss the theoretical principles, practical implementation,
+      and experimental evidence underlying this progression from known to learned recorruption.
+    speaker_bio: |
+      **Brayan Monroy** is a doctoral researcher in Computer Science at **Universidad
+      Industrial de Santander (UIS), Colombia**, and a visiting researcher at **GIPSA-lab**.
+      
+      His research combines mathematical optimization and deep learning to address imaging inverse problems,
+      with a particular focus on self-supervised methods for linear and nonlinear forward operators.
+      His work includes self-supervised image denoising beyond Gaussian noise,
+      compressive spectral imaging, and deep-learning approaches for chronic wound assessment.
+      He holds B.Sc. and M.Sc. degrees in Systems Engineering from UIS and contributes to DeepInverse,
+      an open-source Python library for solving imaging inverse problems using deep learning.
+
   - date: "2026-09-30"
     title: "Multispectral Extended Depth-of-Field Imaging via Stochastic Wavefront Optimization"
     status: past
@@ -62,8 +104,7 @@ sessions:
       solution for real-world multispectral EDoF applications.
     speaker_bio: |
       **Exequiel Oliva** is a Ph.D. student at **Pontificia Universidad Católica
-      de Valparaíso (PUCV), Chile**, visiting **GIPSA-lab**. This invited seminar
-      marked the beginning of the PICSA research-talk series.
+      de Valparaíso (PUCV), Chile**, visiting **GIPSA-lab**.
 
       Exequiel Oliva received his B.Sc. degree in 2025 and Engineering Diploma
       in Electronics Engineering in 2026 from Pontificia Universidad Católica
