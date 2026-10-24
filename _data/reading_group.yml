@@ -29,7 +29,7 @@ organizers:
 sessions:
   - date: "2026-10-20"
     title: "Self-supervised Learning in Image Denoising with GR2R and L2R"
-    status: upcoming
+    status: past
     time: "13:00"
     location: "Room B153, GIPSA-lab"
     presenters:
